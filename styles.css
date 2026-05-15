@@ -521,9 +521,13 @@ h3 {
 }
 
 .text-list p,
-.service-grid p {
+.service-grid p,
+.timeline p,
+.fit-grid p {
   margin-bottom: 0;
   color: var(--muted);
+  text-align: justify;
+  text-align-last: left;
 }
 
 .solution-bridge {
@@ -725,10 +729,6 @@ h3 {
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
-}
-
-.timeline p {
-  color: var(--muted);
 }
 
 .fit {
@@ -982,14 +982,14 @@ textarea:focus {
   }
 
   h1 {
-    max-width: 12.8ch;
-    font-size: clamp(2rem, 9.2vw, 2.45rem);
+    max-width: 100%;
+    font-size: clamp(1.95rem, 8.5vw, 2.28rem);
     line-height: 1.08;
   }
 
   h2 {
-    max-width: 15.5ch;
-    font-size: clamp(1.72rem, 7.3vw, 2.05rem);
+    max-width: 100%;
+    font-size: clamp(1.62rem, 6.7vw, 1.9rem);
     line-height: 1.14;
   }
 
@@ -1039,9 +1039,11 @@ textarea:focus {
   .fit-copy p:not(.eyebrow),
   .contact-copy p,
   .lead {
-    max-width: 31ch;
+    max-width: 100%;
     font-size: 0.98rem;
     line-height: 1.65;
+    text-align: justify;
+    text-align-last: left;
   }
 
   .bridge-copy h2,
@@ -1049,7 +1051,7 @@ textarea:focus {
   .fit-copy h2,
   .contact-copy h2,
   .section-title h2 {
-    max-width: 15.5ch;
+    max-width: 100%;
   }
 
   .hero-actions,
