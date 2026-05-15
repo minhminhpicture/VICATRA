@@ -1,0 +1,21 @@
+{
+  "name": "VICATRA - Vietnam Cambodia Trading",
+  "short_name": "VICATRA",
+  "description": "Hỗ trợ doanh nghiệp Việt xúc tiến sản phẩm vào siêu thị và kênh bán lẻ tại Campuchia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0b3d91",
+  "icons": [
+    {
+      "src": "assets/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

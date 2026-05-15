@@ -188,7 +188,7 @@ const translations = {
 };
 
 const GOOGLE_SHEETS_WEB_APP_URL =
-  "https://script.google.com/macros/s/AKfycbzXg-x8UghSdUSHZ4SFCyJq0kXvVLzZG5bqO_5wdwhZyUQPXEximUIF02oo20cPGTLj/exec";
+  "https://script.google.com/macros/s/AKfycbwqNANLb2XQXQZ1dEzTmueWnmwqCZvoVfzut3F3RzfmGJl6xUugOe7LXfpNkhXOwwuC/exec";
 const form = document.querySelector("#leadForm");
 const note = document.querySelector("#formNote");
 const submitButton = form?.querySelector("button[type='submit']");
@@ -236,13 +236,16 @@ form?.addEventListener("submit", async (event) => {
     return;
   }
 
-  // Chuyển FormData sang URLSearchParams để Google Apps Script nhận diện e.parameter tốt hơn
-  const params = new URLSearchParams();
-  for (const [key, value] of formData.entries()) {
-    params.append(key, value);
-  }
-  params.append("language", currentLanguage);
-  params.append("page", window.location.href);
+  // Đóng gói dữ liệu thành JSON object
+  const payload = {
+    name: name,
+    phone: formData.get("phone")?.toString().trim() || "",
+    address: formData.get("address")?.toString().trim() || "",
+    company: formData.get("company")?.toString().trim() || "",
+    product: formData.get("product")?.toString().trim() || "",
+    language: currentLanguage,
+    page: window.location.href
+  };
 
   note.textContent = translations[currentLanguage].formSending;
   submitButton.disabled = true;
@@ -252,14 +255,15 @@ form?.addEventListener("submit", async (event) => {
       method: "POST",
       mode: "no-cors",
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Type": "text/plain;charset=utf-8",
       },
-      body: params.toString(),
+      body: JSON.stringify(payload),
     });
 
     note.textContent = translations[currentLanguage].formSuccess.replace("{name}", name);
     form.reset();
   } catch (error) {
+    console.error("Lỗi gửi form:", error);
     note.textContent = translations[currentLanguage].formError;
   } finally {
     submitButton.disabled = false;
