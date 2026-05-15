@@ -377,9 +377,9 @@ h3 {
 
 .partners-heading {
   max-width: 780px;
-  margin: 0 auto 26px;
+  margin: 0 0 26px;
   padding: 0 clamp(18px, 5vw, 72px);
-  text-align: center;
+  text-align: left;
 }
 
 .partners-heading h2 {
@@ -731,19 +731,6 @@ h3 {
   color: var(--muted);
 }
 
-.timeline small {
-  display: inline-flex;
-  align-self: end;
-  width: fit-content;
-  margin-top: 18px;
-  border-radius: 999px;
-  padding: 8px 12px;
-  color: var(--blue);
-  background: var(--blue-soft);
-  font-size: 0.78rem;
-  font-weight: 800;
-}
-
 .fit {
   display: grid;
   grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
@@ -991,19 +978,78 @@ textarea:focus {
   }
 
   .hero {
-    padding-top: 42px;
+    padding: 34px 22px 34px;
   }
 
   h1 {
-    max-width: 10ch;
-    font-size: clamp(1.95rem, 10.2vw, 2.9rem);
-    line-height: 1.12;
+    max-width: 12.8ch;
+    font-size: clamp(2rem, 9.2vw, 2.45rem);
+    line-height: 1.08;
   }
 
   h2 {
-    max-width: 14ch;
-    font-size: clamp(1.35rem, 7.2vw, 2rem);
-    line-height: 1.2;
+    max-width: 15.5ch;
+    font-size: clamp(1.72rem, 7.3vw, 2.05rem);
+    line-height: 1.14;
+  }
+
+  h3 {
+    font-size: 1rem;
+    line-height: 1.28;
+  }
+
+  .section,
+  .fit,
+  .solution-bridge,
+  .network,
+  .contact {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .partners {
+    padding: 36px 0;
+  }
+
+  .partners-heading {
+    margin: 0 0 22px;
+    padding: 0 22px;
+  }
+
+  .partners-heading h2 {
+    max-width: 15.5ch;
+    font-size: clamp(1.65rem, 7vw, 2rem);
+    line-height: 1.14;
+  }
+
+  .section-title,
+  .section-title.narrow,
+  .bridge-copy,
+  .network-copy,
+  .fit-copy,
+  .contact-copy,
+  .hero-copy {
+    max-width: 100%;
+  }
+
+  .section-title p,
+  .solution .section-title p,
+  .bridge-copy p,
+  .network-copy p,
+  .fit-copy p:not(.eyebrow),
+  .contact-copy p,
+  .lead {
+    max-width: 31ch;
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .bridge-copy h2,
+  .network-copy h2,
+  .fit-copy h2,
+  .contact-copy h2,
+  .section-title h2 {
+    max-width: 15.5ch;
   }
 
   .hero-actions,
