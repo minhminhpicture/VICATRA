@@ -338,6 +338,16 @@ drawerLinks?.forEach((link) => link.addEventListener("click", closeDrawer));
 // Form submission
 form?.addEventListener("submit", async (event) => {
   event.preventDefault();
+  
+  // Rate Limiting Check (1 minute cooldown)
+  const lastSubmitTime = localStorage.getItem("vicatra-last-submit");
+  if (lastSubmitTime && Date.now() - parseInt(lastSubmitTime) < 60000) {
+    note.textContent = currentLanguage === "vi" 
+      ? "Vui lòng đợi 1 phút trước khi gửi yêu cầu mới." 
+      : "Please wait 1 minute before submitting again.";
+    return;
+  }
+
   const formData = new FormData(form);
   const fallbackName = currentLanguage === "vi" ? "Quý khách" : "Thank you";
   const name = formData.get("name")?.toString().trim() || fallbackName;
@@ -369,6 +379,7 @@ form?.addEventListener("submit", async (event) => {
     });
 
     note.textContent = translations[currentLanguage].formSuccess.replace("{name}", name);
+    localStorage.setItem("vicatra-last-submit", Date.now().toString());
     form.reset();
   } catch (error) {
     console.error("Lỗi gửi form:", error);
