@@ -128,12 +128,15 @@ const translations = {
     formSubmit: "Gửi yêu cầu tư vấn",
     formNote: "VICATRA sẽ phản hồi sớm.",
     formSending: "Đang gửi thông tin...",
+    formRateLimit: "Vui lòng đợi 1 phút trước khi gửi yêu cầu mới.",
     formSuccess: "Quý khách đã gửi thông tin thành công. VICATRA sẽ phản hồi trong thời gian sớm nhất. Trân trọng cảm ơn!",
     formError: "Chưa gửi được thông tin. Vui lòng thử lại hoặc liên hệ VICATRA trực tiếp.",
     footerDesc: "Đưa sản phẩm Việt vào hệ thống bán lẻ Campuchia.",
     footerLinksTitle: "Liên kết",
     footerContactTitle: "Liên hệ",
     footerTop: "Lên đầu trang ↑",
+    languageModalEyebrow: "Chọn ngôn ngữ",
+    languageModalTitle: "Bạn muốn xem website bằng ngôn ngữ nào?",
   },
   en: {
     navWhy: "Why VICATRA",
@@ -264,13 +267,156 @@ const translations = {
     formSubmit: "Request consultation",
     formNote: "VICATRA will respond as soon as possible.",
     formSending: "Sending your details...",
+    formRateLimit: "Please wait 1 minute before submitting again.",
     formSuccess: "{name}, your request has been sent. VICATRA will respond as soon as possible.",
     formError: "We could not send your request yet. Please try again or contact VICATRA directly.",
     footerDesc: "Bringing Vietnamese products into Cambodia retail systems.",
     footerLinksTitle: "Links",
     footerContactTitle: "Contact",
     footerTop: "Back to top ↑",
+    languageModalEyebrow: "Choose language",
+    languageModalTitle: "Which language would you like to use?",
   },
+};
+
+translations.km = {
+  navWhy: "ហេតុអ្វី VICATRA",
+  navServices: "សេវាកម្ម",
+  navPricing: "កញ្ចប់សេវា",
+  navProcess: "ដំណើរការ",
+  navTestimonials: "អតិថិជន",
+  navFaq: "FAQ",
+  navContact: "ទំនាក់ទំនង",
+  navCta: "ប្រឹក្សា",
+  heroEyebrow: "បណ្តាញដៃគូស៊ុបភើម៉ាកែតជាង 500 កន្លែងនៅកម្ពុជា",
+  heroTitle: 'នាំ<span class="keep">ទំនិញវៀតណាម</span>ចូលប្រព័ន្ធលក់រាយកម្ពុជា។',
+  heroLead: "VICATRA ភ្ជាប់អាជីវកម្មវៀតណាមជាមួយស៊ុបភើម៉ាកែត អ្នកចែកចាយ និងសមាគមពាណិជ្ជកម្មនៅកម្ពុជា។",
+  heroPrimary: "ផ្ញើព័ត៌មានផលិតផល",
+  heroSecondary: "មើលសេវាកម្ម",
+  metricOne: "ស៊ុបភើម៉ាកែត និងចំណុចលក់ដៃគូ",
+  metricTwo: "សមាគមអាជីវកម្មដែលបានភ្ជាប់",
+  metricThreeNumber: "ចប់គ្រប់ជំហាន",
+  metricThree: "គាំទ្រផ្សព្វផ្សាយពាណិជ្ជកម្ម",
+  partnersEyebrow: "ដៃគូ និងបណ្តាញ",
+  partnersTitle: "ប្រព័ន្ធលក់រាយទំនើបនៅកម្ពុជា។",
+  whyEyebrow: "ហេតុអ្វីជ្រើស VICATRA",
+  whyTitle: 'ទៅជាមួយ VICATRA ឬ <span class="keep">ចូលទីផ្សារដោយខ្លួនឯង?</span>',
+  whyLead: "ការប្រៀបធៀបខ្លីរវាងការស្វែងរកដៃគូដោយខ្លួនឯង និងការទៅជាមួយ VICATRA។",
+  whyWithoutTitle: "❌ ចូលទីផ្សារដោយខ្លួនឯង",
+  whyWithTitle: "✅ ទៅជាមួយ VICATRA",
+  whyW1: "ចំណាយពេល 6–12 ខែស្វែងរកទំនាក់ទំនង",
+  whyW2: "ចំណាយខ្ពស់លើការស្ទង់ទីផ្សារ និងធ្វើដំណើរ",
+  whyW3: "មិនច្បាស់ពីស្តង់ដារ listing",
+  whyW4: "មានហានិភ័យជ្រើសដៃគូមិនត្រឹមត្រូវ",
+  whyW5: "គ្មានការគាំទ្របន្ទាប់ពីភ្ជាប់រួច",
+  whyV1: "ភ្ជាប់ផ្ទាល់ទៅស៊ុបភើម៉ាកែត 500+",
+  whyV2: "វាយតម្លៃឱកាសមុនចំណាយប្រាក់",
+  whyV3: "គាំទ្ររៀបចំឯកសារ listing",
+  whyV4: "បណ្តាញដៃគូដែលបានផ្ទៀងផ្ទាត់",
+  whyV5: "បន្តគាំទ្រ និងតាមដានមតិត្រឡប់",
+  whyCta: "ទទួលការវាយតម្លៃឥតគិតថ្លៃ",
+  galleryEyebrow: "រូបភាពប្រតិបត្តិការពិត",
+  galleryTitle: "VICATRA កំពុងប្រតិបត្តិការ។",
+  galleryLead: "ទំនិញវៀតណាមកំពុងធ្វើដំណើរទៅកាន់ធ្នើស៊ុបភើម៉ាកែតកម្ពុជា។",
+  galleryCaption1: "ត្រួតពិនិត្យទំនិញនៅឃ្លាំងចែកចាយ",
+  galleryCaption2: "ដឹកជញ្ជូនទៅប្រព័ន្ធស៊ុបភើម៉ាកែត",
+  galleryCaption3: "ត្រួតពិនិត្យផ្ទាល់លើដំណើរការដឹកជញ្ជូន",
+  solutionEyebrow: "សេវាកម្ម VICATRA",
+  solutionTitle: 'នាំ<span class="keep">ផលិតផលវៀតណាម</span>ចូល<span class="keep">បណ្តាញលក់រាយ</span>។',
+  solutionLead: "រៀបចំឯកសារ វាយតម្លៃឱកាស ភ្ជាប់ដៃគូ និងតាមដានមតិត្រឡប់ទីផ្សារ។",
+  serviceOneTitle: "វាយតម្លៃផលិតផល",
+  serviceOneText: "ពិនិត្យប្រភេទផលិតផល អត្ថប្រយោជន៍ប្រកួតប្រជែង តម្លៃ និងភាពរួចរាល់សម្រាប់ស៊ុបភើម៉ាកែត។",
+  serviceTwoTitle: "ភ្ជាប់លក់រាយ",
+  serviceTwoText: "ណែនាំផលិតផលទៅកាន់ស៊ុបភើម៉ាកែត អ្នកទិញ និងដៃគូចែកចាយដែលសមស្រប។",
+  serviceThreeTitle: "ផ្សព្វផ្សាយពាណិជ្ជកម្ម",
+  serviceThreeText: "គាំទ្រកាតាឡុក កិច្ចប្រជុំ ការតាំងបង្ហាញ ការសាកល្បង និងការបើកលក់ផលិតផល។",
+  serviceFourTitle: "គាំទ្របន្ទាប់ពីភ្ជាប់",
+  serviceFourText: "តាមដានមតិត្រឡប់ ដើម្បីកែលម្អវេចខ្ចប់ សារ និងលក្ខខណ្ឌពាណិជ្ជកម្ម។",
+  pricingEyebrow: "កញ្ចប់សេវា",
+  pricingTitle: "ជ្រើសកញ្ចប់សមស្របសម្រាប់អាជីវកម្មរបស់អ្នក។",
+  pricingLead: "កញ្ចប់នីមួយៗត្រូវបានរៀបចំតាមកម្រិតគាំទ្រ និងទំហំទីផ្សារគោលដៅ។",
+  priceTierOneTitle: "ស្វែងយល់",
+  priceTierOneDesc: "វាយតម្លៃឱកាសផលិតផលនៅទីផ្សារកម្ពុជា",
+  priceTierTwoTitle: "ភ្ជាប់",
+  priceTierTwoDesc: "ភ្ជាប់ផ្ទាល់ជាមួយស៊ុបភើម៉ាកែត និងអ្នកចែកចាយ",
+  priceTierThreeTitle: "ដៃគូអមដំណើរ",
+  priceTierThreeDesc: "គាំទ្រពេញលេញពី listing ដល់ការបើកលក់ផលិតផល",
+  priceBadge: "ពេញនិយមបំផុត",
+  priceF1a: "វិភាគប្រភេទផលិតផល និងការប្រកួតប្រជែង",
+  priceF1b: "របាយការណ៍បណ្តាញដែលសមស្រប",
+  priceF1c: "ប្រឹក្សាវេចខ្ចប់ និងកំណត់តម្លៃ",
+  priceF1d: "ប្រឹក្សាជម្រៅ 1 វគ្គ",
+  priceF2a: "រួមបញ្ចូលទាំងអស់ពីកញ្ចប់ស្វែងយល់",
+  priceF2b: "ភ្ជាប់ជាមួយដៃគូសមស្រប 3–5",
+  priceF2c: "គាំទ្ររៀបចំឯកសារ listing",
+  priceF2d: "អមដំណើរក្នុងជំនួបដៃគូ",
+  priceF2e: "តាមដានមតិត្រឡប់ 30 ថ្ងៃ",
+  priceF3a: "រួមបញ្ចូលទាំងអស់ពីកញ្ចប់ភ្ជាប់",
+  priceF3b: "ផ្សព្វផ្សាយការតាំងបង្ហាញ និង sampling",
+  priceF3c: "គាំទ្រកាតាឡុក និងទីផ្សារ",
+  priceF3d: "តាមដានមតិត្រឡប់ 90 ថ្ងៃ",
+  priceF3e: "ប្រឹក្សាពង្រីកបណ្តាញបន្ទាប់",
+  priceCta: "ទាក់ទងសម្រាប់តម្លៃ",
+  processEyebrow: "ដំណើរការ",
+  processTitle: "ដំណើរការ 4 ជំហានច្បាស់លាស់។",
+  processLead: "ពីឯកសារដំបូងរហូតដល់ការភ្ជាប់ដៃគូសមស្រប។",
+  stepOneTitle: "ផ្ញើព័ត៌មាន",
+  stepOneText: "កាតាឡុក វិញ្ញាបនបត្រ ប្រភេទផលិតផល និងសមត្ថភាពផ្គត់ផ្គង់។",
+  stepTwoTitle: "វាយតម្លៃឱកាស",
+  stepTwoText: "កំណត់បណ្តាញសមស្រប ចំណុចត្រូវត្រៀម និងវិធីចូលទៅកាន់ដៃគូ។",
+  stepThreeTitle: "ភ្ជាប់ដៃគូ",
+  stepThreeText: "ចូលទៅកាន់អ្នកទិញ អ្នកចែកចាយ ឬសមាគមអាជីវកម្មដែលពាក់ព័ន្ធ។",
+  stepFourTitle: "តាមដាន និងពង្រីក",
+  stepFourText: "ប្រមូលមតិត្រឡប់ទីផ្សារ និងណែនាំជំហានពង្រីកបន្ទាប់។",
+  testimonialEyebrow: "អ្វីដែលអតិថិជននិយាយ",
+  testimonialTitle: "អាជីវកម្មដែលបានទៅជាមួយ VICATRA។",
+  testimonialOneQuote: '"VICATRA បានជួយយើងភ្ជាប់ជាមួយ AEON Cambodia ក្នុងតែ 3 សប្តាហ៍។ មុននេះយើងស្វែងរកជិត 8 ខែតែមិនមានលទ្ធផល។"',
+  testimonialOneName: "Nguyen Minh Tuan",
+  testimonialOneRole: "នាយក, Saigon Xanh Foods Co.",
+  testimonialTwoQuote: '"ក្រុម VICATRA យល់ទីផ្សារកម្ពុជាយ៉ាងជ្រៅ។ ការប្រឹក្សាវេចខ្ចប់ និងតម្លៃរបស់ពួកគេត្រឹមត្រូវណាស់។"',
+  testimonialTwoName: "Tran Thi Hong Nhung",
+  testimonialTwoRole: "អនុប្រធានផ្នែកនាំចេញ, MekongCare Cosmetics",
+  testimonialThreeQuote: '"ផលិតផលគ្រឿងទេសរបស់យើងបានឡើងធ្នើ Lucky Supermarket ដោយសារការគាំទ្រផ្សព្វផ្សាយពាណិជ្ជកម្មដ៏ជំនាញពី VICATRA។"',
+  testimonialThreeName: "Le Van Phuoc",
+  testimonialThreeRole: "CEO, Phu Quoc Gold Spices",
+  faqEyebrow: "សំណួរដែលសួរញឹកញាប់",
+  faqTitle: "ឆ្លើយសំណួរទូទៅរបស់អាជីវកម្ម។",
+  faqQ1: "VICATRA សមស្របសម្រាប់វិស័យណាខ្លះ?",
+  faqA1: "VICATRA គាំទ្រអ្នកផលិត FMCG អាហារ ភេសជ្ជៈ គ្រឿងទេស គ្រឿងសម្អាង និងផលិតផលថែទាំផ្ទាល់ខ្លួនដែលចង់ចូលស៊ុបភើម៉ាកែត និងបណ្តាញលក់រាយនៅកម្ពុជា។",
+  faqQ2: "តម្លៃសេវា VICATRA ប៉ុន្មាន?",
+  faqA2: "តម្លៃអាស្រ័យលើកញ្ចប់សេវា និងវិសាលភាពផលិតផល។ សូមទាក់ទងយើងដើម្បីទទួលបានសម្រង់តម្លៃលម្អិតតាមតម្រូវការ។",
+  faqQ3: "ត្រូវការពេលប៉ុន្មានដើម្បីឱ្យផលិតផលឡើងធ្នើ?",
+  faqA3: "ជាមធ្យម 4–12 សប្តាហ៍ អាស្រ័យលើភាពរួចរាល់នៃឯកសារ វិញ្ញាបនបត្រ និងបណ្តាញចែកចាយគោលដៅ។",
+  faqQ4: "អាជីវកម្មគួរត្រៀមអ្វីមុនធ្វើការជាមួយ VICATRA?",
+  faqA4: "កាតាឡុកផលិតផល វិញ្ញាបនបត្រគុណភាពមូលដ្ឋាន (បើមាន) ព័ត៌មានតម្លៃ និងសមត្ថភាពផ្គត់ផ្គង់។ VICATRA នឹងជួយបំពេញផ្នែកដែលនៅសល់។",
+  faqQ5: "VICATRA មានតំណាងនៅកម្ពុជាឬទេ?",
+  faqA5: "មាន។ VICATRA មានបណ្តាញដៃគូ និងអ្នកសហការនៅភ្នំពេញ ដើម្បីជួយភ្ជាប់ផ្ទាល់ជាមួយស៊ុបភើម៉ាកែត និងសមាគមអាជីវកម្ម។",
+  faqQ6: "បន្ទាប់ពីភ្ជាប់រួច VICATRA គាំទ្រអ្វីបន្ថែម?",
+  faqA6: "VICATRA តាមដានមតិត្រឡប់ទីផ្សារ ជួយកែលម្អវេចខ្ចប់ និងសារ ព្រមទាំងប្រឹក្សាយុទ្ធសាស្ត្រពង្រីកបណ្តាញចែកចាយ។",
+  contactEyebrow: "ទំនាក់ទំនង",
+  contactTitle: "ទទួលការវាយតម្លៃឱកាសផលិតផល។",
+  contactLead: "ផ្ញើព័ត៌មានផលិតផលរបស់អ្នក។ VICATRA នឹងប្រឹក្សាផ្លូវចូលទីផ្សារកម្ពុជាដែលអាចអនុវត្តបាន។",
+  formName: "ឈ្មោះពេញ",
+  formNamePlaceholder: "ឈ្មោះរបស់អ្នក",
+  formPhone: "ទូរស័ព្ទ / WhatsApp / Zalo",
+  formAddress: "អាសយដ្ឋាន",
+  formAddressPlaceholder: "ទីក្រុង, ប្រទេស",
+  formCompany: "ក្រុមហ៊ុន",
+  formCompanyPlaceholder: "ឈ្មោះក្រុមហ៊ុន",
+  formProduct: "ប្រភេទផលិតផល",
+  formProductPlaceholder: "ឧទាហរណ៍: គ្រឿងទេស, ភេសជ្ជៈ, អាហារវេចខ្ចប់...",
+  formSubmit: "ស្នើសុំប្រឹក្សា",
+  formNote: "VICATRA នឹងឆ្លើយតបឱ្យបានឆាប់បំផុត។",
+  formSending: "កំពុងផ្ញើព័ត៌មាន...",
+  formRateLimit: "សូមរង់ចាំ 1 នាទី មុនផ្ញើសំណើថ្មីម្តងទៀត។",
+  formSuccess: "{name}, សំណើរបស់អ្នកត្រូវបានផ្ញើរួចហើយ។ VICATRA នឹងឆ្លើយតបឱ្យបានឆាប់បំផុត។",
+  formError: "មិនទាន់អាចផ្ញើសំណើបានទេ។ សូមព្យាយាមម្តងទៀត ឬទាក់ទង VICATRA ដោយផ្ទាល់។",
+  footerDesc: "នាំផលិតផលវៀតណាមចូលប្រព័ន្ធលក់រាយកម្ពុជា។",
+  footerLinksTitle: "តំណភ្ជាប់",
+  footerContactTitle: "ទំនាក់ទំនង",
+  footerTop: "ត្រឡប់ទៅខាងលើ ↑",
+  languageModalEyebrow: "ជ្រើសរើសភាសា",
+  languageModalTitle: "តើអ្នកចង់មើលវេបសាយជាភាសាណា?",
 };
 
 const GOOGLE_SHEETS_WEB_APP_URL =
@@ -279,27 +425,34 @@ const form = document.querySelector("#leadForm");
 const note = document.querySelector("#formNote");
 const submitButton = form?.querySelector("button[type='submit']");
 const languageButtons = document.querySelectorAll("[data-lang]");
+const languageModal = document.querySelector("#languageModal");
+const languageChoiceButtons = document.querySelectorAll("[data-language-choice]");
 const revealItems = document.querySelectorAll(".reveal");
-let currentLanguage = localStorage.getItem("vicatra-language") || "vi";
+const savedLanguage = localStorage.getItem("vicatra-language");
+let currentLanguage = translations[savedLanguage] ? savedLanguage : "vi";
 
 function applyLanguage(language) {
+  if (!translations[language]) {
+    language = "vi";
+  }
+
   currentLanguage = language;
   localStorage.setItem("vicatra-language", language);
   document.documentElement.lang = language;
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.dataset.i18n;
-    element.textContent = translations[language][key] || translations.vi[key] || "";
+    element.textContent = translations[language]?.[key] || translations.vi[key] || "";
   });
 
   document.querySelectorAll("[data-i18n-html]").forEach((element) => {
     const key = element.dataset.i18nHtml;
-    element.innerHTML = translations[language][key] || translations.vi[key] || "";
+    element.innerHTML = translations[language]?.[key] || translations.vi[key] || "";
   });
 
   document.querySelectorAll("[data-placeholder]").forEach((element) => {
     const key = element.dataset.placeholder;
-    element.setAttribute("placeholder", translations[language][key] || translations.vi[key] || "");
+    element.setAttribute("placeholder", translations[language]?.[key] || translations.vi[key] || "");
   });
 
   languageButtons.forEach((button) => {
@@ -307,8 +460,34 @@ function applyLanguage(language) {
   });
 }
 
+function closeLanguageModal() {
+  languageModal?.classList.remove("open");
+  languageModal?.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("language-modal-open");
+}
+
+function openLanguageModal() {
+  languageModal?.classList.add("open");
+  languageModal?.setAttribute("aria-hidden", "false");
+  document.body.classList.add("language-modal-open");
+}
+
 languageButtons.forEach((button) => {
-  button.addEventListener("click", () => applyLanguage(button.dataset.lang));
+  button.addEventListener("click", () => {
+    applyLanguage(button.dataset.lang);
+
+    if (button.hasAttribute("data-language-choice")) {
+      closeLanguageModal();
+    }
+  });
+});
+
+languageChoiceButtons.forEach((button) => {
+  button.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeLanguageModal();
+    }
+  });
 });
 
 // Hamburger menu
@@ -342,14 +521,12 @@ form?.addEventListener("submit", async (event) => {
   // Rate Limiting Check (1 minute cooldown)
   const lastSubmitTime = localStorage.getItem("vicatra-last-submit");
   if (lastSubmitTime && Date.now() - parseInt(lastSubmitTime) < 60000) {
-    note.textContent = currentLanguage === "vi" 
-      ? "Vui lòng đợi 1 phút trước khi gửi yêu cầu mới." 
-      : "Please wait 1 minute before submitting again.";
+    note.textContent = translations[currentLanguage].formRateLimit;
     return;
   }
 
   const formData = new FormData(form);
-  const fallbackName = currentLanguage === "vi" ? "Quý khách" : "Thank you";
+  const fallbackName = currentLanguage === "vi" ? "Quý khách" : currentLanguage === "km" ? "អតិថិជន" : "Thank you";
   const name = formData.get("name")?.toString().trim() || fallbackName;
 
   if (!GOOGLE_SHEETS_WEB_APP_URL) {
@@ -408,3 +585,7 @@ if ("IntersectionObserver" in window) {
 }
 
 applyLanguage(currentLanguage);
+
+if (!savedLanguage || !translations[savedLanguage]) {
+  openLanguageModal();
+}

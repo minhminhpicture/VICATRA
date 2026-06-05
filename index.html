@@ -142,6 +142,7 @@
         <div class="lang-switch" aria-label="Language switcher">
           <button class="active" type="button" data-lang="vi">VI</button>
           <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="km">KM</button>
         </div>
         <a class="button header-cta" href="#contact" data-i18n="navCta">Tư vấn</a>
         <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false">
@@ -536,6 +537,29 @@
       </div>
       <a href="#top" data-i18n="footerTop">Lên đầu trang</a>
     </footer>
+
+    <div class="language-modal" id="languageModal" aria-hidden="true">
+      <div class="language-modal-backdrop"></div>
+      <section class="language-modal-panel" role="dialog" aria-modal="true" aria-labelledby="languageModalTitle">
+        <img src="assets/logo-vicatra.png" alt="VICATRA" />
+        <p class="eyebrow" data-i18n="languageModalEyebrow">Chọn ngôn ngữ</p>
+        <h2 id="languageModalTitle" data-i18n="languageModalTitle">Bạn muốn xem website bằng ngôn ngữ nào?</h2>
+        <div class="language-modal-actions">
+          <button type="button" data-lang="vi" data-language-choice>
+            <span>Tiếng Việt</span>
+            <small>VI</small>
+          </button>
+          <button type="button" data-lang="en" data-language-choice>
+            <span>English</span>
+            <small>EN</small>
+          </button>
+          <button type="button" data-lang="km" data-language-choice>
+            <span>ភាសាខ្មែរ</span>
+            <small>KM</small>
+          </button>
+        </div>
+      </section>
+    </div>
 
     <script src="script.js"></script>
   </body>

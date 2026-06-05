@@ -39,6 +39,10 @@ body::selection {
   background: var(--blue);
 }
 
+body.language-modal-open {
+  overflow: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -223,6 +227,119 @@ textarea {
 .header-cta {
   color: var(--white);
   background: var(--red);
+}
+
+.language-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.language-modal.open {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.language-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 26, 57, 0.62);
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.language-modal.open .language-modal-backdrop {
+  opacity: 1;
+}
+
+.language-modal-panel {
+  position: relative;
+  width: min(520px, 100%);
+  padding: clamp(24px, 5vw, 36px);
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0 28px 80px rgba(7, 26, 57, 0.28);
+  text-align: center;
+  transform: translateY(12px) scale(0.98);
+  opacity: 0;
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+.language-modal.open .language-modal-panel {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.language-modal-panel img {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 14px;
+  object-fit: contain;
+}
+
+.language-modal-panel .eyebrow {
+  margin-bottom: 8px;
+}
+
+.language-modal-panel h2 {
+  max-width: 420px;
+  margin: 0 auto 22px;
+  font-size: clamp(1.45rem, 4vw, 2rem);
+  line-height: 1.18;
+}
+
+.language-modal-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.language-modal-actions button {
+  display: flex;
+  min-height: 76px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--navy);
+  background: var(--paper);
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.language-modal-actions button:hover,
+.language-modal-actions button:focus-visible {
+  border-color: var(--red);
+  color: var(--white);
+  background: var(--red);
+  outline: 0;
+  transform: translateY(-2px);
+}
+
+.language-modal-actions span {
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.language-modal-actions small {
+  color: inherit;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
 }
 
 .hero {
@@ -1073,6 +1190,27 @@ textarea:focus {
 
   .hero-actions, .hero-actions .button { width: 100%; }
   .hero-visual img { aspect-ratio: 3 / 2; }
+
+  .language-modal {
+    padding: 16px;
+  }
+
+  .language-modal-panel {
+    padding: 24px 18px;
+  }
+
+  .language-modal-panel img {
+    width: 58px;
+    height: 58px;
+  }
+
+  .language-modal-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .language-modal-actions button {
+    min-height: 62px;
+  }
 
   .metrics, .service-grid, .pricing-grid, .testimonial-grid, .compare-grid, .gallery-grid {
     grid-template-columns: 1fr;
