@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thế Giới Chay x VICATRA | Catalog sản phẩm chay Việt</title>
+    <meta
+      name="description"
+      content="Catalog sản phẩm Thế Giới Chay được VICATRA tổng hợp từ hai trang sản phẩm công khai, phục vụ xúc tiến thương mại và kết nối kênh bán lẻ."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vicatra.com/the-gioi-chay" />
+    <meta property="og:site_name" content="VICATRA" />
+    <meta property="og:title" content="Thế Giới Chay x VICATRA | Catalog sản phẩm chay Việt" />
+    <meta
+      property="og:description"
+      content="Catalog sản phẩm đơn lẻ từ Thế Giới Chay, phục vụ khách xem mẫu và liên hệ VICATRA để báo giá sỉ."
+    />
+    <meta property="og:image" content="https://vicatra.com/assets/og-vicatra.jpg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+Khmer:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="the-gioi-chay.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Thế Giới Chay x VICATRA",
+        "url": "https://vicatra.com/the-gioi-chay",
+        "description": "Catalog sản phẩm chay Việt do VICATRA tổng hợp để phục vụ xúc tiến thương mại."
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="VICATRA">
+        <img src="assets/logo-vicatra.png" alt="VICATRA" />
+        <span>VICATRA</span>
+      </a>
+      <nav class="nav" aria-label="Điều hướng catalog">
+        <a href="#products" data-i18n="navProducts">Sản phẩm</a>
+        <a href="#contact" data-i18n="navContact">Liên hệ</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Language switcher">
+          <button class="active" type="button" data-lang="vi">VI</button>
+          <button type="button" data-lang="km">KM</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <a class="button primary" href="https://zalo.me/0907215521" data-i18n="quoteCta">Báo giá sỉ</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">Catalog sản phẩm chay Việt</p>
+          <h1 data-i18n="heroTitle">Thế Giới Chay cho kênh bán lẻ Campuchia.</h1>
+          <p class="lead" data-i18n="heroLead">
+            Catalog sản phẩm đơn lẻ để khách xem mẫu nhanh. Chọn sản phẩm cần quan tâm và liên hệ VICATRA
+            qua Zalo hoặc Telegram để nhận báo giá sỉ.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#products" data-i18n="viewCatalog">Xem catalog</a>
+            <a class="button secondary" href="https://zalo.me/0907215521" data-i18n="quoteCta">Báo giá sỉ</a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <strong id="productCount">12</strong>
+          <span data-i18n="singleProducts">sản phẩm đơn lẻ</span>
+          <small data-i18n="heroNote">Catalog tập trung vào từng SKU để khách dễ chọn mẫu và hỏi giá sỉ</small>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="Bộ lọc sản phẩm">
+        <label class="search-box">
+          <span data-i18n="searchLabel">Tìm sản phẩm</span>
+          <input id="searchInput" type="search" placeholder="Nhập tên, SKU hoặc nhóm hàng..." />
+        </label>
+        <div class="filter-tabs" id="categoryTabs" aria-label="Nhóm sản phẩm"></div>
+      </section>
+
+      <section class="catalog" id="products" aria-live="polite">
+        <div class="catalog-heading">
+          <div>
+            <p class="eyebrow" data-i18n="catalogEyebrow">Danh mục</p>
+            <h2 data-i18n="catalogTitle">Sản phẩm đơn lẻ, dễ xem mẫu và hỏi giá sỉ.</h2>
+          </div>
+          <p id="resultCount"></p>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="contact-band" id="contact">
+        <div>
+          <p class="eyebrow">VICATRA</p>
+          <h2 data-i18n="contactTitle">Cần báo giá sỉ hoặc tư vấn phân phối?</h2>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="https://zalo.me/0907215521" data-i18n="zaloQuote">Zalo 0907 215 521</a>
+          <a class="button secondary dark" href="https://t.me/0907215521" data-i18n="telegramQuote">Telegram 0907 215 521</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 VICATRA</span>
+      <a href="/">Về trang chủ</a>
+    </footer>
+
+    <script src="the-gioi-chay.js"></script>
+  </body>
+</html>

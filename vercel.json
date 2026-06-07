@@ -4,6 +4,10 @@
     {
       "source": "/",
       "destination": "/index.html"
+    },
+    {
+      "source": "/the-gioi-chay",
+      "destination": "/the-gioi-chay.html"
     }
   ],
   "headers": [
