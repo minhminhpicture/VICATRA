@@ -514,6 +514,23 @@ drawerClose?.addEventListener("click", closeDrawer);
 drawerOverlay?.addEventListener("click", closeDrawer);
 drawerLinks?.forEach((link) => link.addEventListener("click", closeDrawer));
 
+// Trade Tab Switcher
+const tradeTabBtns = document.querySelectorAll(".trade-tab-btn");
+const tradeTabContents = document.querySelectorAll(".trade-tab-content");
+
+tradeTabBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const targetTab = btn.getAttribute("data-tab");
+
+    tradeTabBtns.forEach((b) => b.classList.remove("active"));
+    tradeTabContents.forEach((c) => c.classList.remove("active"));
+
+    btn.classList.add("active");
+    const content = document.getElementById(targetTab);
+    if (content) content.classList.add("active");
+  });
+});
+
 // Form submission
 form?.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -521,7 +538,7 @@ form?.addEventListener("submit", async (event) => {
   // Rate Limiting Check (1 minute cooldown)
   const lastSubmitTime = localStorage.getItem("vicatra-last-submit");
   if (lastSubmitTime && Date.now() - parseInt(lastSubmitTime) < 60000) {
-    note.textContent = translations[currentLanguage].formRateLimit;
+    if (note) note.textContent = translations[currentLanguage]?.formRateLimit || "Bạn vừa gửi thông tin. Vui lòng đợi 1 phút.";
     return;
   }
 
@@ -530,24 +547,28 @@ form?.addEventListener("submit", async (event) => {
   const name = formData.get("name")?.toString().trim() || fallbackName;
 
   if (!GOOGLE_SHEETS_WEB_APP_URL) {
-    note.textContent = translations[currentLanguage].formError;
+    if (note) note.textContent = translations[currentLanguage]?.formError || "Chưa cấu hình URL kết nối Google Sheets.";
     return;
   }
 
   const payload = {
+    company: formData.get("company")?.toString().trim() || "",
+    tax_id: formData.get("tax_id")?.toString().trim() || "",
     name: name,
     phone: formData.get("phone")?.toString().trim() || "",
+    website: formData.get("website")?.toString().trim() || "",
     address: formData.get("address")?.toString().trim() || "",
-    company: formData.get("company")?.toString().trim() || "",
     category: formData.get("category")?.toString().trim() || "",
-    shelves_count: formData.get("shelves_count")?.toString().trim() || "1",
+    product_count: formData.get("product_count")?.toString().trim() || "1",
+    demand: formData.get("demand")?.toString().trim() || "",
+    target_market: formData.get("target_market")?.toString().trim() || "",
     product: formData.get("product")?.toString().trim() || "",
     language: currentLanguage,
     page: window.location.href,
   };
 
-  note.textContent = translations[currentLanguage].formSending;
-  submitButton.disabled = true;
+  if (note) note.textContent = translations[currentLanguage]?.formSending || "Đang gửi hồ sơ doanh nghiệp...";
+  if (submitButton) submitButton.disabled = true;
 
   try {
     await fetch(GOOGLE_SHEETS_WEB_APP_URL, {
@@ -557,14 +578,15 @@ form?.addEventListener("submit", async (event) => {
       body: JSON.stringify(payload),
     });
 
-    note.textContent = translations[currentLanguage].formSuccess.replace("{name}", name);
+    const successMsg = translations[currentLanguage]?.formSuccess || "Cảm ơn {name}! VICATRA đã nhận hồ sơ và sẽ phản hồi trong 24h.";
+    if (note) note.textContent = successMsg.replace("{name}", name);
     localStorage.setItem("vicatra-last-submit", Date.now().toString());
     form.reset();
   } catch (error) {
     console.error("Lỗi gửi form:", error);
-    note.textContent = translations[currentLanguage].formError;
+    if (note) note.textContent = translations[currentLanguage]?.formError || "Có lỗi xảy ra. Vui lòng liên hệ Hotline 0907 215 521.";
   } finally {
-    submitButton.disabled = false;
+    if (submitButton) submitButton.disabled = false;
   }
 });
 

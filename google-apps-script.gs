@@ -22,12 +22,16 @@ function doPost(e) {
     const rowData = [
       new Date(),
       data.language || "",
+      data.company || "",
+      data.tax_id || "",
       data.name || "",
       data.phone || "",
+      data.website || "",
       data.address || "",
-      data.company || "",
       data.category || "",
-      data.shelves_count || "1",
+      data.product_count || "",
+      data.demand || "",
+      data.target_market || "",
       data.product || "",
       data.page || ""
     ];
@@ -57,12 +61,16 @@ function getOrCreateSheet_(spreadsheet) {
     sheet.appendRow([
       "Thoi gian",
       "Ngon ngu",
-      "Ho va ten",
+      "Ten Doanh nghiep",
+      "MST",
+      "Ho va ten đại diện",
       "Dien thoai / Zalo",
-      "Dia chi",
-      "Doanh nghiep",
-      "Nhom san pham",
-      "So luong ke",
+      "Website",
+      "Dia chi nhà máy",
+      "Nganh hang",
+      "So luong SP",
+      "Nhu cau chinh",
+      "Thi truong muc tieu",
       "Mo ta chi tiet",
       "Trang gui"
     ]);
