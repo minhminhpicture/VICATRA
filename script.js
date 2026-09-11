@@ -463,13 +463,13 @@ function applyLanguage(language) {
 function closeLanguageModal() {
   languageModal?.classList.remove("open");
   languageModal?.setAttribute("aria-hidden", "true");
-  document.body.classList.remove("language-modal-open");
+  document.body.classList.remove("no-scroll");
 }
 
 function openLanguageModal() {
   languageModal?.classList.add("open");
   languageModal?.setAttribute("aria-hidden", "false");
-  document.body.classList.add("language-modal-open");
+  document.body.classList.add("no-scroll");
 }
 
 languageButtons.forEach((button) => {
@@ -494,7 +494,7 @@ languageChoiceButtons.forEach((button) => {
 const hamburger = document.querySelector(".hamburger");
 const drawer = document.querySelector("#mobileDrawer");
 const drawerClose = drawer?.querySelector(".drawer-close");
-const drawerOverlay = drawer?.querySelector(".drawer-overlay");
+const drawerOverlay = drawer?.querySelector(".drawer-backdrop");
 const drawerLinks = drawer?.querySelectorAll(".drawer-nav a");
 
 function openDrawer() {
@@ -515,8 +515,8 @@ drawerOverlay?.addEventListener("click", closeDrawer);
 drawerLinks?.forEach((link) => link.addEventListener("click", closeDrawer));
 
 // Trade Tab Switcher
-const tradeTabBtns = document.querySelectorAll(".trade-tab-btn");
-const tradeTabContents = document.querySelectorAll(".trade-tab-content");
+const tradeTabBtns = document.querySelectorAll(".tab-btn");
+const tradeTabContents = document.querySelectorAll(".tab-content");
 
 tradeTabBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -596,7 +596,7 @@ if ("IntersectionObserver" in window) {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
+          entry.target.classList.add("visible");
           revealObserver.unobserve(entry.target);
         }
       });
@@ -605,7 +605,7 @@ if ("IntersectionObserver" in window) {
   );
   revealItems.forEach((item) => revealObserver.observe(item));
 } else {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
+  revealItems.forEach((item) => item.classList.add("visible"));
 }
 
 applyLanguage(currentLanguage);
