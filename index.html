@@ -92,17 +92,24 @@
 <div class="reading-bar" id="readingStatusBar">
   <div class="reading-bar-inner">
     <div class="reading-bar-current">
-      <span class="reading-bar-label" data-i18n="readingLabel">Đang đọc:</span>
+      <span class="reading-ch-pill" id="readingChPill">01/07</span>
       <strong class="reading-bar-title" id="currentChapterTitle" data-i18n="readingIntro">Tổng quan VICATRA Trade Platform</strong>
     </div>
-    <div class="reading-bar-next">
+
+    <!-- Mobile Table of Contents button / remaining count -->
+    <button class="reading-mobile-toggle" id="readingMobileToggle" type="button" aria-label="Xem mục lục cuốn sách">
+      <span class="remaining-text" id="remainingCountText">Còn 6 phần</span>
+      <span class="toc-icon">☰</span>
+    </button>
+
+    <div class="reading-bar-next" id="readingBarNext">
       <span class="next-tag" data-i18n="readingNext">Tiếp theo:</span>
       <a href="#reason" id="nextChapterLink" data-i18n="ch01Title">Chương 01: Thách Thức Thị Trường →</a>
     </div>
   </div>
 </div>
 
-<!-- Chapter Navigator Sidebar -->
+<!-- Chapter Navigator Sidebar (Desktop) -->
 <aside class="chapter-nav" id="chapterNavigator" aria-label="Mục lục">
   <div class="chapter-nav-head">
     <span data-i18n="navToc">Mục lục hành trình</span>
@@ -118,6 +125,53 @@
     <li><a href="#register" data-chapter="7"><span class="ch-num">07</span><span data-i18n="ch07Short">Đăng Ký</span></a></li>
   </ul>
 </aside>
+
+<!-- Mobile Chapter Bottom Sheet (Mục lục hành trình trên Mobile) -->
+<div class="chapter-sheet" id="chapterSheet" aria-hidden="true">
+  <div class="sheet-backdrop" id="sheetBackdrop"></div>
+  <div class="sheet-panel">
+    <div class="sheet-handle"></div>
+    <div class="sheet-header">
+      <div>
+        <span class="sheet-eyebrow" data-i18n="sheetProgress">TIẾN TRÌNH ĐỌC</span>
+        <h3 class="sheet-title" id="sheetTitleSummary">Chương 01 / 07 · Còn 6 phần</h3>
+      </div>
+      <button class="sheet-close" id="sheetClose" type="button" aria-label="Đóng mục lục">×</button>
+    </div>
+
+    <!-- Visual 7-step dot line -->
+    <div class="sheet-progress-wrap">
+      <div class="sheet-progress-bar">
+        <div class="sheet-progress-fill" id="sheetProgressFill" style="width: 14%;"></div>
+      </div>
+      <div class="sheet-dots" id="sheetDots">
+        <span class="dot active">1</span>
+        <span class="dot">2</span>
+        <span class="dot">3</span>
+        <span class="dot">4</span>
+        <span class="dot">5</span>
+        <span class="dot">6</span>
+        <span class="dot">7</span>
+      </div>
+    </div>
+
+    <!-- Chapter list with interactive status -->
+    <div class="sheet-list" id="sheetList">
+      <!-- Generated dynamically by script.js -->
+    </div>
+
+    <div class="sheet-footer">
+      <a class="btn btn--primary" href="#register" style="width:100%;justify-content:center" data-i18n="heroPrimary">Đăng ký doanh nghiệp</a>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Floating Reader Indicator (Sticky bottom pill) -->
+<button class="mobile-reader-pill" id="mobileReaderPill" type="button" aria-label="Xem tiến trình đọc">
+  <span class="pill-ch" id="pillCh">01/07</span>
+  <span class="pill-title" id="pillTitle">Chương 01: Thách Thức</span>
+  <span class="pill-remaining" id="pillRemaining">Còn 6 phần ▴</span>
+</button>
 
 <!-- Mobile Drawer -->
 <div class="mobile-drawer" id="mobileDrawer">
@@ -330,7 +384,7 @@
       <article class="pillar-card">
         <span class="pillar-num">01</span>
         <div class="pillar-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <h3 data-i18n="pillar1Title">Vietnam Factory Showroom</h3>
+        <h3 data-i18n="pillar1Title">VICATRA Showroom Phnom Penh</h3>
         <p data-i18n="pillar1Text">Không gian giới thiệu và trưng bày sản phẩm Việt chất lượng cao tại vị trí đắc địa trung tâm Phnom Penh.</p>
       </article>
       <article class="pillar-card">
@@ -658,14 +712,14 @@
     </div>
 
     <div class="register-box reveal">
-      <h4 style="text-align:center;margin-bottom:16px;color:var(--navy)" data-i18n="reqHeading">Điều kiện &amp; Tiêu chuẩn tham gia VFS</h4>
+      <h4 style="text-align:center;margin-bottom:16px;color:var(--navy)" data-i18n="reqHeading">Điều kiện &amp; Tiêu chuẩn tham gia VICATRA</h4>
       <div class="requirements-grid">
         <div class="req-card">
           <strong data-i18n="req1Title">01. Sản xuất tại Việt Nam</strong>
           <p data-i18n="req1Text">Doanh nghiệp có nhà máy sản xuất trực tiếp tại Việt Nam (Made in Vietnam).</p>
         </div>
         <div class="req-card">
-          <strong data-i18n="req2Title">02. Tiêu chuẩn thẩm định VFS</strong>
+          <strong data-i18n="req2Title">02. Tiêu chuẩn thẩm định VICATRA</strong>
           <p data-i18n="req2Text">Đáp ứng tiêu chí thẩm định: Nguồn gốc xuất xứ, chứng chỉ lưu hành, quy trình và năng lực sản xuất.</p>
         </div>
       </div>

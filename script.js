@@ -1,6 +1,7 @@
 /* ============================================================
    VICATRA — Vietnam Cambodia Trade Platform
-   Complete Multilingual (VI / EN / KM) Script Engine v3.2
+   Complete Multilingual (VI / EN / KM) Script Engine v3.3
+   With Mobile Chapter Progress & Table of Contents Sheet
    ============================================================ */
 
 const translations = {
@@ -23,13 +24,13 @@ const translations = {
     nextLabel: "Tiếp theo",
 
     ch01Title: "Chương 01: Thách Thức Thị Trường →",
-    ch01Short: "Thách Thức",
-    ch02Short: "Giải Pháp",
-    ch03Short: "4 Trụ Cột",
-    ch04Short: "Showroom",
-    ch05Short: "Ngành Hàng",
-    ch06Short: "Nền Tảng Số",
-    ch07Short: "Đăng Ký",
+    ch01Short: "Thách Thức Thị Trường",
+    ch02Short: "Hệ Sinh Thái Giải Pháp",
+    ch03Short: "4 Trụ Cột Năng Lực",
+    ch04Short: "Showroom & KVFCA",
+    ch05Short: "Danh Mục Ngành Hàng",
+    ch06Short: "Nền Tảng Số & App",
+    ch07Short: "Đăng Ký & Kết Nối B2B",
 
     next01: "Chương 02 — Hệ Sinh Thái Giải Pháp VICATRA →",
     next02: "Chương 03 — 4 Trụ Cột Năng Lực →",
@@ -37,6 +38,16 @@ const translations = {
     next04: "Chương 05 — Danh Mục Ngành Hàng →",
     next05: "Chương 06 — Nền Tảng Số & VICATRA App →",
     next06: "Chương 07 — Đăng Ký & Kết Nối B2B →",
+
+    /* Mobile Sheet & Progress */
+    sheetProgress: "TIẾN TRÌNH ĐỌC",
+    sheetSummary: "Chương {curr} / {total} · Còn {rem} phần",
+    sheetOverview: "Tổng quan VICATRA · Còn 7 phần",
+    statusRead: "Đã đọc",
+    statusReading: "Đang đọc",
+    statusRemaining: "Còn lại",
+    remainingBadge: "Còn {rem} phần",
+    completedBadge: "Hoàn thành ✓",
 
     heroEyebrow: "CONNECT VIETNAM · GROW IN CAMBODIA",
     heroTitle: "Đưa hàng Việt<br><span>vươn xa Campuchia</span>",
@@ -98,7 +109,7 @@ const translations = {
     ch03Label: "4 Trụ cột năng lực",
     ch03Heading: "Nền Tảng Vững Chắc Cho Doanh Nghiệp Việt",
     ch03Lead: "Giải pháp tối ưu hóa mọi công đoạn xuất khẩu và phát triển kênh phân phối tại Campuchia.",
-    pillar1Title: "Vietnam Factory Showroom",
+    pillar1Title: "VICATRA Showroom Phnom Penh",
     pillar1Text: "Không gian giới thiệu và trưng bày sản phẩm Việt chất lượng cao tại vị trí đắc địa trung tâm Phnom Penh.",
     pillar2Title: "Kết Nối Giao Thương",
     pillar2Text: "Kết nối doanh nghiệp Việt với Importer, Distributor, Retailer và các Hiệp hội thương mại bản địa tại Campuchia.",
@@ -231,10 +242,10 @@ const translations = {
     ch07Label: "Đăng ký tham gia",
     ch07Heading: "Sẵn sàng đưa sản phẩm đến thị trường Campuchia?",
     ch07Lead: "Điền thông tin hồ sơ doanh nghiệp để nhận tư vấn gian hàng và cơ hội kết nối B2B trong 24h.",
-    reqHeading: "Điều kiện & Tiêu chuẩn tham gia VFS",
+    reqHeading: "Điều kiện & Tiêu chuẩn tham gia VICATRA",
     req1Title: "01. Sản xuất tại Việt Nam",
     req1Text: "Doanh nghiệp có nhà máy sản xuất trực tiếp tại Việt Nam (Made in Vietnam).",
-    req2Title: "02. Tiêu chuẩn thẩm định VFS",
+    req2Title: "02. Tiêu chuẩn thẩm định VICATRA",
     req2Text: "Đáp ứng tiêu chí thẩm định: Nguồn gốc xuất xứ, chứng chỉ lưu hành, quy trình và năng lực sản xuất.",
 
     formCompany: "Tên Công ty / Nhà máy *",
@@ -305,13 +316,13 @@ const translations = {
     nextLabel: "Next Chapter",
 
     ch01Title: "Chapter 01: Market Challenges →",
-    ch01Short: "Challenges",
-    ch02Short: "Solutions",
-    ch03Short: "4 Pillars",
-    ch04Short: "Showroom",
-    ch05Short: "Categories",
-    ch06Short: "Digital Hub",
-    ch07Short: "Register",
+    ch01Short: "Market Challenges",
+    ch02Short: "Solution Ecosystem",
+    ch03Short: "4 Core Pillars",
+    ch04Short: "Showroom & KVFCA",
+    ch05Short: "Target Categories",
+    ch06Short: "Digital Hub & App",
+    ch07Short: "Register & Connect",
 
     next01: "Chapter 02 — VICATRA Solution Ecosystem →",
     next02: "Chapter 03 — 4 Core Competency Pillars →",
@@ -319,6 +330,16 @@ const translations = {
     next04: "Chapter 05 — Target Product Categories →",
     next05: "Chapter 06 — Digital Platform & App →",
     next06: "Chapter 07 — Registration & B2B Matchmaking →",
+
+    /* Mobile Sheet & Progress */
+    sheetProgress: "READING PROGRESS",
+    sheetSummary: "Chapter {curr} of {total} · {rem} remaining",
+    sheetOverview: "VICATRA Overview · 7 chapters remaining",
+    statusRead: "Read",
+    statusReading: "Reading",
+    statusRemaining: "Upcoming",
+    remainingBadge: "{rem} left",
+    completedBadge: "Completed ✓",
 
     heroEyebrow: "CONNECT VIETNAM · GROW IN CAMBODIA",
     heroTitle: "Empower Vietnamese Brands<br><span>to Expand in Cambodia</span>",
@@ -380,7 +401,7 @@ const translations = {
     ch03Label: "4 Core Pillars",
     ch03Heading: "Solid Foundation for Vietnamese Enterprises",
     ch03Lead: "Comprehensive solutions optimizing every phase of export and distribution in Cambodia.",
-    pillar1Title: "Vietnam Factory Showroom",
+    pillar1Title: "VICATRA Showroom Phnom Penh",
     pillar1Text: "High-standard showroom space showcasing quality Vietnamese goods in central Phnom Penh.",
     pillar2Title: "B2B Trade Matching",
     pillar2Text: "Direct linkages with Cambodian Importers, Distributors, Retailers, and local Business Chambers.",
@@ -513,10 +534,10 @@ const translations = {
     ch07Label: "Registration",
     ch07Heading: "Ready to Expand Your Products to Cambodia?",
     ch07Lead: "Submit your business profile to receive booth assessment and B2B matchmaking within 24 hours.",
-    reqHeading: "VFS Eligibility & Qualification Standards",
+    reqHeading: "VICATRA Eligibility & Qualification Standards",
     req1Title: "01. Made in Vietnam",
     req1Text: "Enterprise must own or operate manufacturing facilities in Vietnam.",
-    req2Title: "02. VFS Assessment Criteria",
+    req2Title: "02. VICATRA Assessment Criteria",
     req2Text: "Clear traceability, valid circulation licenses, and verified manufacturing capability.",
 
     formCompany: "Company / Factory Name *",
@@ -587,13 +608,13 @@ const translations = {
     nextLabel: "បន្ទាប់",
 
     ch01Title: "ជំពូក ០១: បញ្ហាប្រឈមទីផ្សារ →",
-    ch01Short: "បញ្ហាប្រឈម",
-    ch02Short: "ដំណោះស្រាយ",
+    ch01Short: "បញ្ហាប្រឈមទីផ្សារ",
+    ch02Short: "ប្រព័ន្ធដំណោះស្រាយ",
     ch03Short: "សសរស្តម្ភ ៤",
-    ch04Short: "បន្ទប់តាំង",
-    ch05Short: "វិស័យទំនិញ",
-    ch06Short: "វេទិកាឌីជីថល",
-    ch07Short: "ចុះឈ្មោះ",
+    ch04Short: "បន្ទប់តាំង & KVFCA",
+    ch05Short: "វិស័យទំនិញគោលដៅ",
+    ch06Short: "វេទិកាឌីជីថល & App",
+    ch07Short: "ចុះឈ្មោះ និងតភ្ជាប់ B2B",
 
     next01: "ជំពូក ០២ — ប្រព័ន្ធដំណោះស្រាយ VICATRA →",
     next02: "ជំពូក ០៣ — សសរស្តម្ភសមត្ថភាពទាំង ៤ →",
@@ -601,6 +622,16 @@ const translations = {
     next04: "ជំពូក ០៥ — បញ្ជីវិស័យទំនិញគោលដៅ →",
     next05: "ជំពូក ០៦ — វេទិកាឌីជីថល និង App →",
     next06: "ជំពូក ០៧ — ចុះឈ្មោះ និងតភ្ជាប់ B2B →",
+
+    /* Mobile Sheet & Progress */
+    sheetProgress: "ដំណើរការអាន",
+    sheetSummary: "ជំពូក {curr} / {total} · នៅសល់ {rem} ផ្នែក",
+    sheetOverview: "ទិដ្ឋភាពទូទៅនៃ VICATRA · នៅសល់ ៧ ផ្នែក",
+    statusRead: "បានអានរួច",
+    statusReading: "កំពុងអាន",
+    statusRemaining: "នៅសល់",
+    remainingBadge: "នៅសល់ {rem}",
+    completedBadge: "រួចរាល់ ✓",
 
     heroEyebrow: "ភ្ជាប់ទំនិញវៀតណាម · រីកចម្រើននៅកម្ពុជា",
     heroTitle: "នាំទំនិញវៀតណាម<br><span>ចូលទីផ្សារកម្ពុជា</span>",
@@ -662,7 +693,7 @@ const translations = {
     ch03Label: "សសរស្តម្ភសមត្ថភាពទាំង ៤",
     ch03Heading: "គ្រឹះដ៏រឹងមាំសម្រាប់អាជីវកម្មវៀតណាម",
     ch03Lead: "ដំណោះស្រាយសម្រួលគ្រប់ដំណាក់កាលនាំចេញ និងអភិវឌ្ឍន៍បណ្តាញចែកចាយនៅកម្ពុជា។",
-    pillar1Title: "បន្ទប់តាំងបង្ហាញរោងចក្រវៀតណាម",
+    pillar1Title: "បន្ទប់តាំងបង្ហាញ VICATRA ភ្នំពេញ",
     pillar1Text: "ទីកន្លែងបង្ហាញផលិតផលវៀតណាមគុណភាពខ្ពស់នៅកណ្តាលរាជធានីភ្នំពេញ។",
     pillar2Title: "ការតភ្ជាប់ពាណិជ្ជកម្ម B2B",
     pillar2Text: "តភ្ជាប់អាជីវកម្មវៀតណាមជាមួយអ្នកនាំចូល អ្នកចែកចាយ និងសមាគមពាណិជ្ជកម្ម។",
@@ -795,10 +826,10 @@ const translations = {
     ch07Label: "ការចុះឈ្មោះ",
     ch07Heading: "ត្រៀមខ្លួនរួចរាល់ដើម្បីនាំទំនិញចូលទីផ្សារកម្ពុជា?",
     ch07Lead: "បំពេញព័ត៌មានអាជីវកម្មដើម្បីទទួលបានការប្រឹក្សាអំពីស្តង់ និងឱកាសតភ្ជាប់ B2B ក្នុង ២៤ ម៉ោង។",
-    reqHeading: "លក្ខខណ្ឌ និងស្តង់ដារចូលរួម VFS",
+    reqHeading: "លក្ខខណ្ឌ និងស្តង់ដារចូលរួម VICATRA",
     req1Title: "០១. ផលិតនៅវៀតណាម",
     req1Text: "អាជីវកម្មមានរោងចក្រផលិតផ្ទាល់នៅប្រទេសវៀតណាម (Made in Vietnam)។",
-    req2Title: "០២. ស្តង់ដារវាយតម្លៃ VFS",
+    req2Title: "០២. ស្តង់ដារវាយតម្លៃ VICATRA",
     req2Text: "ឆ្លើយតបលក្ខណៈវិនិច្ឆ័យ៖ ប្រភពដើម វិញ្ញាបនបត្រចរាចរ និងសមត្ថភាពផលិតកម្ម។",
 
     formCompany: "ឈ្មោះក្រុមហ៊ុន / រោងចក្រ *",
@@ -882,7 +913,7 @@ function applyLanguage(lang) {
     }
   });
 
-  // HTML content (for linebreaks/spans)
+  // HTML content
   document.querySelectorAll("[data-i18n-html]").forEach((el) => {
     const key = el.dataset.i18nHtml;
     if (translations[lang]?.[key]) {
@@ -907,7 +938,7 @@ function applyLanguage(lang) {
     btn.classList.toggle("active", btn.dataset.lang === lang);
   });
 
-  // Update dynamic chapter bar
+  // Update dynamic reading progress & bottom sheet
   updateReadingProgress();
 }
 
@@ -935,6 +966,9 @@ languageButtons.forEach((button) => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && languageModal?.classList.contains("open")) {
     closeLanguageModal();
+  }
+  if (e.key === "Escape" && chapterSheet?.classList.contains("open")) {
+    closeChapterSheet();
   }
 });
 
@@ -981,7 +1015,6 @@ tabBtns.forEach((btn) => {
 form?.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  // Rate Limiting (1 minute cooldown)
   const lastSubmitTime = localStorage.getItem("vicatra-last-submit");
   if (lastSubmitTime && Date.now() - parseInt(lastSubmitTime) < 60000) {
     if (note) note.textContent = translations[currentLanguage]?.formRateLimit || "Bạn vừa gửi thông tin. Vui lòng đợi 1 phút.";
@@ -1047,15 +1080,15 @@ if ("IntersectionObserver" in window) {
   revealItems.forEach((item) => item.classList.add("visible"));
 }
 
-/* ── Reading Progress & Chapter Navigator ──────────────────── */
+/* ── Reading Progress & Chapter Engine ─────────────────────── */
 const chapters = [
-  { id: "reason", titleKey: "ch01Title", nextId: "about", nextKey: "next01" },
-  { id: "about", titleKey: "next01", nextId: "pillars", nextKey: "next02" },
-  { id: "pillars", titleKey: "next02", nextId: "showroom", nextKey: "next03" },
-  { id: "showroom", titleKey: "next03", nextId: "categories", nextKey: "next04" },
-  { id: "categories", titleKey: "next04", nextId: "app", nextKey: "next05" },
-  { id: "app", titleKey: "next05", nextId: "register", nextKey: "next06" },
-  { id: "register", titleKey: "next06", nextId: "top", nextKey: "navHome" },
+  { id: "reason", num: "01", titleKey: "ch01Short", nextId: "about", nextKey: "next01" },
+  { id: "about", num: "02", titleKey: "ch02Short", nextId: "pillars", nextKey: "next02" },
+  { id: "pillars", num: "03", titleKey: "ch03Short", nextId: "showroom", nextKey: "next03" },
+  { id: "showroom", num: "04", titleKey: "ch04Short", nextId: "categories", nextKey: "next04" },
+  { id: "categories", num: "05", titleKey: "ch05Short", nextId: "app", nextKey: "next05" },
+  { id: "app", num: "06", titleKey: "ch06Short", nextId: "register", nextKey: "next06" },
+  { id: "register", num: "07", titleKey: "ch07Short", nextId: "top", nextKey: "navHome" },
 ];
 
 const progressBar = document.getElementById("readingProgressBar");
@@ -1065,11 +1098,129 @@ const chapterNavLinks = document.querySelectorAll(".chapter-nav-list a");
 const chapterNavigator = document.getElementById("chapterNavigator");
 const chapterNavToggle = document.getElementById("chapterNavToggle");
 
+/* Mobile elements */
+const readingChPill = document.getElementById("readingChPill");
+const remainingCountText = document.getElementById("remainingCountText");
+const readingMobileToggle = document.getElementById("readingMobileToggle");
+const mobileReaderPill = document.getElementById("mobileReaderPill");
+const pillCh = document.getElementById("pillCh");
+const pillTitle = document.getElementById("pillTitle");
+const pillRemaining = document.getElementById("pillRemaining");
+
+/* Mobile Bottom Sheet */
+const chapterSheet = document.getElementById("chapterSheet");
+const sheetBackdrop = document.getElementById("sheetBackdrop");
+const sheetClose = document.getElementById("sheetClose");
+const sheetTitleSummary = document.getElementById("sheetTitleSummary");
+const sheetProgressFill = document.getElementById("sheetProgressFill");
+const sheetDots = document.querySelectorAll("#sheetDots .dot");
+const sheetList = document.getElementById("sheetList");
+
+function openChapterSheet() {
+  chapterSheet?.classList.add("open");
+  chapterSheet?.setAttribute("aria-hidden", "false");
+  document.body.classList.add("no-scroll");
+}
+
+function closeChapterSheet() {
+  chapterSheet?.classList.remove("open");
+  chapterSheet?.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("no-scroll");
+}
+
+readingMobileToggle?.addEventListener("click", openChapterSheet);
+mobileReaderPill?.addEventListener("click", openChapterSheet);
+sheetClose?.addEventListener("click", closeChapterSheet);
+sheetBackdrop?.addEventListener("click", closeChapterSheet);
+
 chapterNavToggle?.addEventListener("click", () => {
   chapterNavigator?.classList.toggle("collapsed");
   const isCollapsed = chapterNavigator?.classList.contains("collapsed");
   if (chapterNavToggle) chapterNavToggle.textContent = isCollapsed ? "▶" : "◀";
 });
+
+/* Render Chapter Bottom Sheet with live read/remaining status */
+function renderChapterSheet(activeIndex, lang) {
+  if (!sheetList) return;
+
+  const total = chapters.length;
+  const currentNum = activeIndex >= 0 ? activeIndex + 1 : 0;
+  const remaining = activeIndex >= 0 ? total - currentNum : total;
+
+  if (sheetTitleSummary) {
+    if (activeIndex >= 0) {
+      const summaryTpl = translations[lang]?.sheetSummary || "Chương {curr} / {total} · Còn {rem} phần";
+      sheetTitleSummary.textContent = summaryTpl
+        .replace("{curr}", "0" + currentNum)
+        .replace("{total}", "0" + total)
+        .replace("{rem}", remaining);
+    } else {
+      sheetTitleSummary.textContent = translations[lang]?.sheetOverview || "Tổng quan VICATRA · Còn 7 phần";
+    }
+  }
+
+  if (sheetProgressFill) {
+    const percent = activeIndex >= 0 ? Math.round((currentNum / total) * 100) : 5;
+    sheetProgressFill.style.width = percent + "%";
+  }
+
+  // Update dots
+  sheetDots.forEach((dot, dotIdx) => {
+    dot.classList.remove("completed", "active");
+    if (dotIdx < activeIndex) {
+      dot.classList.add("completed");
+      dot.textContent = "✓";
+    } else if (dotIdx === activeIndex) {
+      dot.classList.add("active");
+      dot.textContent = dotIdx + 1;
+    } else {
+      dot.textContent = dotIdx + 1;
+    }
+  });
+
+  // Render chapters list with statuses
+  sheetList.innerHTML = chapters.map((ch, idx) => {
+    let statusClass = "remaining";
+    let statusLabel = translations[lang]?.statusRemaining || "Còn lại";
+    let icon = ch.num;
+
+    if (idx < activeIndex) {
+      statusClass = "read";
+      statusLabel = "✓ " + (translations[lang]?.statusRead || "Đã đọc");
+      icon = "✓";
+    } else if (idx === activeIndex) {
+      statusClass = "reading";
+      statusLabel = "📍 " + (translations[lang]?.statusReading || "Đang đọc");
+    } else {
+      const stepLeft = total - idx;
+      statusLabel = (translations[lang]?.remainingBadge || "Còn {rem} phần").replace("{rem}", stepLeft);
+    }
+
+    const title = translations[lang]?.[ch.titleKey] || translations.vi[ch.titleKey];
+
+    return `
+      <a href="#${ch.id}" class="sheet-item ${idx === activeIndex ? "active" : ""} ${idx < activeIndex ? "completed" : ""}" data-sheet-target="${ch.id}">
+        <div class="sheet-item-left">
+          <span class="sheet-ch-num">${icon}</span>
+          <span class="sheet-ch-name">${title}</span>
+        </div>
+        <span class="sheet-status-tag ${statusClass}">${statusLabel}</span>
+      </a>
+    `;
+  }).join("");
+
+  sheetList.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = a.getAttribute("data-sheet-target");
+      closeChapterSheet();
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+}
 
 function updateReadingProgress() {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -1098,29 +1249,59 @@ function updateReadingProgress() {
   }
 
   const lang = currentLanguage;
+  const total = chapters.length;
+
   if (activeIndex >= 0) {
     const ch = chapters[activeIndex];
-    if (currentChapterTitleEl) {
-      currentChapterTitleEl.textContent = translations[lang]?.[ch.titleKey] || translations.vi[ch.titleKey] || "";
-    }
+    const currentNum = activeIndex + 1;
+    const remaining = total - currentNum;
+    const chNumStr = "0" + currentNum + "/07";
+    const chTitle = translations[lang]?.[ch.titleKey] || translations.vi[ch.titleKey] || "";
+
+    if (currentChapterTitleEl) currentChapterTitleEl.textContent = chTitle;
+    if (readingChPill) readingChPill.textContent = chNumStr;
+
+    const remainingText = remaining > 0 
+      ? (translations[lang]?.remainingBadge || "Còn {rem} phần").replace("{rem}", remaining)
+      : (translations[lang]?.completedBadge || "Hoàn thành ✓");
+
+    if (remainingCountText) remainingCountText.textContent = remainingText;
+
     if (nextChapterLinkEl) {
       nextChapterLinkEl.href = "#" + ch.nextId;
       nextChapterLinkEl.textContent = translations[lang]?.[ch.nextKey] || translations.vi[ch.nextKey] || "";
     }
+
+    // Floating Mobile Pill
+    if (pillCh) pillCh.textContent = chNumStr;
+    if (pillTitle) pillTitle.textContent = chTitle;
+    if (pillRemaining) pillRemaining.textContent = remainingText + " ▴";
+    if (mobileReaderPill) {
+      if (scrollTop > 350) mobileReaderPill.classList.add("visible");
+      else mobileReaderPill.classList.remove("visible");
+    }
+
     chapterNavLinks.forEach((link) => {
       const targetId = link.getAttribute("href")?.substring(1);
       link.classList.toggle("active", targetId === ch.id);
     });
   } else {
-    if (currentChapterTitleEl) {
-      currentChapterTitleEl.textContent = translations[lang]?.readingIntro || "Tổng quan VICATRA Trade Platform";
-    }
+    const overviewTitle = translations[lang]?.readingIntro || "Tổng quan VICATRA Trade Platform";
+    if (currentChapterTitleEl) currentChapterTitleEl.textContent = overviewTitle;
+    if (readingChPill) readingChPill.textContent = "00/07";
+    if (remainingCountText) remainingCountText.textContent = (translations[lang]?.remainingBadge || "Còn {rem} phần").replace("{rem}", 7);
+
     if (nextChapterLinkEl) {
       nextChapterLinkEl.href = "#reason";
       nextChapterLinkEl.textContent = translations[lang]?.ch01Title || "Chương 01: Thách Thức Thị Trường →";
     }
+
+    if (mobileReaderPill) mobileReaderPill.classList.remove("visible");
     chapterNavLinks.forEach((link) => link.classList.remove("active"));
   }
+
+  // Update bottom sheet view
+  renderChapterSheet(activeIndex, lang);
 }
 
 window.addEventListener("scroll", updateReadingProgress, { passive: true });
