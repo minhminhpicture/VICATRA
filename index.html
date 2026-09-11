@@ -3,22 +3,51 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VICATRA | Vietnam Cambodia Trade Platform — Kết nối hàng Việt, Vươn xa Campuchia</title>
-  <meta name="description" content="VICATRA – Nền tảng xúc tiến thương mại kết nối doanh nghiệp Việt Nam với thị trường Campuchia qua Showroom vật lý tại Phnom Penh, Nền tảng số, Kết nối B2B và VICATRA App.">
+  <title>VICATRA | Vietnam Cambodia Trade Platform</title>
+  <meta name="description" content="VICATRA – Nền tảng xúc tiến thương mại kết nối doanh nghiệp Việt Nam với thị trường Campuchia qua Showroom Phnom Penh, Kết nối B2B và VICATRA App.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#071939">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vicatra.com/">
   <meta property="og:title" content="VICATRA | Kết nối hàng Việt – Vươn xa Campuchia">
-  <meta property="og:description" content="Hệ sinh thái xúc tiến thương mại: Showroom vật lý Phnom Penh + Nền tảng số + Kết nối B2B + VICATRA App.">
   <meta property="og:image" content="assets/og-vicatra.jpg">
   <link rel="icon" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
+
+  <!-- Google Fonts: Be Vietnam Pro (VI/EN) + Noto Sans Khmer (KM) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Noto+Sans+Khmer:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Khmer font override when language is km */
+    html[lang="km"] body,
+    html[lang="km"] h1,
+    html[lang="km"] h2,
+    html[lang="km"] h3,
+    html[lang="km"] h4,
+    html[lang="km"] p,
+    html[lang="km"] a,
+    html[lang="km"] button,
+    html[lang="km"] .btn,
+    html[lang="km"] label,
+    html[lang="km"] input,
+    html[lang="km"] textarea,
+    html[lang="km"] select {
+      font-family: 'Noto Sans Khmer', 'Be Vietnam Pro', sans-serif;
+      line-height: 1.85;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+    html[lang="km"] h1 { line-height: 1.35; }
+    html[lang="km"] h2 { line-height: 1.4; }
+    /* Prevent orphaned words across all languages */
+    h1, h2, h3 { text-wrap: balance; }
+    p, .lead { text-wrap: pretty; }
+    .no-widow { white-space: nowrap; }
+  </style>
 </head>
 <body>
 
@@ -32,17 +61,17 @@
       <img src="assets/logo-vicatra.png" alt="VICATRA">
       <div class="brand-text">
         <span class="brand-name">VICATRA</span>
-        <span class="brand-tagline">Trade Platform</span>
+        <span class="brand-tagline" data-i18n="brandTagline">Trade Platform</span>
       </div>
     </a>
 
     <nav class="nav" aria-label="Điều hướng chính">
-      <a href="#top">Trang chủ</a>
-      <a href="#about">Hệ sinh thái</a>
-      <a href="#showroom">Showroom</a>
-      <a href="#categories">Ngành hàng</a>
-      <a href="#app">VICATRA App</a>
-      <a href="#insights">Market Insights</a>
+      <a href="#top" data-i18n="navHome">Trang chủ</a>
+      <a href="#about" data-i18n="navAbout">Hệ sinh thái</a>
+      <a href="#showroom" data-i18n="navShowroom">Showroom</a>
+      <a href="#categories" data-i18n="navCategories">Ngành hàng</a>
+      <a href="#app" data-i18n="navApp">VICATRA App</a>
+      <a href="#insights" data-i18n="navInsights">Market Insights</a>
     </nav>
 
     <div class="header-actions">
@@ -51,7 +80,7 @@
         <button type="button" data-lang="km">KH</button>
         <button type="button" data-lang="en">EN</button>
       </div>
-      <a class="btn btn--primary header-cta" href="#register">Đăng ký tham gia</a>
+      <a class="btn btn--primary header-cta" href="#register" data-i18n="navCta">Đăng ký</a>
       <button class="hamburger" type="button" aria-label="Mở menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -63,30 +92,30 @@
 <div class="reading-bar" id="readingStatusBar">
   <div class="reading-bar-inner">
     <div class="reading-bar-current">
-      <span class="reading-bar-label">Đang đọc:</span>
-      <strong class="reading-bar-title" id="currentChapterTitle">Tổng quan VICATRA Trade Platform</strong>
+      <span class="reading-bar-label" data-i18n="readingLabel">Đang đọc:</span>
+      <strong class="reading-bar-title" id="currentChapterTitle" data-i18n="readingIntro">Tổng quan VICATRA Trade Platform</strong>
     </div>
     <div class="reading-bar-next">
-      <span class="next-tag">Tiếp theo:</span>
-      <a href="#about" id="nextChapterLink">Chương 01: Thách Thức Thị Trường →</a>
+      <span class="next-tag" data-i18n="readingNext">Tiếp theo:</span>
+      <a href="#reason" id="nextChapterLink" data-i18n="ch01Title">Chương 01: Thách Thức Thị Trường →</a>
     </div>
   </div>
 </div>
 
 <!-- Chapter Navigator Sidebar -->
-<aside class="chapter-nav" id="chapterNavigator" aria-label="Mục lục hành trình">
+<aside class="chapter-nav" id="chapterNavigator" aria-label="Mục lục">
   <div class="chapter-nav-head">
-    <span>Mục lục hành trình</span>
-    <button class="chapter-nav-toggle" id="chapterNavToggle" type="button" title="Thu gọn">◀</button>
+    <span data-i18n="navToc">Mục lục hành trình</span>
+    <button class="chapter-nav-toggle" id="chapterNavToggle" type="button">◀</button>
   </div>
   <ul class="chapter-nav-list">
-    <li><a href="#reason" data-chapter="1"><span class="ch-num">01</span>Thách Thức</a></li>
-    <li><a href="#about" data-chapter="2"><span class="ch-num">02</span>Giải Pháp</a></li>
-    <li><a href="#pillars" data-chapter="3"><span class="ch-num">03</span>4 Trụ Cột</a></li>
-    <li><a href="#showroom" data-chapter="4"><span class="ch-num">04</span>Showroom</a></li>
-    <li><a href="#categories" data-chapter="5"><span class="ch-num">05</span>Ngành Hàng</a></li>
-    <li><a href="#app" data-chapter="6"><span class="ch-num">06</span>Nền Tảng Số</a></li>
-    <li><a href="#register" data-chapter="7"><span class="ch-num">07</span>Đăng Ký</a></li>
+    <li><a href="#reason" data-chapter="1"><span class="ch-num">01</span><span data-i18n="ch01Short">Thách Thức</span></a></li>
+    <li><a href="#about" data-chapter="2"><span class="ch-num">02</span><span data-i18n="ch02Short">Giải Pháp</span></a></li>
+    <li><a href="#pillars" data-chapter="3"><span class="ch-num">03</span><span data-i18n="ch03Short">4 Trụ Cột</span></a></li>
+    <li><a href="#showroom" data-chapter="4"><span class="ch-num">04</span><span data-i18n="ch04Short">Showroom</span></a></li>
+    <li><a href="#categories" data-chapter="5"><span class="ch-num">05</span><span data-i18n="ch05Short">Ngành Hàng</span></a></li>
+    <li><a href="#app" data-chapter="6"><span class="ch-num">06</span><span data-i18n="ch06Short">Nền Tảng Số</span></a></li>
+    <li><a href="#register" data-chapter="7"><span class="ch-num">07</span><span data-i18n="ch07Short">Đăng Ký</span></a></li>
   </ul>
 </aside>
 
@@ -102,18 +131,18 @@
       <button class="drawer-close" type="button" aria-label="Đóng menu">×</button>
     </div>
     <nav class="drawer-nav">
-      <a href="#top">Trang chủ</a>
-      <a href="#about">Hệ sinh thái VICATRA</a>
-      <a href="#showroom">Showroom Phnom Penh</a>
-      <a href="#categories">Ngành hàng &amp; Sản phẩm</a>
-      <a href="#app">VICATRA App</a>
-      <a href="#insights">Market Insights</a>
-      <a href="#trade">Kết nối giao thương</a>
-      <a href="#contact">Liên hệ</a>
+      <a href="#top" data-i18n="navHome">Trang chủ</a>
+      <a href="#about" data-i18n="navAbout">Hệ sinh thái</a>
+      <a href="#showroom" data-i18n="navShowroom">Showroom</a>
+      <a href="#categories" data-i18n="navCategories">Ngành hàng</a>
+      <a href="#app" data-i18n="navApp">VICATRA App</a>
+      <a href="#insights" data-i18n="navInsights">Market Insights</a>
+      <a href="#trade" data-i18n="navTrade">Kết nối giao thương</a>
+      <a href="#contact" data-i18n="navContact">Liên hệ</a>
     </nav>
     <div class="drawer-footer">
-      <a class="btn btn--primary" href="#register" style="width:100%;justify-content:center">Đăng ký tham gia</a>
-      <a href="tel:0907215521" style="font-weight:700;color:var(--navy);font-size:.9rem">📞 0907 215 521</a>
+      <a class="btn btn--primary" href="#register" style="width:100%;justify-content:center" data-i18n="navCta">Đăng ký</a>
+      <a href="tel:0907215521" style="font-weight:700;color:var(--navy);font-size:.9rem">☎ 0907 215 521</a>
     </div>
   </div>
 </div>
@@ -122,44 +151,48 @@
 
 <!-- ═══ HERO ══════════════════════════════════════════════════ -->
 <section class="hero">
-  <div class="hero-copy reveal">
-    <p class="hero-eyebrow">CONNECT VIETNAM · GROW IN CAMBODIA</p>
-    <h1>Đưa hàng Việt<br><span>vươn xa Campuchia</span></h1>
-    <p class="hero-sub">VICATRA kết nối doanh nghiệp Việt Nam với thị trường Campuchia thông qua hệ sinh thái trưng bày tại Showroom Phnom Penh, xúc tiến thương mại B2B, nền tảng số và ứng dụng VICATRA App.</p>
-    <div class="hero-actions">
-      <a class="btn btn--primary btn--lg" href="#register">Đăng ký doanh nghiệp</a>
-      <a class="btn btn--outline" href="#about">Khám phá lộ trình</a>
+  <div class="container">
+    <div class="hero-copy reveal">
+      <p class="hero-eyebrow" data-i18n="heroEyebrow">CONNECT VIETNAM · GROW IN CAMBODIA</p>
+      <h1 data-i18n-html="heroTitle">Đưa hàng Việt<br><span>vươn xa Campuchia</span></h1>
+      <p class="hero-sub" data-i18n="heroLead">VICATRA kết nối doanh nghiệp Việt Nam với thị trường Campuchia thông qua Showroom Phnom Penh, xúc tiến thương mại B2B, nền tảng số và VICATRA App.</p>
+      <div class="hero-actions">
+        <a class="btn btn--primary btn--lg" href="#register" data-i18n="heroPrimary">Đăng ký doanh nghiệp</a>
+        <a class="btn btn--outline" href="#about" data-i18n="heroSecondary">Khám phá lộ trình</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong data-i18n="stat1Num">18M+</strong>
+          <span data-i18n="stat1Label">Dân số thị trường Campuchia tiếp cận</span>
+        </div>
+        <div class="hero-stat">
+          <strong data-i18n="stat2Num">4</strong>
+          <span data-i18n="stat2Label">Hiệp hội thương mại đối tác bản địa</span>
+        </div>
+        <div class="hero-stat">
+          <strong data-i18n="stat3Num">B2B</strong>
+          <span data-i18n="stat3Label">Kết nối chính ngạch bảo lãnh thanh toán</span>
+        </div>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <strong>18M+</strong>
-        <span>Dân số thị trường Campuchia tiếp cận</span>
-      </div>
-      <div class="hero-stat">
-        <strong>4</strong>
-        <span>Hiệp hội thương mại đối tác bản địa</span>
-      </div>
-      <div class="hero-stat">
-        <strong>B2B</strong>
-        <span>Kết nối chính ngạch bảo lãnh thanh toán</span>
-      </div>
-    </div>
-  </div>
 
-  <div class="hero-visual reveal">
-    <div class="route-label">
-      <span>HỒ CHÍ MINH</span>
-      <span class="route-line"></span>
-      <span>PHNOM PENH</span>
-    </div>
-    <img src="assets/vicatra-exterior-showroom.jpg" alt="Tòa nhà Showroom VICATRA Vietnam Cambodia Trading tại Phnom Penh">
-    <div class="hero-badge">
-      <div class="hero-badge-icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    <div class="hero-visual-frame reveal">
+      <div class="hero-visual-box">
+        <div class="route-label">
+          <span data-i18n="routeFrom">HỒ CHÍ MINH</span>
+          <span class="route-line"></span>
+          <span data-i18n="routeTo">PHNOM PENH</span>
+        </div>
+        <img src="assets/vicatra-exterior-showroom.jpg" alt="Showroom VICATRA tại Phnom Penh" class="hero-full-img">
       </div>
-      <div class="hero-badge-text">
-        <strong>VICATRA Showroom — Trung tâm Phnom Penh</strong>
-        <small>Cách Sân vận động Quốc gia Olympic ~1 km · Vị trí giao thương chiến lược</small>
+      <div class="hero-badge-bar">
+        <div class="hero-badge-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="hero-badge-text">
+          <strong data-i18n="heroBadgeTitle">VICATRA Showroom — Trung tâm Phnom Penh</strong>
+          <span data-i18n="heroBadgeSub">Cách Sân vận động Quốc gia Olympic ~1 km · Vị trí giao thương chiến lược</span>
+        </div>
       </div>
     </div>
   </div>
@@ -168,7 +201,7 @@
 <!-- Logo Strip -->
 <div class="logo-strip">
   <div class="logo-strip-inner">
-    <span class="logo-strip-label">Đối tác &amp; Mạng lưới</span>
+    <span class="logo-strip-label" data-i18n="partnersLabel">Đối tác &amp; Mạng lưới</span>
     <span class="logo-strip-sep"></span>
     <div class="logo-strip-logos">
       <img src="assets/logo-aeon.svg" alt="AEON Cambodia">
@@ -180,246 +213,210 @@
   </div>
 </div>
 
-<!-- ═══ CH01: LÝ DO & THÁCH THỨC ════════════════════════════ -->
+<!-- ═══ CH01: THÁCH THỨC ══════════════════════════════════════ -->
 <section class="section section--gray" id="reason">
   <div class="container">
     <div class="section-head center reveal">
       <span class="chapter-badge">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        CHƯƠNG 01 / 07
+        <span data-i18n="chBadge1">CHƯƠNG 01 / 07</span>
       </span>
-      <span class="label">LÝ DO &amp; THÁCH THỨC</span>
-      <h2>Tại Sao Tự Mở Thị Trường Campuchia Thường Gặp Rủi Ro?</h2>
-      <p class="lead">Thị trường Campuchia đầy tiềm năng nhưng mở ra nhiều rào cản lớn đối với doanh nghiệp tự tìm đầu mối.</p>
+      <span class="label" data-i18n="ch01Label">Lý do &amp; Thách thức</span>
+      <h2 data-i18n="ch01Heading">Tại Sao Tự Mở Thị Trường Campuchia Thường Gặp Rủi Ro?</h2>
+      <p class="lead" data-i18n="ch01Lead">Thị trường Campuchia đầy tiềm năng nhưng đặt ra nhiều rào cản lớn đối với doanh nghiệp tự tìm đầu mối.</p>
     </div>
 
     <div class="compare-grid reveal">
       <div class="compare-card compare-card--problem">
         <div class="compare-card-tag">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-          Tự mở thị trường lẻ tẻ
+          <span data-i18n="problemTitle">Tự mở thị trường lẻ tẻ</span>
         </div>
         <ul class="compare-list">
-          <li>
-            <span class="compare-dot">✕</span>
-            <span><strong>Mất nhiều thời gian:</strong> Tốn từ 6–12 tháng tự tìm kiếm đầu mối mua hàng nhưng không hiệu quả.</span>
-          </li>
-          <li>
-            <span class="compare-dot">✕</span>
-            <span><strong>Rào cản ngôn ngữ &amp; pháp lý:</strong> Bất đồng ngôn ngữ, không rõ tiêu chuẩn giấy phép lưu hành &amp; thông quan.</span>
-          </li>
-          <li>
-            <span class="compare-dot">✕</span>
-            <span><strong>Rủi ro thanh toán cao:</strong> Dễ gặp tình trạng bùng nợ, thanh toán chậm hoặc không có bảo lãnh quốc tế.</span>
-          </li>
-          <li>
-            <span class="compare-dot">✕</span>
-            <span><strong>Thiếu điểm hiện diện:</strong> Sản phẩm không có không gian trưng bày để đối tác dùng thử &amp; thẩm định.</span>
-          </li>
+          <li><span class="compare-dot">✕</span><span><strong data-i18n="p1Bold">Mất nhiều thời gian:</strong> <span data-i18n="p1Text">Tốn từ 6–12 tháng tự tìm kiếm đầu mối mà không hiệu quả.</span></span></li>
+          <li><span class="compare-dot">✕</span><span><strong data-i18n="p2Bold">Rào cản ngôn ngữ &amp; pháp lý:</strong> <span data-i18n="p2Text">Bất đồng ngôn ngữ, không rõ tiêu chuẩn giấy phép lưu hành và thông quan.</span></span></li>
+          <li><span class="compare-dot">✕</span><span><strong data-i18n="p3Bold">Rủi ro thanh toán cao:</strong> <span data-i18n="p3Text">Dễ gặp bùng nợ, thanh toán chậm hoặc không có bảo lãnh quốc tế.</span></span></li>
+          <li><span class="compare-dot">✕</span><span><strong data-i18n="p4Bold">Thiếu điểm hiện diện:</strong> <span data-i18n="p4Text">Sản phẩm không có không gian trưng bày để đối tác dùng thử và thẩm định.</span></span></li>
         </ul>
       </div>
 
       <div class="compare-card compare-card--solution">
         <div class="compare-card-tag">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Đồng hành cùng VICATRA
+          <span data-i18n="solutionTitle">Đồng hành cùng VICATRA</span>
         </div>
         <ul class="compare-list">
-          <li>
-            <span class="compare-dot">✓</span>
-            <span><strong>Hiện diện tức thì:</strong> Gian hàng trưng bày bài bản tại trung tâm Phnom Penh ngay khi tham gia.</span>
-          </li>
-          <li>
-            <span class="compare-dot">✓</span>
-            <span><strong>Bảo lãnh giao thương:</strong> Cơ chế bảo lãnh thanh toán 2 chiều giúp loại bỏ rủi ro tài chính.</span>
-          </li>
-          <li>
-            <span class="compare-dot">✓</span>
-            <span><strong>Trọn gói pháp lý:</strong> Hỗ trợ hồ sơ xuất khẩu chính ngạch, phiên dịch viên &amp; soạn thảo hợp đồng.</span>
-          </li>
-          <li>
-            <span class="compare-dot">✓</span>
-            <span><strong>Hiện diện số 24/7:</strong> Tự động đồng bộ sản phẩm lên Sàn TMĐT &amp; VICATRA App.</span>
-          </li>
+          <li><span class="compare-dot">✓</span><span><strong data-i18n="s1Bold">Hiện diện tức thì:</strong> <span data-i18n="s1Text">Gian hàng bài bản tại trung tâm Phnom Penh ngay khi tham gia.</span></span></li>
+          <li><span class="compare-dot">✓</span><span><strong data-i18n="s2Bold">Bảo lãnh giao thương:</strong> <span data-i18n="s2Text">Cơ chế bảo lãnh thanh toán 2 chiều giúp loại bỏ rủi ro tài chính.</span></span></li>
+          <li><span class="compare-dot">✓</span><span><strong data-i18n="s3Bold">Trọn gói pháp lý:</strong> <span data-i18n="s3Text">Hỗ trợ hồ sơ xuất khẩu chính ngạch, phiên dịch và soạn thảo hợp đồng.</span></span></li>
+          <li><span class="compare-dot">✓</span><span><strong data-i18n="s4Bold">Hiện diện số 24/7:</strong> <span data-i18n="s4Text">Tự động đồng bộ sản phẩm lên Sàn TMĐT và VICATRA App.</span></span></li>
         </ul>
       </div>
     </div>
 
     <div class="next-chapter reveal">
-      <span class="next-label">Tiếp theo</span>
-      <a href="#about">Chương 02 — Hệ Sinh Thái Giải Pháp VICATRA →</a>
+      <span class="next-label" data-i18n="nextLabel">Tiếp theo</span>
+      <a href="#about" data-i18n="next01">Chương 02 — Hệ Sinh Thái Giải Pháp VICATRA →</a>
     </div>
   </div>
 </section>
 
-<!-- ═══ CH02: GIẢI PHÁP & HỆ SINH THÁI ══════════════════════ -->
+<!-- ═══ CH02: GIẢI PHÁP ═══════════════════════════════════════ -->
 <section class="section section--white" id="about">
   <div class="container">
     <div class="section-head center reveal">
       <span class="chapter-badge">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        CHƯƠNG 02 / 07
+        <span data-i18n="chBadge2">CHƯƠNG 02 / 07</span>
       </span>
-      <span class="label">Giải pháp toàn diện</span>
-      <h2>Hệ Sinh Thái Xúc Tiến Thương Mại VICATRA</h2>
-      <p class="lead">Mô hình kết nối khép kín giúp thương hiệu Việt định vị chuyên nghiệp và tăng trưởng bền vững tại Campuchia.</p>
+      <span class="label" data-i18n="ch02Label">Giải pháp toàn diện</span>
+      <h2 data-i18n="ch02Heading">Hệ Sinh Thái Xúc Tiến Thương Mại VICATRA</h2>
+      <p class="lead" data-i18n="ch02Lead">Mô hình kết nối khép kín giúp thương hiệu Việt định vị chuyên nghiệp và tăng trưởng bền vững tại Campuchia.</p>
     </div>
 
     <div style="margin-bottom:40px;border-radius:20px;overflow:hidden;box-shadow:0 20px 56px rgba(7,25,57,.14);" class="reveal">
-      <img src="assets/vicatra-showroom-interior.jpg" alt="Không gian trưng bày bên trong Showroom VICATRA Phnom Penh" style="width:100%;max-height:460px;object-fit:cover;display:block;">
+      <img src="assets/vicatra-showroom-interior.jpg" alt="Không gian trưng bày Showroom VICATRA Phnom Penh" style="width:100%;max-height:460px;object-fit:cover;display:block;">
     </div>
 
     <div class="steps-grid reveal">
       <div class="step">
         <div class="step-num">01</div>
-        <h4>Trưng bày sản phẩm</h4>
-        <p>Hiện diện trực tiếp tại Showroom Phnom Penh &amp; Nền tảng số</p>
+        <h4 data-i18n="step1Title">Trưng bày sản phẩm</h4>
+        <p data-i18n="step1Text">Hiện diện trực tiếp tại Showroom Phnom Penh và nền tảng số</p>
       </div>
       <div class="step">
         <div class="step-num">02</div>
-        <h4>Tiếp cận thị trường</h4>
-        <p>Khảo sát nhu cầu, tiếp cận người tiêu dùng &amp; chuỗi bán lẻ</p>
+        <h4 data-i18n="step2Title">Tiếp cận thị trường</h4>
+        <p data-i18n="step2Text">Khảo sát nhu cầu, tiếp cận người tiêu dùng và chuỗi bán lẻ</p>
       </div>
       <div class="step">
         <div class="step-num">03</div>
-        <h4>Kết nối đối tác</h4>
-        <p>Gặp gỡ Importer, Distributor &amp; Hiệp hội thương mại Campuchia</p>
+        <h4 data-i18n="step3Title">Kết nối đối tác</h4>
+        <p data-i18n="step3Text">Gặp gỡ Importer, Distributor và Hiệp hội thương mại Campuchia</p>
       </div>
       <div class="step">
         <div class="step-num">04</div>
-        <h4>Phát triển phân phối</h4>
-        <p>Đàm phán hợp đồng, bảo lãnh thanh toán 2 chiều &amp; logistics</p>
+        <h4 data-i18n="step4Title">Phát triển phân phối</h4>
+        <p data-i18n="step4Text">Đàm phán hợp đồng, bảo lãnh thanh toán và logistics</p>
       </div>
       <div class="step">
         <div class="step-num">05</div>
-        <h4>Mở rộng kinh doanh</h4>
-        <p>Tăng trưởng thị phần bền vững trên toàn lãnh thổ Campuchia</p>
+        <h4 data-i18n="step5Title">Mở rộng kinh doanh</h4>
+        <p data-i18n="step5Text">Tăng trưởng thị phần bền vững trên toàn lãnh thổ Campuchia</p>
       </div>
     </div>
 
     <div class="next-chapter reveal">
-      <span class="next-label">Tiếp theo</span>
-      <a href="#pillars">Chương 03 — 4 Trụ Cột Năng Lực →</a>
+      <span class="next-label" data-i18n="nextLabel">Tiếp theo</span>
+      <a href="#pillars" data-i18n="next02">Chương 03 — 4 Trụ Cột Năng Lực →</a>
     </div>
   </div>
 </section>
 
-<!-- ═══ CH03: 4 TRỤ CỘT ══════════════════════════════════════ -->
+<!-- ═══ CH03: 4 TRỤ CỘT ═══════════════════════════════════════ -->
 <section class="section section--gray" id="pillars">
   <div class="container">
     <div class="section-head center reveal">
       <span class="chapter-badge">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        CHƯƠNG 03 / 07
+        <span data-i18n="chBadge3">CHƯƠNG 03 / 07</span>
       </span>
-      <span class="label">4 Trụ cột năng lực</span>
-      <h2>Nền Tảng Vững Chắc Cho Doanh Nghiệp Việt</h2>
-      <p class="lead">Giải pháp tối ưu hóa mọi công đoạn xuất khẩu và phát triển kênh phân phối tại Campuchia.</p>
+      <span class="label" data-i18n="ch03Label">4 Trụ cột năng lực</span>
+      <h2 data-i18n="ch03Heading">Nền Tảng Vững Chắc Cho Doanh Nghiệp Việt</h2>
+      <p class="lead" data-i18n="ch03Lead">Giải pháp tối ưu hóa mọi công đoạn xuất khẩu và phát triển kênh phân phối tại Campuchia.</p>
     </div>
 
     <div class="pillars-grid reveal">
       <article class="pillar-card">
         <span class="pillar-num">01</span>
-        <div class="pillar-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <h3>Vietnam Factory Showroom</h3>
-        <p>Không gian giới thiệu và trưng bày sản phẩm Việt Nam chất lượng cao tại vị trí đắc địa Thủ đô Phnom Penh.</p>
+        <div class="pillar-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3 data-i18n="pillar1Title">Vietnam Factory Showroom</h3>
+        <p data-i18n="pillar1Text">Không gian giới thiệu và trưng bày sản phẩm Việt chất lượng cao tại vị trí đắc địa trung tâm Phnom Penh.</p>
       </article>
-
       <article class="pillar-card">
         <span class="pillar-num">02</span>
-        <div class="pillar-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        </div>
-        <h3>Kết Nối Giao Thương</h3>
-        <p>Kết nối doanh nghiệp Việt Nam với Importer, Distributor, Retailer và các Hiệp hội thương mại bản địa tại Campuchia.</p>
+        <div class="pillar-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <h3 data-i18n="pillar2Title">Kết Nối Giao Thương</h3>
+        <p data-i18n="pillar2Text">Kết nối doanh nghiệp Việt với Importer, Distributor, Retailer và các Hiệp hội thương mại bản địa tại Campuchia.</p>
       </article>
-
       <article class="pillar-card">
         <span class="pillar-num">03</span>
-        <div class="pillar-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-        </div>
-        <h3>Nền Tảng Số VICATRA</h3>
-        <p>Số hóa toàn bộ hồ sơ doanh nghiệp, kho sản phẩm e-Commerce và hệ thống danh thiếp điện tử NFC Smart Card.</p>
+        <div class="pillar-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+        <h3 data-i18n="pillar3Title">Nền Tảng Số VICATRA</h3>
+        <p data-i18n="pillar3Text">Số hóa toàn bộ hồ sơ doanh nghiệp, kho sản phẩm e-Commerce và hệ thống danh thiếp NFC Smart Card.</p>
       </article>
-
       <article class="pillar-card">
         <span class="pillar-num">04</span>
-        <div class="pillar-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3>Đồng Hành Thị Trường</h3>
-        <p>Hỗ trợ trọn gói thủ tục hải quan, xuất nhập khẩu, logistics, phiên dịch viên, hợp đồng và bảo lãnh thanh toán 2 chiều.</p>
+        <div class="pillar-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 data-i18n="pillar4Title">Đồng Hành Thị Trường</h3>
+        <p data-i18n="pillar4Text">Hỗ trợ trọn gói hải quan, xuất nhập khẩu, logistics, phiên dịch, hợp đồng và bảo lãnh thanh toán 2 chiều.</p>
       </article>
     </div>
 
     <div class="next-chapter reveal">
-      <span class="next-label">Tiếp theo</span>
-      <a href="#showroom">Chương 04 — Showroom Phnom Penh →</a>
+      <span class="next-label" data-i18n="nextLabel">Tiếp theo</span>
+      <a href="#showroom" data-i18n="next03">Chương 04 — Showroom &amp; Lợi Thế KVFCA →</a>
     </div>
   </div>
 </section>
 
-<!-- ═══ CH04: SHOWROOM & LỢI THẾ KVFCA ══════════════════════ -->
+<!-- ═══ CH04: SHOWROOM & KVFCA ════════════════════════════════ -->
 <section class="section section--white" id="showroom">
   <div class="container">
     <div class="section-head reveal">
       <span class="chapter-badge">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        CHƯƠNG 04 / 07
+        <span data-i18n="chBadge4">CHƯƠNG 04 / 07</span>
       </span>
-      <span class="label">Showroom &amp; Lợi thế đối tác bản địa</span>
-      <h2>Hiện Diện Thực Tế. Mạng Lưới Người Việt Sâu Rộng.</h2>
-      <p class="lead">Showroom tại trung tâm Phnom Penh kết hợp mạng lưới đối tác KVFCA — cộng đồng người gốc Việt trải khắp 25 tỉnh thành Campuchia — tạo lợi thế tiếp cận thị trường không ai có thể thay thế.</p>
+      <span class="label" data-i18n="ch04Label">Showroom &amp; Lợi thế đối tác bản địa</span>
+      <h2 data-i18n="ch04Heading">Hiện Diện Thực Tế. Mạng Lưới Người Việt Sâu Rộng.</h2>
+      <p class="lead" data-i18n="ch04Lead">Showroom tại trung tâm Phnom Penh kết hợp mạng lưới đối tác KVFCA — cộng đồng người gốc Việt trải khắp 25 tỉnh thành Campuchia — tạo lợi thế thị trường không ai thay thế được.</p>
     </div>
 
     <div class="showroom-grid reveal">
-      <!-- Lợi thế đối tác KVFCA -->
       <div class="showroom-spec">
-        <span class="spec-badge" style="background:var(--navy)">Đối tác chiến lược tại Campuchia</span>
-        <div class="spec-title">LỢI THẾ KVFCA — MẠNG LƯỚI NGƯỜI VIỆT SÂU RỘNG</div>
-        <div class="spec-sub">VICATRA hợp tác độc quyền với Hội Khmer-Việt Kiều Campuchia (KVFCA) — tổ chức đại diện cộng đồng người gốc Việt lớn nhất tại Campuchia</div>
+        <span class="spec-badge" style="background:var(--navy)" data-i18n="kvfcaBadge">Đối tác chiến lược tại Campuchia</span>
+        <div class="spec-title" data-i18n="kvfcaTitle">LỢI THẾ KVFCA — MẠNG LƯỚI NGƯỜI VIỆT SÂU RỘNG</div>
+        <div class="spec-sub" data-i18n="kvfcaSub">VICATRA hợp tác với Hội Khmer-Việt Kiều Campuchia (KVFCA) — tổ chức đại diện cộng đồng người gốc Việt lớn nhất tại Campuchia</div>
 
         <ul class="spec-list">
           <li>
             <svg class="spec-list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <span><strong>5 tổ chức hội trực thuộc</strong> cùng hệ thống chi nhánh tỉnh hội trải rộng</span>
+            <span><strong data-i18n="k1Bold">5 tổ chức hội trực thuộc</strong> <span data-i18n="k1Text">cùng hệ thống chi nhánh tỉnh hội trải rộng toàn quốc</span></span>
           </li>
           <li>
             <svg class="spec-list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span><strong>Hiện diện tại 25/25 đơn vị hành chính cấp tỉnh</strong> trên toàn lãnh thổ Campuchia</span>
+            <span><strong data-i18n="k2Bold">Hiện diện tại 25/25 tỉnh thành</strong> <span data-i18n="k2Text">trên toàn lãnh thổ Campuchia</span></span>
           </li>
           <li>
             <svg class="spec-list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            <span><strong>Đại hội đầu năm 2026:</strong> Cam kết đổi tên &amp; tái cơ cấu, thắt chặt quan hệ với chính quyền sở tại</span>
+            <span><strong data-i18n="k3Bold">Đại hội đầu năm 2026:</strong> <span data-i18n="k3Text">Cam kết tái cơ cấu, thắt chặt quan hệ chính quyền sở tại</span></span>
           </li>
           <li>
             <svg class="spec-list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span><strong>Điểm tựa vững chắc</strong> cho cộng đồng người gốc Việt — kênh phân phối tự nhiên đáng tin cậy</span>
+            <span><strong data-i18n="k4Bold">Điểm tựa cộng đồng:</strong> <span data-i18n="k4Text">Kênh phân phối tự nhiên đáng tin cậy qua mạng lưới người Việt</span></span>
           </li>
           <li>
             <svg class="spec-list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            <span><strong>Quan hệ chính quyền sâu rộng:</strong> Kết nối trực tiếp với các Bộ ngành, tỉnh thành địa phương</span>
+            <span><strong data-i18n="k5Bold">Quan hệ chính quyền sâu rộng:</strong> <span data-i18n="k5Text">Kết nối trực tiếp với Bộ ngành và tỉnh thành địa phương</span></span>
           </li>
           <li>
             <svg class="spec-list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            <span><strong>Phiên dịch &amp; Văn hóa:</strong> Am hiểu thị trường, hỗ trợ đàm phán song ngữ Việt – Khmer</span>
+            <span><strong data-i18n="k6Bold">Phiên dịch &amp; Am hiểu văn hóa:</strong> <span data-i18n="k6Text">Hỗ trợ đàm phán song ngữ Việt – Khmer chuyên nghiệp</span></span>
           </li>
         </ul>
 
-        <a class="btn btn--primary" href="#register" style="width:100%;justify-content:center">Kết nối qua mạng lưới KVFCA</a>
+        <a class="btn btn--primary" href="#register" style="width:100%;justify-content:center" data-i18n="kvfcaCta">Kết nối qua mạng lưới KVFCA</a>
       </div>
 
       <div class="showroom-photo">
-        <img src="assets/vicatra-showroom-wide.jpg" alt="Không gian Showroom VICATRA tại Phnom Penh nhìn tổng thể">
+        <img src="assets/vicatra-showroom-wide.jpg" alt="Không gian Showroom VICATRA nhìn tổng thể">
       </div>
     </div>
 
     <div class="next-chapter reveal">
-      <span class="next-label">Tiếp theo</span>
-      <a href="#categories">Chương 05 — Danh Mục Ngành Hàng →</a>
+      <span class="next-label" data-i18n="nextLabel">Tiếp theo</span>
+      <a href="#categories" data-i18n="next04">Chương 05 — Danh Mục Ngành Hàng →</a>
     </div>
   </div>
 </section>
@@ -430,69 +427,29 @@
     <div class="section-head center reveal">
       <span class="chapter-badge">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        CHƯƠNG 05 / 07
+        <span data-i18n="chBadge5">CHƯƠNG 05 / 07</span>
       </span>
-      <span class="label">Ngành hàng mục tiêu</span>
-      <h2>Các Ngành Hàng Ưu Tiên Phát Triển</h2>
-      <p class="lead">Danh mục sản phẩm có nhu cầu tiêu thụ và tiềm năng tăng trưởng lớn nhất tại thị trường Campuchia.</p>
+      <span class="label" data-i18n="ch05Label">Ngành hàng mục tiêu</span>
+      <h2 data-i18n="ch05Heading">Các Ngành Hàng Ưu Tiên Phát Triển</h2>
+      <p class="lead" data-i18n="ch05Lead">Danh mục sản phẩm có nhu cầu tiêu thụ và tiềm năng tăng trưởng lớn nhất tại thị trường Campuchia.</p>
     </div>
 
     <div class="cat-grid reveal">
-      <div class="cat-card">
-        <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 20h10"/><path d="M10 20c0-4.4-3.6-8-8-8 0 4.4 3.6 8 8 8z"/><path d="M14 20c0-7.7 6.3-14 14-14-7.7 0-14 6.3-14 14z"/></svg></div>
-        <h4>Nông Sản</h4>
-        <p>Gạo, hạt điều, trái cây sấy, nông sản chế biến</p>
-      </div>
-      <div class="cat-card">
-        <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-        <h4>Thực Phẩm &amp; Đồ Uống</h4>
-        <p>Mì gói, bánh kẹo, thực phẩm đóng hộp, nước giải khát</p>
-      </div>
-      <div class="cat-card">
-        <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v4.5A5.5 5.5 0 0 0 4.5 12c-1.3 0-2.5 1.2-2.5 2.5v5A2.5 2.5 0 0 0 4.5 22h15a2.5 2.5 0 0 0 2.5-2.5v-5c0-1.3-1.2-2.5-2.5-2.5A5.5 5.5 0 0 0 14 6.5V2h-4z"/></svg></div>
-        <h4>Gia Vị Việt Nam</h4>
-        <p>Nước tương, nước mắm, dầu ăn, hạt nêm, tiêu, ớt</p>
-      </div>
-      <div class="cat-card">
-        <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
-        <h4>Hàng Tiêu Dùng</h4>
-        <p>Nước tẩy rửa, lau sàn, đồ dùng vệ sinh gia đình</p>
-      </div>
-      <div class="cat-card">
-        <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-        <h4>Mỹ Phẩm &amp; Chăm Sóc</h4>
-        <p>Dầu gội, xà bông, kem dưỡng, sản phẩm cá nhân</p>
-      </div>
-      <div class="cat-card">
-        <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
-        <h4>Sản Phẩm OCOP</h4>
-        <p>Đặc sản vùng miền Việt Nam đạt chuẩn OCOP</p>
-      </div>
-      <div class="cat-card">
-        <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
-        <h4>Máy Móc &amp; Thiết Bị</h4>
-        <p>Thiết bị công nghiệp nhỏ, máy đóng gói, công cụ</p>
-      </div>
-      <div class="cat-card">
-        <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
-        <h4>Vật Tư Nông Nghiệp</h4>
-        <p>Phân bón, thuốc bảo vệ thực vật, hạt giống</p>
-      </div>
-      <div class="cat-card">
-        <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
-        <h4>Năng Lượng Mặt Trời</h4>
-        <p>Thiết bị &amp; giải pháp năng lượng sạch cho trang trại</p>
-      </div>
-      <div class="cat-card">
-        <div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
-        <h4>Sản Phẩm Công Nghiệp</h4>
-        <p>Vật liệu xây dựng, phụ liệu sản xuất, bao bì</p>
-      </div>
+      <div class="cat-card"><div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 20h10"/><path d="M10 20c0-4.4-3.6-8-8-8 0 4.4 3.6 8 8 8z"/><path d="M14 20c0-7.7 6.3-14 14-14-7.7 0-14 6.3-14 14z"/></svg></div><h4 data-i18n="cat1">Nông Sản</h4><p data-i18n="cat1Sub">Gạo, hạt điều, trái cây sấy, nông sản chế biến</p></div>
+      <div class="cat-card"><div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div><h4 data-i18n="cat2">Thực Phẩm &amp; Đồ Uống</h4><p data-i18n="cat2Sub">Mì gói, bánh kẹo, thực phẩm đóng hộp, nước giải khát</p></div>
+      <div class="cat-card"><div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v4.5A5.5 5.5 0 0 0 4.5 12c-1.3 0-2.5 1.2-2.5 2.5v5A2.5 2.5 0 0 0 4.5 22h15a2.5 2.5 0 0 0 2.5-2.5v-5c0-1.3-1.2-2.5-2.5-2.5A5.5 5.5 0 0 0 14 6.5V2h-4z"/></svg></div><h4 data-i18n="cat3">Gia Vị Việt Nam</h4><p data-i18n="cat3Sub">Nước tương, nước mắm, dầu ăn, hạt nêm, tiêu, ớt</p></div>
+      <div class="cat-card"><div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><h4 data-i18n="cat4">Hàng Tiêu Dùng</h4><p data-i18n="cat4Sub">Nước tẩy rửa, lau sàn, đồ dùng vệ sinh gia đình</p></div>
+      <div class="cat-card"><div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><h4 data-i18n="cat5">Mỹ Phẩm &amp; Chăm Sóc</h4><p data-i18n="cat5Sub">Dầu gội, xà bông, kem dưỡng, sản phẩm cá nhân</p></div>
+      <div class="cat-card"><div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div><h4 data-i18n="cat6">Sản Phẩm OCOP</h4><p data-i18n="cat6Sub">Đặc sản vùng miền Việt Nam đạt chuẩn OCOP</p></div>
+      <div class="cat-card"><div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div><h4 data-i18n="cat7">Máy Móc &amp; Thiết Bị</h4><p data-i18n="cat7Sub">Thiết bị công nghiệp nhỏ, máy đóng gói, công cụ</p></div>
+      <div class="cat-card"><div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div><h4 data-i18n="cat8">Vật Tư Nông Nghiệp</h4><p data-i18n="cat8Sub">Phân bón, thuốc bảo vệ thực vật, hạt giống</p></div>
+      <div class="cat-card"><div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div><h4 data-i18n="cat9">Năng Lượng Mặt Trời</h4><p data-i18n="cat9Sub">Thiết bị và giải pháp năng lượng sạch cho trang trại</p></div>
+      <div class="cat-card"><div class="cat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div><h4 data-i18n="cat10">Sản Phẩm Công Nghiệp</h4><p data-i18n="cat10Sub">Vật liệu xây dựng, phụ liệu sản xuất, bao bì</p></div>
     </div>
 
     <div class="next-chapter reveal">
-      <span class="next-label">Tiếp theo</span>
-      <a href="#app">Chương 06 — Nền Tảng Số &amp; VICATRA App →</a>
+      <span class="next-label" data-i18n="nextLabel">Tiếp theo</span>
+      <a href="#app" data-i18n="next05">Chương 06 — Nền Tảng Số &amp; VICATRA App →</a>
     </div>
   </div>
 </section>
@@ -505,323 +462,280 @@
         <div class="app-copy">
           <span class="chapter-badge">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-            CHƯƠNG 06 / 07
+            <span data-i18n="chBadge6">CHƯƠNG 06 / 07</span>
           </span>
-          <span class="label" style="color:#5ba9f5;margin-top:12px">Nền tảng số dành cho doanh nghiệp</span>
-          <h2 style="color:#fff;margin-top:4px">Một Gian Hàng —<br>Hai Không Gian Hiện Diện</h2>
-          <p class="app-lead">Hiện diện trực tiếp tại Showroom Phnom Penh. Kết nối liên tục mọi lúc mọi nơi trên <strong style="color:#fff">VICATRA App &amp; Bản Đồ B2B Bản Địa</strong>.</p>
+          <span class="label" style="color:#5ba9f5;margin-top:12px;display:block" data-i18n="ch06Label">Nền tảng số dành cho doanh nghiệp</span>
+          <h2 style="color:#fff;margin-top:4px" data-i18n="ch06Heading">Một Gian Hàng — Hai Không Gian Hiện Diện</h2>
+          <p class="app-lead" data-i18n="ch06Lead">Hiện diện trực tiếp tại Showroom Phnom Penh. Kết nối liên tục mọi lúc mọi nơi trên VICATRA App và Bản Đồ B2B Bản Địa.</p>
 
           <div class="app-features">
             <div class="app-feat">
-              <div class="app-feat-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-              </div>
+              <div class="app-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
               <div class="app-feat-text">
-                <strong>Danh thiếp điện tử NFC Smart Card</strong>
-                <p>Mỗi doanh nghiệp được cấp thẻ NFC thông minh. Chạm nhẹ vào điện thoại đối tác để mở ngay trang thông tin, catalogue và liên hệ.</p>
+                <strong data-i18n="feat1Title">Danh thiếp điện tử NFC Smart Card</strong>
+                <p data-i18n="feat1Text">Mỗi doanh nghiệp được cấp thẻ NFC thông minh. Chạm nhẹ vào điện thoại đối tác để mở ngay trang thông tin và catalogue.</p>
               </div>
             </div>
             <div class="app-feat">
-              <div class="app-feat-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
-              </div>
+              <div class="app-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></div>
               <div class="app-feat-text">
-                <strong>Bản đồ doanh nghiệp B2B Campuchia</strong>
-                <p>Tra cứu và định vị vị trí nhà máy tại Việt Nam và gian hàng tại Showroom Phnom Penh trên bản đồ số tương tác.</p>
+                <strong data-i18n="feat2Title">Bản đồ doanh nghiệp B2B Campuchia</strong>
+                <p data-i18n="feat2Text">Tra cứu và định vị nhà máy Việt Nam cùng gian hàng tại Showroom Phnom Penh trên bản đồ số tương tác.</p>
               </div>
             </div>
             <div class="app-feat">
-              <div class="app-feat-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-              </div>
+              <div class="app-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
               <div class="app-feat-text">
-                <strong>Kho sản phẩm số hóa 24/7</strong>
-                <p>Trưng bày đầy đủ catalogue, video giới thiệu nhà máy và chứng nhận chất lượng cho đối tác quốc tế.</p>
+                <strong data-i18n="feat3Title">Kho sản phẩm số hóa 24/7</strong>
+                <p data-i18n="feat3Text">Trưng bày catalogue, video giới thiệu nhà máy và chứng nhận chất lượng cho đối tác quốc tế.</p>
               </div>
             </div>
             <div class="app-feat">
-              <div class="app-feat-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-              </div>
+              <div class="app-feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
               <div class="app-feat-text">
-                <strong>Kết nối &amp; Đặt hàng B2B trực tiếp</strong>
-                <p>Nhận yêu cầu báo giá và đơn đặt hàng từ chuỗi siêu thị và nhà nhập khẩu Campuchia ngay trên ứng dụng.</p>
+                <strong data-i18n="feat4Title">Kết nối &amp; Đặt hàng B2B</strong>
+                <p data-i18n="feat4Text">Nhận yêu cầu báo giá và đơn đặt hàng từ chuỗi siêu thị và nhà nhập khẩu Campuchia ngay trên ứng dụng.</p>
               </div>
             </div>
           </div>
 
           <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
-            <a class="btn btn--primary" href="#register">Đăng ký trải nghiệm sớm</a>
-            <span style="font-size:.82rem;color:#64748b">Hỗ trợ Android, iOS &amp; NFC Smart Card</span>
+            <a class="btn btn--primary" href="#register" data-i18n="appCta">Đăng ký trải nghiệm sớm</a>
+            <span style="font-size:.82rem;color:#64748b" data-i18n="appSub">Android, iOS &amp; NFC Smart Card</span>
           </div>
         </div>
 
         <div class="app-visuals">
-          <div class="app-img">
-            <img src="assets/vicatra-app-khmer-map.jpg" alt="Bản đồ B2B VICATRA App định vị đối tác tại Phnom Penh">
-          </div>
-          <div class="app-img">
-            <img src="assets/vicatra-nfc-app-banner.jpg" alt="Chạm NFC Kết Nối Ngay trên VICATRA App">
-          </div>
+          <div class="app-img"><img src="assets/vicatra-app-khmer-map.jpg" alt="Bản đồ B2B VICATRA App tại Phnom Penh"></div>
+          <div class="app-img"><img src="assets/vicatra-nfc-app-banner.jpg" alt="NFC Smart Card VICATRA App"></div>
         </div>
       </div>
     </div>
 
     <div class="next-chapter reveal" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18)">
-      <span class="next-label" style="color:#475569">Tiếp theo</span>
-      <a href="#register" style="color:#fff">Chương 07 — Đăng Ký &amp; Kết Nối B2B →</a>
+      <span class="next-label" style="color:#475569" data-i18n="nextLabel">Tiếp theo</span>
+      <a href="#register" style="color:#fff" data-i18n="next06">Chương 07 — Đăng Ký &amp; Kết Nối B2B →</a>
     </div>
   </div>
 </section>
 
-<!-- ═══ DIAGRAM: MÔ HÌNH VẬN HÀNH ═══════════════════════════ -->
+<!-- ═══ MÔ HÌNH VẬN HÀNH ══════════════════════════════════════ -->
 <section class="section section--white">
   <div class="container">
     <div class="section-head center reveal">
-      <span class="label">Mô hình vận hành</span>
-      <h2>Hành Lang Thương Mại Việt Nam — Campuchia</h2>
-      <p class="lead">Tuyến đường giao thương chiến lược giúp hàng hóa lưu thông nhanh chóng từ nhà máy Việt Nam sang Campuchia.</p>
+      <span class="label" data-i18n="flowLabel">Mô hình vận hành</span>
+      <h2 data-i18n="flowHeading">Hành Lang Thương Mại Việt Nam — Campuchia</h2>
+      <p class="lead" data-i18n="flowLead">Tuyến đường giao thương chiến lược giúp hàng hóa lưu thông nhanh chóng từ nhà máy Việt Nam sang Campuchia.</p>
     </div>
 
     <div style="margin-bottom:32px;border-radius:16px;overflow:hidden;box-shadow:0 8px 28px rgba(7,25,57,.08);" class="reveal">
-      <img src="assets/vicatra-border-trade-corridor.jpg" alt="Hành lang giao thương Cửa khẩu Mộc Bài kết nối Việt Nam - Campuchia" style="width:100%;max-height:380px;object-fit:cover;display:block;">
+      <img src="assets/vicatra-border-trade-corridor.jpg" alt="Hành lang giao thương Việt Nam - Campuchia" style="width:100%;max-height:380px;object-fit:cover;display:block;">
     </div>
 
     <div class="flow-wrap reveal">
-      <div class="flow-node flow-node--gold">DOANH NGHIỆP VIỆT NAM</div>
+      <div class="flow-node flow-node--gold" data-i18n="flowNode1">DOANH NGHIỆP VIỆT NAM</div>
       <div class="flow-arrow">↓</div>
-      <div class="flow-node flow-node--blue">HỆ SINH THÁI VICATRA</div>
+      <div class="flow-node flow-node--blue" data-i18n="flowNode2">HỆ SINH THÁI VICATRA</div>
       <div class="flow-arrow">↓</div>
       <div class="flow-split">
-        <div class="flow-box">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-          <strong>SHOWROOM CAMBODIA</strong><br>
-          <small>Hiện diện vật lý Phnom Penh</small>
-        </div>
+        <div class="flow-box"><strong data-i18n="flowBox1">SHOWROOM PHNOM PENH</strong><br><small data-i18n="flowBox1Sub">Hiện diện vật lý</small></div>
         <div class="flow-plus">+</div>
-        <div class="flow-box">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px"><rect x="5" y="2" width="14" height="20" rx="2"/></svg>
-          <strong>VICATRA APP</strong><br>
-          <small>Kết nối số 24/7</small>
-        </div>
+        <div class="flow-box"><strong data-i18n="flowBox2">VICATRA APP</strong><br><small data-i18n="flowBox2Sub">Kết nối số 24/7</small></div>
       </div>
       <div class="flow-arrow">↓</div>
       <div class="flow-targets">
-        <span class="flow-target">IMPORTER — Nhà nhập khẩu</span>
-        <span class="flow-target">DISTRIBUTOR — Nhà phân phối</span>
-        <span class="flow-target">RETAILER — Chuỗi bán lẻ</span>
-        <span class="flow-target">CONSUMER — Người tiêu dùng</span>
+        <span class="flow-target" data-i18n="flowT1">IMPORTER — Nhà nhập khẩu</span>
+        <span class="flow-target" data-i18n="flowT2">DISTRIBUTOR — Nhà phân phối</span>
+        <span class="flow-target" data-i18n="flowT3">RETAILER — Chuỗi bán lẻ</span>
+        <span class="flow-target" data-i18n="flowT4">CONSUMER — Người tiêu dùng</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ KẾT NỐI GIAO THƯƠNG ═══════════════════════════════════ -->
+<!-- ═══ KẾT NỐI GIAO THƯƠNG ══════════════════════════════════ -->
 <section class="section section--gray" id="trade">
   <div class="container">
     <div class="section-head center reveal">
-      <span class="label">Kết nối thương mại</span>
-      <h2>Nhu Cầu Giao Thương Của Bạn Là Gì?</h2>
-      <p class="lead">Lựa chọn đúng mục tiêu để nhận tư vấn lộ trình và kết nối chính xác nhất.</p>
+      <span class="label" data-i18n="tradeLabel">Kết nối thương mại</span>
+      <h2 data-i18n="tradeHeading">Nhu Cầu Giao Thương Của Bạn Là Gì?</h2>
+      <p class="lead" data-i18n="tradeLead">Lựa chọn đúng mục tiêu để nhận tư vấn lộ trình và kết nối chính xác nhất.</p>
     </div>
 
     <div style="margin-bottom:32px;border-radius:16px;overflow:hidden;box-shadow:0 8px 28px rgba(7,25,57,.08);" class="reveal">
-      <img src="assets/vicatra-b2b-meeting.jpg" alt="Cuộc họp kết nối giao thương B2B Việt Nam - Campuchia" style="width:100%;max-height:380px;object-fit:cover;display:block;">
+      <img src="assets/vicatra-b2b-meeting.jpg" alt="Kết nối giao thương B2B Việt Nam - Campuchia" style="width:100%;max-height:380px;object-fit:cover;display:block;">
     </div>
 
     <div class="trade-tabs-wrap reveal">
       <div class="tab-nav">
-        <button class="tab-btn active" data-tab="tab1">Tìm nhà phân phối</button>
-        <button class="tab-btn" data-tab="tab2">Tìm nhà nhập khẩu</button>
-        <button class="tab-btn" data-tab="tab3">Tìm nguồn hàng Việt</button>
-        <button class="tab-btn" data-tab="tab4">Đối tác VICATRA</button>
+        <button class="tab-btn active" data-tab="tab1" data-i18n="tab1Btn">Tìm nhà phân phối</button>
+        <button class="tab-btn" data-tab="tab2" data-i18n="tab2Btn">Tìm nhà nhập khẩu</button>
+        <button class="tab-btn" data-tab="tab3" data-i18n="tab3Btn">Tìm nguồn hàng Việt</button>
+        <button class="tab-btn" data-tab="tab4" data-i18n="tab4Btn">Đối tác VICATRA</button>
       </div>
 
       <div class="tab-content active" id="tab1">
-        <h3>Dành cho Nhà sản xuất Việt Nam tìm kênh phân phối tại Campuchia</h3>
-        <p>VICATRA sẽ hỗ trợ đưa gian hàng vào Showroom Phnom Penh và kết nối trực tiếp với danh sách các nhà phân phối phù hợp.</p>
-        <a class="btn btn--blue" href="#register">Gửi yêu cầu tìm nhà phân phối</a>
+        <h3 data-i18n="tab1Title">Dành cho nhà sản xuất Việt Nam tìm kênh phân phối tại Campuchia</h3>
+        <p data-i18n="tab1Text">VICATRA hỗ trợ đưa gian hàng vào Showroom Phnom Penh và kết nối trực tiếp với danh sách nhà phân phối phù hợp.</p>
+        <a class="btn btn--blue" href="#register" data-i18n="tab1Cta">Gửi yêu cầu tìm nhà phân phối</a>
       </div>
       <div class="tab-content" id="tab2">
-        <h3>Dành cho Doanh nghiệp xuất khẩu tìm đối tác nhập khẩu lớn</h3>
-        <p>Hỗ trợ pháp lý, hồ sơ xuất khẩu chính ngạch và tiếp cận các tập đoàn nhập khẩu hàng đầu tại Campuchia.</p>
-        <a class="btn btn--blue" href="#register">Gửi yêu cầu tìm nhà nhập khẩu</a>
+        <h3 data-i18n="tab2Title">Dành cho doanh nghiệp xuất khẩu tìm đối tác nhập khẩu lớn</h3>
+        <p data-i18n="tab2Text">Hỗ trợ pháp lý, hồ sơ xuất khẩu chính ngạch và tiếp cận tập đoàn nhập khẩu hàng đầu Campuchia.</p>
+        <a class="btn btn--blue" href="#register" data-i18n="tab2Cta">Gửi yêu cầu tìm nhà nhập khẩu</a>
       </div>
       <div class="tab-content" id="tab3">
-        <h3>Dành cho Doanh nghiệp &amp; Nhà bán lẻ Campuchia tìm nguồn hàng Việt</h3>
-        <p>Tra cứu nguồn hàng Made in Vietnam tận gốc nhà máy, giá cạnh tranh và hỗ trợ thủ tục mua hàng an toàn.</p>
-        <a class="btn btn--blue" href="#register">Gửi yêu cầu nguồn hàng Việt Nam</a>
+        <h3 data-i18n="tab3Title">Dành cho doanh nghiệp &amp; nhà bán lẻ Campuchia tìm nguồn hàng Việt</h3>
+        <p data-i18n="tab3Text">Tra cứu nguồn hàng Made in Vietnam tận gốc nhà máy, giá cạnh tranh và hỗ trợ thủ tục mua hàng an toàn.</p>
+        <a class="btn btn--blue" href="#register" data-i18n="tab3Cta">Gửi yêu cầu nguồn hàng Việt Nam</a>
       </div>
       <div class="tab-content" id="tab4">
-        <h3>Dành cho Hiệp hội, Đại lý &amp; Đối tác dịch vụ</h3>
-        <p>Hợp tác phát triển mạng lưới đại lý, tổ chức sự kiện xúc tiến thương mại và mở rộng hệ sinh thái VICATRA.</p>
-        <a class="btn btn--blue" href="#register">Đăng ký trở thành đối tác VICATRA</a>
+        <h3 data-i18n="tab4Title">Dành cho Hiệp hội, đại lý &amp; đối tác dịch vụ</h3>
+        <p data-i18n="tab4Text">Hợp tác phát triển mạng lưới đại lý, tổ chức sự kiện xúc tiến thương mại và mở rộng hệ sinh thái VICATRA.</p>
+        <a class="btn btn--blue" href="#register" data-i18n="tab4Cta">Đăng ký trở thành đối tác VICATRA</a>
       </div>
     </div>
 
-    <!-- Associations Grid -->
+    <!-- Associations -->
     <div style="margin-top:48px" class="reveal">
       <div class="section-head center" style="margin-bottom:24px">
-        <h3 style="color:var(--navy)">Chương trình kết nối trực tiếp với các Hiệp hội tại Campuchia</h3>
-        <p class="lead" style="font-size:.92rem;margin-top:8px">Hỗ trợ doanh nghiệp Việt tiếp cận mạng lưới lãnh đạo &amp; hội viên các Hiệp hội thương mại lớn nhất Campuchia.</p>
+        <h3 style="color:var(--navy)" data-i18n="assocHeading">Kết nối trực tiếp với Hiệp hội thương mại tại Campuchia</h3>
+        <p class="lead" style="font-size:.92rem;margin-top:8px" data-i18n="assocSub">Hỗ trợ doanh nghiệp Việt tiếp cận mạng lưới lãnh đạo và hội viên các Hiệp hội thương mại lớn nhất Campuchia.</p>
       </div>
       <div class="assoc-grid">
-        <div class="assoc-card">
-          <span>Phòng Thương mại</span>
-          <strong>CCC — Phòng Thương mại Campuchia</strong>
-        </div>
-        <div class="assoc-card">
-          <span>Hiệp hội Doanh nghiệp</span>
-          <strong>VCBA — HH Doanh nghiệp Việt Nam – Campuchia</strong>
-        </div>
-        <div class="assoc-card">
-          <span>Doanh nhân trẻ</span>
-          <strong>YEAC — HH Doanh nghiệp trẻ Campuchia</strong>
-        </div>
-        <div class="assoc-card">
-          <span>SME Campuchia</span>
-          <strong>FASMEC — HH Doanh nghiệp vừa &amp; nhỏ</strong>
-        </div>
+        <div class="assoc-card"><span data-i18n="a1Type">Phòng Thương mại</span><strong data-i18n="a1Name">CCC — Phòng Thương mại Campuchia</strong></div>
+        <div class="assoc-card"><span data-i18n="a2Type">Hiệp hội Doanh nghiệp</span><strong data-i18n="a2Name">VCBA — HH Doanh nghiệp Việt Nam – Campuchia</strong></div>
+        <div class="assoc-card"><span data-i18n="a3Type">Doanh nhân trẻ</span><strong data-i18n="a3Name">YEAC — HH Doanh nghiệp trẻ Campuchia</strong></div>
+        <div class="assoc-card"><span data-i18n="a4Type">SME Campuchia</span><strong data-i18n="a4Name">FASMEC — HH Doanh nghiệp vừa &amp; nhỏ</strong></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ MARKET INSIGHTS ═══════════════════════════════════════ -->
+<!-- ═══ INSIGHTS ══════════════════════════════════════════════ -->
 <section class="section section--white" id="insights">
   <div class="container">
     <div class="section-head reveal">
-      <span class="label">Market Insights</span>
-      <h2>Tin Tức &amp; Phân Tích Thị Trường Campuchia</h2>
-      <p class="lead">Cập nhật kiến thức chuyên sâu, chính sách xuất nhập khẩu và cơ hội thương mại mới nhất.</p>
+      <span class="label" data-i18n="insightsLabel">Market Insights</span>
+      <h2 data-i18n="insightsHeading">Tin Tức &amp; Phân Tích Thị Trường Campuchia</h2>
+      <p class="lead" data-i18n="insightsLead">Cập nhật kiến thức chuyên sâu, chính sách xuất nhập khẩu và cơ hội thương mại mới nhất.</p>
     </div>
 
     <div class="insights-grid reveal">
       <article class="insight-card">
-        <span class="insight-tag">Thủ tục xuất khẩu</span>
-        <h4>Xuất khẩu hàng Việt sang Campuchia cần những chứng nhận và thủ tục gì?</h4>
-        <p>Hướng dẫn chi tiết quy trình hải quan, tiêu chuẩn lưu hành và lưu ý pháp lý quan trọng khi đưa sản phẩm sang Phnom Penh.</p>
-        <a href="#contact" class="link-more arrow-link">
-          Đọc bài viết
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+        <span class="insight-tag" data-i18n="i1Tag">Thủ tục xuất khẩu</span>
+        <h4 data-i18n="i1Title">Xuất khẩu hàng Việt sang Campuchia cần những chứng nhận và thủ tục gì?</h4>
+        <p data-i18n="i1Text">Hướng dẫn chi tiết quy trình hải quan, tiêu chuẩn lưu hành và lưu ý pháp lý khi đưa sản phẩm sang Phnom Penh.</p>
+        <a href="#contact" class="link-more arrow-link"><span data-i18n="readMore">Đọc bài viết</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </article>
-
       <article class="insight-card">
-        <span class="insight-tag">Phân tích ngành hàng</span>
-        <h4>5 Ngành hàng sản phẩm Việt có sức tiêu thụ và tiềm năng lớn nhất tại Campuchia</h4>
-        <p>Phân tích xu hướng tiêu dùng của thị trường Campuchia đối với nhóm hàng FMCG, gia vị và hàng tiêu dùng Việt Nam.</p>
-        <a href="#contact" class="link-more arrow-link">
-          Đọc bài viết
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+        <span class="insight-tag" data-i18n="i2Tag">Phân tích ngành hàng</span>
+        <h4 data-i18n="i2Title">5 Ngành hàng Việt có sức tiêu thụ và tiềm năng lớn nhất tại Campuchia</h4>
+        <p data-i18n="i2Text">Phân tích xu hướng tiêu dùng của thị trường Campuchia đối với nhóm hàng FMCG, gia vị và hàng tiêu dùng.</p>
+        <a href="#contact" class="link-more arrow-link"><span data-i18n="readMore">Đọc bài viết</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </article>
-
       <article class="insight-card">
-        <span class="insight-tag">Mạng lưới phân phối</span>
-        <h4>Cách tìm nhà phân phối và thiết lập kênh bán lẻ hiệu quả tại Phnom Penh</h4>
-        <p>Bí quyết tiếp cận các siêu thị lớn như AEON, Lucky Supermarket, Chip Mong và kết nối mạng lưới đại lý bản địa.</p>
-        <a href="#contact" class="link-more arrow-link">
-          Đọc bài viết
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+        <span class="insight-tag" data-i18n="i3Tag">Mạng lưới phân phối</span>
+        <h4 data-i18n="i3Title">Cách tìm nhà phân phối và thiết lập kênh bán lẻ hiệu quả tại Phnom Penh</h4>
+        <p data-i18n="i3Text">Bí quyết tiếp cận AEON, Lucky Supermarket, Chip Mong và kết nối mạng lưới đại lý bản địa vững chắc.</p>
+        <a href="#contact" class="link-more arrow-link"><span data-i18n="readMore">Đọc bài viết</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ═══ CH07: ĐĂNG KÝ ════════════════════════════════════════ -->
+<!-- ═══ CH07: ĐĂNG KÝ ═════════════════════════════════════════ -->
 <section class="section section--gray" id="register">
   <div class="container">
     <div class="section-head center reveal">
       <span class="chapter-badge">
         <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        CHƯƠNG 07 / 07
+        <span data-i18n="chBadge7">CHƯƠNG 07 / 07</span>
       </span>
-      <span class="label">Đăng ký tham gia</span>
-      <h2>Sẵn sàng đưa sản phẩm đến thị trường Campuchia?</h2>
-      <p class="lead">Điền thông tin hồ sơ doanh nghiệp bên dưới để nhận tư vấn gian hàng và cơ hội kết nối B2B trong 24h.</p>
+      <span class="label" data-i18n="ch07Label">Đăng ký tham gia</span>
+      <h2 data-i18n="ch07Heading">Sẵn sàng đưa sản phẩm đến thị trường Campuchia?</h2>
+      <p class="lead" data-i18n="ch07Lead">Điền thông tin hồ sơ doanh nghiệp để nhận tư vấn gian hàng và cơ hội kết nối B2B trong 24h.</p>
     </div>
 
     <div class="register-box reveal">
-      <!-- Điều kiện tham gia -->
-      <h4 style="text-align:center;margin-bottom:16px;color:var(--navy)">Điều kiện &amp; Tiêu chuẩn tham gia VFS</h4>
+      <h4 style="text-align:center;margin-bottom:16px;color:var(--navy)" data-i18n="reqHeading">Điều kiện &amp; Tiêu chuẩn tham gia VFS</h4>
       <div class="requirements-grid">
         <div class="req-card">
-          <strong>01. Sản xuất tại Việt Nam</strong>
-          <p>Doanh nghiệp có nhà máy sản xuất trực tiếp tại Việt Nam (Made in Vietnam).</p>
+          <strong data-i18n="req1Title">01. Sản xuất tại Việt Nam</strong>
+          <p data-i18n="req1Text">Doanh nghiệp có nhà máy sản xuất trực tiếp tại Việt Nam (Made in Vietnam).</p>
         </div>
         <div class="req-card">
-          <strong>02. Tiêu chuẩn thẩm định VFS</strong>
-          <p>Đáp ứng các tiêu chí thẩm định: Nguồn gốc xuất xứ, chứng chỉ lưu hành, quy trình &amp; năng lực sản xuất.</p>
+          <strong data-i18n="req2Title">02. Tiêu chuẩn thẩm định VFS</strong>
+          <p data-i18n="req2Text">Đáp ứng tiêu chí thẩm định: Nguồn gốc xuất xứ, chứng chỉ lưu hành, quy trình và năng lực sản xuất.</p>
         </div>
       </div>
 
       <form id="leadForm">
         <div class="form-grid-2">
           <div class="form-field">
-            <label for="company">Tên Công ty / Nhà máy *</label>
-            <input id="company" name="company" type="text" placeholder="Công ty TNHH Sản xuất A..." required>
+            <label for="company" data-i18n="formCompany">Tên Công ty / Nhà máy *</label>
+            <input id="company" name="company" type="text" data-i18n-placeholder="formCompanyPh" placeholder="Công ty TNHH Sản xuất A..." required>
           </div>
           <div class="form-field">
-            <label for="tax_id">Mã số thuế (MST) *</label>
+            <label for="tax_id" data-i18n="formTax">Mã số thuế (MST) *</label>
             <input id="tax_id" name="tax_id" type="text" placeholder="03xxxxxxxx" required>
           </div>
         </div>
         <div class="form-grid-2">
           <div class="form-field">
-            <label for="name">Họ và tên người đại diện *</label>
-            <input id="name" name="name" type="text" placeholder="Nguyễn Văn A" required>
+            <label for="name" data-i18n="formName">Họ và tên người đại diện *</label>
+            <input id="name" name="name" type="text" data-i18n-placeholder="formNamePh" placeholder="Nguyễn Văn A" required>
           </div>
           <div class="form-field">
-            <label for="phone">Số điện thoại / Zalo *</label>
+            <label for="phone" data-i18n="formPhone">Số điện thoại / Zalo *</label>
             <input id="phone" name="phone" type="tel" placeholder="09xx xxx xxx" required>
           </div>
         </div>
         <div class="form-grid-2">
           <div class="form-field">
-            <label for="website">Website / Fanpage</label>
+            <label for="website" data-i18n="formWebsite">Website / Fanpage</label>
             <input id="website" name="website" type="text" placeholder="https://company.com">
           </div>
           <div class="form-field">
-            <label for="address">Địa chỉ trụ sở / Nhà máy *</label>
-            <input id="address" name="address" type="text" placeholder="Tỉnh/Thành phố (Việt Nam)" required>
+            <label for="address" data-i18n="formAddress">Địa chỉ Nhà máy *</label>
+            <input id="address" name="address" type="text" data-i18n-placeholder="formAddressPh" placeholder="Tỉnh/Thành phố (Việt Nam)" required>
           </div>
         </div>
         <div class="form-grid-2">
           <div class="form-field">
-            <label for="category">Ngành hàng chính *</label>
+            <label for="category" data-i18n="formCategory">Ngành hàng chính *</label>
             <select id="category" name="category" required>
-              <option value="">-- Chọn ngành hàng --</option>
-              <option>Nông sản</option>
-              <option>Thực phẩm &amp; Đồ uống</option>
-              <option>Gia vị Việt Nam</option>
-              <option>Hàng tiêu dùng</option>
-              <option>Mỹ phẩm &amp; Chăm sóc cá nhân</option>
-              <option>Sản phẩm OCOP</option>
-              <option>Máy móc &amp; Thiết bị</option>
-              <option>Vật tư Nông nghiệp</option>
-              <option>Sản phẩm Công nghiệp</option>
+              <option value="" data-i18n="formCategoryPh">-- Chọn ngành hàng --</option>
+              <option data-i18n="cat1">Nông sản</option>
+              <option data-i18n="cat2">Thực phẩm &amp; Đồ uống</option>
+              <option data-i18n="cat3">Gia vị Việt Nam</option>
+              <option data-i18n="cat4">Hàng tiêu dùng</option>
+              <option data-i18n="cat5">Mỹ phẩm &amp; Chăm sóc cá nhân</option>
+              <option data-i18n="cat6">Sản phẩm OCOP</option>
+              <option data-i18n="cat7">Máy móc &amp; Thiết bị</option>
+              <option data-i18n="cat8">Vật tư Nông nghiệp</option>
+              <option data-i18n="cat9">Năng lượng Mặt trời</option>
+              <option data-i18n="cat10">Sản phẩm Công nghiệp</option>
             </select>
           </div>
           <div class="form-field">
-            <label for="demand">Mục tiêu &amp; Nhu cầu chính *</label>
+            <label for="demand" data-i18n="formDemand">Mục tiêu chính *</label>
             <select id="demand" name="demand" required>
-              <option value="">-- Chọn nhu cầu chính --</option>
-              <option>Trưng bày gian hàng Showroom Phnom Penh</option>
-              <option>Tìm Nhà Phân Phối (Distributor)</option>
-              <option>Tìm Nhà Nhập Khẩu (Importer)</option>
-              <option>Đưa sản phẩm lên VICATRA App &amp; Digital Hub</option>
+              <option value="" data-i18n="formDemandPh">-- Chọn nhu cầu --</option>
+              <option data-i18n="d1">Trưng bày gian hàng Showroom Phnom Penh</option>
+              <option data-i18n="d2">Tìm Nhà Phân Phối (Distributor)</option>
+              <option data-i18n="d3">Tìm Nhà Nhập Khẩu (Importer)</option>
+              <option data-i18n="d4">Đưa sản phẩm lên VICATRA App</option>
             </select>
           </div>
         </div>
         <div class="form-field">
-          <label for="product">Mô tả sản phẩm, chứng nhận (ISO, HACCP, FDA...) &amp; Ghi chú</label>
-          <textarea id="product" name="product" rows="3" placeholder="Chi tiết tên sản phẩm, các chứng nhận chất lượng đã có, quy cách đóng gói..."></textarea>
+          <label for="product" data-i18n="formProduct">Mô tả sản phẩm &amp; Chứng nhận</label>
+          <textarea id="product" name="product" rows="3" data-i18n-placeholder="formProductPh" placeholder="Tên sản phẩm, chứng nhận (ISO, HACCP, FDA...), quy cách đóng gói..."></textarea>
         </div>
         <div class="form-submit">
-          <button class="btn btn--primary btn--lg" type="submit" id="submitBtn">Gửi hồ sơ doanh nghiệp</button>
-          <p class="form-note" id="formNote">VICATRA cam kết bảo mật thông tin và sẽ phản hồi qua điện thoại/Zalo trong 24h.</p>
+          <button class="btn btn--primary btn--lg" type="submit" id="submitBtn" data-i18n="formSubmit">Gửi hồ sơ doanh nghiệp</button>
+          <p class="form-note" id="formNote" data-i18n="formNote">VICATRA cam kết bảo mật và sẽ phản hồi qua điện thoại/Zalo trong 24h.</p>
         </div>
       </form>
     </div>
@@ -833,26 +747,20 @@
   <div class="container">
     <div class="contact-strip reveal">
       <div class="contact-strip-text">
-        <h3>Trụ Sở &amp; Văn Phòng Kết Nối VICATRA</h3>
-        <p>Hãy liên hệ trực tiếp với chuyên viên tư vấn để nhận hỗ trợ nhanh nhất.</p>
+        <h3 data-i18n="contactHeading">Trụ Sở &amp; Văn Phòng Kết Nối VICATRA</h3>
+        <p data-i18n="contactSub">Liên hệ trực tiếp với chuyên viên tư vấn để nhận hỗ trợ nhanh nhất.</p>
       </div>
       <div class="contact-links">
         <a class="contact-link" href="tel:0907215521">
-          <span class="contact-link-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </span>
+          <span class="contact-link-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
           Hotline: 0907 215 521
         </a>
         <a class="contact-link" href="https://zalo.me/0907215521">
-          <span class="contact-link-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-          </span>
+          <span class="contact-link-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
           Zalo: 0907 215 521
         </a>
         <a class="contact-link" href="mailto:info@vicatra.com">
-          <span class="contact-link-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </span>
+          <span class="contact-link-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
           info@vicatra.com
         </a>
       </div>
@@ -870,38 +778,33 @@
         <img src="assets/logo-vicatra.png" alt="VICATRA" style="width:40px;height:40px;border-radius:50%">
         <div class="brand-text">
           <span class="brand-name" style="color:#fff">VICATRA</span>
-          <span class="brand-tagline">Trade Platform</span>
+          <span class="brand-tagline" data-i18n="brandTagline">Trade Platform</span>
         </div>
       </a>
-      <p class="footer-brand-desc">VICATRA – Vietnam Cambodia Trade Platform. Hệ sinh thái xúc tiến thương mại kết nối hàng Việt Nam vươn xa tại thị trường Campuchia.</p>
+      <p class="footer-brand-desc" data-i18n="footerDesc">VICATRA – Vietnam Cambodia Trade Platform. Hệ sinh thái xúc tiến thương mại kết nối hàng Việt Nam vươn xa tại thị trường Campuchia.</p>
     </div>
-
     <div class="footer-col">
-      <h4>Về VICATRA</h4>
-      <a href="#about">Giới thiệu VICATRA</a>
-      <a href="#about">Tầm nhìn &amp; Sứ mệnh</a>
-      <a href="#showroom">Mô hình Showroom</a>
-      <a href="#pillars">4 Trụ cột năng lực</a>
+      <h4 data-i18n="footerCol1">Về VICATRA</h4>
+      <a href="#about" data-i18n="footerAbout">Giới thiệu VICATRA</a>
+      <a href="#showroom" data-i18n="footerShowroom">Mô hình Showroom</a>
+      <a href="#pillars" data-i18n="footerPillars">4 Trụ cột năng lực</a>
     </div>
-
     <div class="footer-col">
-      <h4>Doanh nghiệp</h4>
-      <a href="#showroom">Thuê gian hàng Showroom</a>
-      <a href="#categories">Kho sản phẩm Việt</a>
-      <a href="#trade">Kết nối B2B</a>
-      <a href="#register">Đăng ký tham gia</a>
+      <h4 data-i18n="footerCol2">Doanh nghiệp</h4>
+      <a href="#showroom" data-i18n="footerRegister">Thuê gian hàng Showroom</a>
+      <a href="#categories" data-i18n="footerCat">Kho sản phẩm Việt</a>
+      <a href="#trade" data-i18n="footerTrade">Kết nối B2B</a>
+      <a href="#register" data-i18n="navCta">Đăng ký</a>
     </div>
-
     <div class="footer-col">
-      <h4>Ứng dụng &amp; Hỗ trợ</h4>
-      <a href="#app">VICATRA App (Android / iOS)</a>
-      <a href="#insights">Market Insights</a>
-      <a href="#contact">Liên hệ tư vấn</a>
+      <h4 data-i18n="footerCol3">Hỗ trợ</h4>
+      <a href="#app" data-i18n="footerApp">VICATRA App</a>
+      <a href="#insights" data-i18n="footerInsights">Market Insights</a>
+      <a href="#contact" data-i18n="footerContact">Liên hệ tư vấn</a>
       <a href="tel:0907215521">Hotline: 0907 215 521</a>
     </div>
   </div>
-
-  <p class="footer-copy">© 2026 VICATRA – Vietnam Cambodia Trade Platform. All rights reserved. — CONNECT VIETNAM. GROW IN CAMBODIA.</p>
+  <p class="footer-copy" data-i18n="footerCopy">© 2026 VICATRA – Vietnam Cambodia Trade Platform. All rights reserved.</p>
 </footer>
 
 <!-- Language Modal -->
@@ -909,21 +812,12 @@
   <div class="modal-backdrop"></div>
   <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
     <img src="assets/logo-vicatra.png" alt="VICATRA">
-    <p class="label" style="display:block;margin-bottom:8px">Chọn ngôn ngữ / Choose Language</p>
-    <h2 id="langModalTitle" style="font-size:1.5rem;margin-bottom:28px">Bạn muốn trải nghiệm VICATRA bằng ngôn ngữ nào?</h2>
+    <p class="label" style="display:block;margin-bottom:8px" data-i18n="langEyebrow">Chọn ngôn ngữ</p>
+    <h2 id="langModalTitle" data-i18n="langTitle">Bạn muốn trải nghiệm VICATRA bằng ngôn ngữ nào?</h2>
     <div class="lang-choices">
-      <button class="lang-choice" type="button" data-lang="vi" data-language-choice>
-        <span>Tiếng Việt</span>
-        <small>VI</small>
-      </button>
-      <button class="lang-choice" type="button" data-lang="km" data-language-choice>
-        <span>ភាសាខ្មែរ (Khmer)</span>
-        <small>KH</small>
-      </button>
-      <button class="lang-choice" type="button" data-lang="en" data-language-choice>
-        <span>English</span>
-        <small>EN</small>
-      </button>
+      <button class="lang-choice" type="button" data-lang="vi" data-language-choice><span>Tiếng Việt</span><small>VI</small></button>
+      <button class="lang-choice" type="button" data-lang="km" data-language-choice><span>ភាសាខ្មែរ (Khmer)</span><small>KH</small></button>
+      <button class="lang-choice" type="button" data-lang="en" data-language-choice><span>English</span><small>EN</small></button>
     </div>
   </div>
 </div>

@@ -1,426 +1,860 @@
+/* ============================================================
+   VICATRA — Vietnam Cambodia Trade Platform
+   Complete Multilingual (VI / EN / KM) Script Engine v3.2
+   ============================================================ */
+
 const translations = {
   vi: {
-    navWhy: "Tại sao VICATRA",
-    navServices: "Dịch vụ",
-    navPricing: "Gói dịch vụ",
-    navProcess: "Quy trình",
-    navTestimonials: "Khách hàng",
-    navFaq: "FAQ",
+    brandTagline: "Trade Platform",
+    navHome: "Trang chủ",
+    navAbout: "Hệ sinh thái",
+    navShowroom: "Showroom",
+    navCategories: "Ngành hàng",
+    navApp: "VICATRA App",
+    navInsights: "Market Insights",
+    navTrade: "Kết nối giao thương",
     navContact: "Liên hệ",
-    navCta: "Tư vấn",
-    heroEyebrow: "Đối tác hơn 500+ siêu thị tại Campuchia",
-    heroTitle: 'Đưa <span class="keep">hàng Việt</span> vào bán lẻ Campuchia.',
-    heroLead: "VICATRA kết nối doanh nghiệp Việt với siêu thị và nhà phân phối Campuchia.",
-    heroPrimary: "Gửi thông tin sản phẩm",
-    heroSecondary: "Xem dịch vụ",
-    metricOne: "siêu thị và điểm bán đối tác",
-    metricTwo: "hiệp hội doanh nghiệp kết nối",
-    metricThreeNumber: "End-to-end",
-    metricThree: "hỗ trợ xúc tiến thương mại",
-    partnersEyebrow: "Đối tác và mạng lưới",
-    partnersTitle: "Mạng lưới bán lẻ hiện đại.",
-    whyEyebrow: "Tại sao chọn VICATRA",
-    whyTitle: 'Đi cùng VICATRA hay <span class="keep">tự mở thị trường?</span>',
-    whyLead: "So sánh nhanh giữa tự tìm đối tác và đi cùng VICATRA.",
-    whyWithoutTitle: "❌ Tự mở thị trường",
-    whyWithTitle: "✅ Đi cùng VICATRA",
-    whyW1: "Mất 6–12 tháng tìm đầu mối",
-    whyW2: "Chi phí khảo sát, đi lại cao",
-    whyW3: "Không rõ tiêu chuẩn listing",
-    whyW4: "Rủi ro chọn sai đối tác",
-    whyW5: "Không có hỗ trợ sau kết nối",
-    whyV1: "Kết nối trực tiếp 500+ siêu thị",
-    whyV2: "Đánh giá cơ hội trước khi chi tiền",
-    whyV3: "Hỗ trợ chuẩn bị hồ sơ listing",
-    whyV4: "Mạng lưới đối tác đã xác minh",
-    whyV5: "Đồng hành và theo dõi phản hồi",
-    whyCta: "Nhận đánh giá miễn phí",
-    galleryEyebrow: "Hình ảnh thực tế",
-    galleryTitle: "VICATRA đang vận hành.",
-    galleryLead: "Hàng Việt đang trên đường đến kệ siêu thị Campuchia.",
-    galleryCaption1: "Kiểm hàng tại kho phân phối",
-    galleryCaption2: "Giao hàng đến hệ thống siêu thị",
-    galleryCaption3: "Giám sát trực tiếp quá trình vận chuyển",
-    solutionEyebrow: "Dịch vụ VICATRA",
-    solutionTitle: 'Đưa <span class="keep">sản phẩm Việt</span> vào kênh <span class="keep">bán lẻ</span>.',
-    solutionLead: "Chuẩn bị hồ sơ, đánh giá cơ hội, kết nối đối tác và theo dõi phản hồi.",
-    serviceOneTitle: "Đánh giá sản phẩm",
-    serviceOneText: "Xem nhóm hàng, lợi thế, giá bán và khả năng vào siêu thị.",
-    serviceTwoTitle: "Kết nối bán lẻ",
-    serviceTwoText: "Kết nối với siêu thị, nhà mua hàng và đối tác phân phối phù hợp.",
-    serviceThreeTitle: "Xúc tiến thương mại",
-    serviceThreeText: "Hỗ trợ catalogue, gặp gỡ, trưng bày, dùng thử và ra mắt sản phẩm.",
-    serviceFourTitle: "Đồng hành sau kết nối",
-    serviceFourText: "Theo dõi phản hồi để tối ưu bao bì, thông điệp và chính sách.",
-    pricingEyebrow: "Gói dịch vụ",
-    pricingTitle: "Chọn gói phù hợp với doanh nghiệp.",
-    pricingLead: "Mỗi gói được thiết kế theo mức độ hỗ trợ và quy mô thị trường mục tiêu.",
-    priceTierOneTitle: "Khám phá",
-    priceTierOneDesc: "Đánh giá cơ hội sản phẩm tại thị trường Campuchia",
-    priceTierTwoTitle: "Kết nối",
-    priceTierTwoDesc: "Kết nối trực tiếp với siêu thị và nhà phân phối",
-    priceTierThreeTitle: "Đồng hành",
-    priceTierThreeDesc: "Hỗ trợ toàn diện từ listing đến ra mắt sản phẩm",
-    priceBadge: "Phổ biến nhất",
-    priceF1a: "Đánh giá nhóm hàng & cạnh tranh",
-    priceF1b: "Báo cáo kênh phù hợp",
-    priceF1c: "Tư vấn bao bì & định giá",
-    priceF1d: "1 buổi tư vấn chuyên sâu",
-    priceF2a: "Tất cả từ gói Khám phá",
-    priceF2b: "Kết nối 3–5 đối tác phù hợp",
-    priceF2c: "Hỗ trợ chuẩn bị hồ sơ listing",
-    priceF2d: "Đồng hành gặp gỡ đối tác",
-    priceF2e: "Theo dõi phản hồi 30 ngày",
-    priceF3a: "Tất cả từ gói Kết nối",
-    priceF3b: "Xúc tiến trưng bày & sampling",
-    priceF3c: "Hỗ trợ catalogue & marketing",
-    priceF3d: "Theo dõi phản hồi 90 ngày",
-    priceF3e: "Tư vấn mở rộng kênh tiếp theo",
-    priceCta: "Liên hệ báo giá",
-    processEyebrow: "Quy trình",
-    processTitle: "4 bước triển khai rõ ràng.",
-    processLead: "Từ hồ sơ đến kết nối đối tác phù hợp.",
-    stepOneTitle: "Gửi thông tin",
-    stepOneText: "Catalogue, chứng nhận, nhóm hàng và năng lực cung ứng.",
-    stepTwoTitle: "Đánh giá cơ hội",
-    stepTwoText: "Xác định kênh phù hợp, điểm chuẩn bị và cách tiếp cận.",
-    stepThreeTitle: "Kết nối đối tác",
-    stepThreeText: "Tiếp cận nhà mua hàng, nhà phân phối hoặc hiệp hội doanh nghiệp phù hợp.",
-    stepFourTitle: "Theo dõi mở rộng",
-    stepFourText: "Tổng hợp phản hồi thị trường và đề xuất bước đi tiếp theo.",
-    testimonialEyebrow: "Khách hàng nói gì",
-    testimonialTitle: "Doanh nghiệp đã đi cùng VICATRA.",
-    testimonialOneQuote: '"VICATRA giúp chúng tôi kết nối với AEON Cambodia chỉ trong 3 tuần. Trước đó tự tìm mất gần 8 tháng không có kết quả."',
-    testimonialOneName: "Nguyễn Minh Tuấn",
-    testimonialOneRole: "Giám đốc, Công ty Thực phẩm Sài Gòn Xanh",
-    testimonialTwoQuote: '"Đội ngũ VICATRA am hiểu thị trường Campuchia. Họ tư vấn điều chỉnh bao bì và giá bán rất sát thực tế."',
-    testimonialTwoName: "Trần Thị Hồng Nhung",
-    testimonialTwoRole: "Phó phòng xuất khẩu, MekongCare Cosmetics",
-    testimonialThreeQuote: '"Sản phẩm gia vị của chúng tôi đã lên kệ Lucky Supermarket nhờ sự hỗ trợ xúc tiến chuyên nghiệp từ VICATRA."',
-    testimonialThreeName: "Lê Văn Phước",
-    testimonialThreeRole: "CEO, Gia vị Phú Quốc Gold",
-    faqEyebrow: "Câu hỏi thường gặp",
-    faqTitle: "Giải đáp thắc mắc của doanh nghiệp.",
-    faqQ1: "VICATRA phù hợp với ngành hàng nào?",
-    faqA1: "VICATRA hỗ trợ các doanh nghiệp sản xuất FMCG, thực phẩm, đồ uống, gia vị, mỹ phẩm và sản phẩm chăm sóc cá nhân muốn đưa hàng vào siêu thị và kênh bán lẻ tại Campuchia.",
-    faqQ2: "Chi phí dịch vụ VICATRA là bao nhiêu?",
-    faqA2: "Chi phí tùy thuộc vào gói dịch vụ và quy mô sản phẩm. Vui lòng liên hệ để nhận báo giá chi tiết phù hợp với nhu cầu doanh nghiệp.",
-    faqQ3: "Mất bao lâu để sản phẩm lên kệ siêu thị?",
-    faqA3: "Thời gian trung bình từ 4–12 tuần tùy thuộc vào mức độ sẵn sàng của hồ sơ, chứng nhận và kênh phân phối mục tiêu.",
-    faqQ4: "Doanh nghiệp cần chuẩn bị gì trước khi làm việc với VICATRA?",
-    faqA4: "Catalogue sản phẩm, chứng nhận chất lượng cơ bản (nếu có), thông tin giá bán và năng lực cung ứng. VICATRA sẽ hỗ trợ hoàn thiện phần còn lại.",
-    faqQ5: "VICATRA có đại diện tại Campuchia không?",
-    faqA5: "Có. VICATRA có mạng lưới đối tác và cộng tác viên tại Phnom Penh, hỗ trợ kết nối trực tiếp với các siêu thị và hiệp hội doanh nghiệp.",
-    faqQ6: "Sau khi kết nối, VICATRA còn hỗ trợ gì?",
-    faqA6: "VICATRA theo dõi phản hồi thị trường, hỗ trợ tối ưu bao bì và thông điệp, đồng thời tư vấn chiến lược mở rộng kênh phân phối.",
-    contactEyebrow: "Liên hệ",
-    contactTitle: "Nhận đánh giá cơ hội sản phẩm.",
-    contactLead: "Gửi thông tin sản phẩm. VICATRA sẽ tư vấn lộ trình vào Campuchia.",
-    formName: "Họ và tên",
-    formNamePlaceholder: "Nguyễn Văn A",
-    formPhone: "Số điện thoại / Zalo",
-    formAddress: "Địa chỉ",
-    formAddressPlaceholder: "Tỉnh/thành, quốc gia",
-    formCompany: "Doanh nghiệp",
-    formCompanyPlaceholder: "Tên công ty",
-    formProduct: "Nhóm sản phẩm",
-    formProductPlaceholder: "Ví dụ: gia vị, đồ uống, thực phẩm đóng gói...",
-    formSubmit: "Gửi yêu cầu tư vấn",
-    formNote: "VICATRA sẽ phản hồi sớm.",
-    formSending: "Đang gửi thông tin...",
-    formRateLimit: "Vui lòng đợi 1 phút trước khi gửi yêu cầu mới.",
-    formSuccess: "Quý khách đã gửi thông tin thành công. VICATRA sẽ phản hồi trong thời gian sớm nhất. Trân trọng cảm ơn!",
-    formError: "Chưa gửi được thông tin. Vui lòng thử lại hoặc liên hệ VICATRA trực tiếp.",
-    footerDesc: "Đưa sản phẩm Việt vào hệ thống bán lẻ Campuchia.",
-    footerLinksTitle: "Liên kết",
-    footerContactTitle: "Liên hệ",
-    footerTop: "Lên đầu trang ↑",
-    languageModalEyebrow: "Chọn ngôn ngữ",
-    languageModalTitle: "Bạn muốn xem website bằng ngôn ngữ nào?",
+    navCta: "Đăng ký",
+    navToc: "Mục lục hành trình",
+
+    readingLabel: "Đang đọc:",
+    readingIntro: "Tổng quan VICATRA Trade Platform",
+    readingNext: "Tiếp theo:",
+    nextLabel: "Tiếp theo",
+
+    ch01Title: "Chương 01: Thách Thức Thị Trường →",
+    ch01Short: "Thách Thức",
+    ch02Short: "Giải Pháp",
+    ch03Short: "4 Trụ Cột",
+    ch04Short: "Showroom",
+    ch05Short: "Ngành Hàng",
+    ch06Short: "Nền Tảng Số",
+    ch07Short: "Đăng Ký",
+
+    next01: "Chương 02 — Hệ Sinh Thái Giải Pháp VICATRA →",
+    next02: "Chương 03 — 4 Trụ Cột Năng Lực →",
+    next03: "Chương 04 — Showroom & Lợi Thế KVFCA →",
+    next04: "Chương 05 — Danh Mục Ngành Hàng →",
+    next05: "Chương 06 — Nền Tảng Số & VICATRA App →",
+    next06: "Chương 07 — Đăng Ký & Kết Nối B2B →",
+
+    heroEyebrow: "CONNECT VIETNAM · GROW IN CAMBODIA",
+    heroTitle: "Đưa hàng Việt<br><span>vươn xa Campuchia</span>",
+    heroLead: "VICATRA kết nối doanh nghiệp Việt Nam với thị trường Campuchia thông qua Showroom Phnom Penh, xúc tiến thương mại B2B, nền tảng số và VICATRA App.",
+    heroPrimary: "Đăng ký doanh nghiệp",
+    heroSecondary: "Khám phá lộ trình",
+    stat1Num: "18M+",
+    stat1Label: "Dân số thị trường Campuchia tiếp cận",
+    stat2Num: "4",
+    stat2Label: "Hiệp hội thương mại đối tác bản địa",
+    stat3Num: "B2B",
+    stat3Label: "Kết nối chính ngạch bảo lãnh thanh toán",
+    routeFrom: "HỒ CHÍ MINH",
+    routeTo: "PHNOM PENH",
+    heroBadgeTitle: "VICATRA Showroom — Trung tâm Phnom Penh",
+    heroBadgeSub: "Cách Sân vận động Quốc gia Olympic ~1 km · Vị trí giao thương chiến lược",
+
+    partnersLabel: "Đối tác & Mạng lưới",
+
+    chBadge1: "CHƯƠNG 01 / 07",
+    ch01Label: "Lý do & Thách thức",
+    ch01Heading: "Tại Sao Tự Mở Thị Trường Campuchia Thường Gặp Rủi Ro?",
+    ch01Lead: "Thị trường Campuchia đầy tiềm năng nhưng đặt ra nhiều rào cản lớn đối với doanh nghiệp tự tìm đầu mối.",
+    problemTitle: "Tự mở thị trường lẻ tẻ",
+    p1Bold: "Mất nhiều thời gian:",
+    p1Text: "Tốn từ 6–12 tháng tự tìm kiếm đầu mối mà không hiệu quả.",
+    p2Bold: "Rào cản ngôn ngữ & pháp lý:",
+    p2Text: "Bất đồng ngôn ngữ, không rõ tiêu chuẩn giấy phép lưu hành và thông quan.",
+    p3Bold: "Rủi ro thanh toán cao:",
+    p3Text: "Dễ gặp bùng nợ, thanh toán chậm hoặc không có bảo lãnh quốc tế.",
+    p4Bold: "Thiếu điểm hiện diện:",
+    p4Text: "Sản phẩm không có không gian trưng bày để đối tác dùng thử và thẩm định.",
+    solutionTitle: "Đồng hành cùng VICATRA",
+    s1Bold: "Hiện diện tức thì:",
+    s1Text: "Gian hàng bài bản tại trung tâm Phnom Penh ngay khi tham gia.",
+    s2Bold: "Bảo lãnh giao thương:",
+    s2Text: "Cơ chế bảo lãnh thanh toán 2 chiều giúp loại bỏ rủi ro tài chính.",
+    s3Bold: "Trọn gói pháp lý:",
+    s3Text: "Hỗ trợ hồ sơ xuất khẩu chính ngạch, phiên dịch và soạn thảo hợp đồng.",
+    s4Bold: "Hiện diện số 24/7:",
+    s4Text: "Tự động đồng bộ sản phẩm lên Sàn TMĐT và VICATRA App.",
+
+    chBadge2: "CHƯƠNG 02 / 07",
+    ch02Label: "Giải pháp toàn diện",
+    ch02Heading: "Hệ Sinh Thái Xúc Tiến Thương Mại VICATRA",
+    ch02Lead: "Mô hình kết nối khép kín giúp thương hiệu Việt định vị chuyên nghiệp và tăng trưởng bền vững tại Campuchia.",
+    step1Title: "Trưng bày sản phẩm",
+    step1Text: "Hiện diện trực tiếp tại Showroom Phnom Penh và nền tảng số",
+    step2Title: "Tiếp cận thị trường",
+    step2Text: "Khảo sát nhu cầu, tiếp cận người tiêu dùng và chuỗi bán lẻ",
+    step3Title: "Kết nối đối tác",
+    step3Text: "Gặp gỡ Importer, Distributor và Hiệp hội thương mại Campuchia",
+    step4Title: "Phát triển phân phối",
+    step4Text: "Đàm phán hợp đồng, bảo lãnh thanh toán và logistics",
+    step5Title: "Mở rộng kinh doanh",
+    step5Text: "Tăng trưởng thị phần bền vững trên toàn lãnh thổ Campuchia",
+
+    chBadge3: "CHƯƠNG 03 / 07",
+    ch03Label: "4 Trụ cột năng lực",
+    ch03Heading: "Nền Tảng Vững Chắc Cho Doanh Nghiệp Việt",
+    ch03Lead: "Giải pháp tối ưu hóa mọi công đoạn xuất khẩu và phát triển kênh phân phối tại Campuchia.",
+    pillar1Title: "Vietnam Factory Showroom",
+    pillar1Text: "Không gian giới thiệu và trưng bày sản phẩm Việt chất lượng cao tại vị trí đắc địa trung tâm Phnom Penh.",
+    pillar2Title: "Kết Nối Giao Thương",
+    pillar2Text: "Kết nối doanh nghiệp Việt với Importer, Distributor, Retailer và các Hiệp hội thương mại bản địa tại Campuchia.",
+    pillar3Title: "Nền Tảng Số VICATRA",
+    pillar3Text: "Số hóa toàn bộ hồ sơ doanh nghiệp, kho sản phẩm e-Commerce và hệ thống danh thiếp NFC Smart Card.",
+    pillar4Title: "Đồng Hành Thị Trường",
+    pillar4Text: "Hỗ trợ trọn gói hải quan, xuất nhập khẩu, logistics, phiên dịch, hợp đồng và bảo lãnh thanh toán 2 chiều.",
+
+    chBadge4: "CHƯƠNG 04 / 07",
+    ch04Label: "Showroom & Lợi thế đối tác bản địa",
+    ch04Heading: "Hiện Diện Thực Tế. Mạng Lưới Người Việt Sâu Rộng.",
+    ch04Lead: "Showroom tại trung tâm Phnom Penh kết hợp mạng lưới đối tác KVFCA — cộng đồng người gốc Việt trải khắp 25 tỉnh thành Campuchia — tạo lợi thế thị trường không ai thay thế được.",
+    kvfcaBadge: "Đối tác chiến lược tại Campuchia",
+    kvfcaTitle: "LỢI THẾ KVFCA — MẠNG LƯỚI NGƯỜI VIỆT SÂU RỘNG",
+    kvfcaSub: "VICATRA hợp tác chiến lược với Hội Khmer-Việt Kiều Campuchia (KVFCA) — tổ chức đại diện cộng đồng người gốc Việt lớn nhất tại Campuchia",
+    k1Bold: "5 tổ chức hội trực thuộc",
+    k1Text: "cùng hệ thống chi nhánh tỉnh hội trải rộng toàn quốc",
+    k2Bold: "Hiện diện tại 25/25 tỉnh thành",
+    k2Text: "trên toàn lãnh thổ Campuchia",
+    k3Bold: "Đại hội đầu năm 2026:",
+    k3Text: "Cam kết tái cơ cấu, thắt chặt quan hệ chính quyền sở tại",
+    k4Bold: "Điểm tựa cộng đồng:",
+    k4Text: "Kênh phân phối tự nhiên đáng tin cậy qua mạng lưới người Việt",
+    k5Bold: "Quan hệ chính quyền sâu rộng:",
+    k5Text: "Kết nối trực tiếp với Bộ ngành và tỉnh thành địa phương",
+    k6Bold: "Phiên dịch & Am hiểu văn hóa:",
+    k6Text: "Hỗ trợ đàm phán song ngữ Việt – Khmer chuyên nghiệp",
+    kvfcaCta: "Kết nối qua mạng lưới KVFCA",
+
+    chBadge5: "CHƯƠNG 05 / 07",
+    ch05Label: "Ngành hàng mục tiêu",
+    ch05Heading: "Các Ngành Hàng Ưu Tiên Phát Triển",
+    ch05Lead: "Danh mục sản phẩm có nhu cầu tiêu thụ và tiềm năng tăng trưởng lớn nhất tại thị trường Campuchia.",
+    cat1: "Nông Sản",
+    cat1Sub: "Gạo, hạt điều, trái cây sấy, nông sản chế biến",
+    cat2: "Thực Phẩm & Đồ Uống",
+    cat2Sub: "Mì gói, bánh kẹo, thực phẩm đóng hộp, nước giải khát",
+    cat3: "Gia Vị Việt Nam",
+    cat3Sub: "Nước tương, nước mắm, dầu ăn, hạt nêm, tiêu, ớt",
+    cat4: "Hàng Tiêu Dùng",
+    cat4Sub: "Nước tẩy rửa, lau sàn, đồ dùng vệ sinh gia đình",
+    cat5: "Mỹ Phẩm & Chăm Sóc",
+    cat5Sub: "Dầu gội, xà bông, kem dưỡng, sản phẩm cá nhân",
+    cat6: "Sản Phẩm OCOP",
+    cat6Sub: "Đặc sản vùng miền Việt Nam đạt chuẩn OCOP",
+    cat7: "Máy Móc & Thiết Bị",
+    cat7Sub: "Thiết bị công nghiệp nhỏ, máy đóng gói, công cụ",
+    cat8: "Vật Tư Nông Nghiệp",
+    cat8Sub: "Phân bón, thuốc bảo vệ thực vật, hạt giống",
+    cat9: "Năng Lượng Mặt Trời",
+    cat9Sub: "Thiết bị và giải pháp năng lượng sạch cho trang trại",
+    cat10: "Sản Phẩm Công Nghiệp",
+    cat10Sub: "Vật liệu xây dựng, phụ liệu sản xuất, bao bì",
+
+    chBadge6: "CHƯƠNG 06 / 07",
+    ch06Label: "Nền tảng số dành cho doanh nghiệp",
+    ch06Heading: "Một Gian Hàng — Hai Không Gian Hiện Diện",
+    ch06Lead: "Hiện diện trực tiếp tại Showroom Phnom Penh. Kết nối liên tục mọi lúc mọi nơi trên VICATRA App và Bản Đồ B2B Bản Địa.",
+    feat1Title: "Danh thiếp điện tử NFC Smart Card",
+    feat1Text: "Mỗi doanh nghiệp được cấp thẻ NFC thông minh. Chạm nhẹ vào điện thoại đối tác để mở ngay trang thông tin và catalogue.",
+    feat2Title: "Bản đồ doanh nghiệp B2B Campuchia",
+    feat2Text: "Tra cứu và định vị nhà máy Việt Nam cùng gian hàng tại Showroom Phnom Penh trên bản đồ số tương tác.",
+    feat3Title: "Kho sản phẩm số hóa 24/7",
+    feat3Text: "Trưng bày catalogue, video giới thiệu nhà máy và chứng nhận chất lượng cho đối tác quốc tế.",
+    feat4Title: "Kết nối & Đặt hàng B2B",
+    feat4Text: "Nhận yêu cầu báo giá và đơn đặt hàng từ chuỗi siêu thị và nhà nhập khẩu Campuchia ngay trên ứng dụng.",
+    appCta: "Đăng ký trải nghiệm sớm",
+    appSub: "Android, iOS & NFC Smart Card",
+
+    flowLabel: "Mô hình vận hành",
+    flowHeading: "Hành Lang Thương Mại Việt Nam — Campuchia",
+    flowLead: "Tuyến đường giao thương chiến lược giúp hàng hóa lưu thông nhanh chóng từ nhà máy Việt Nam sang Campuchia.",
+    flowNode1: "DOANH NGHIỆP VIỆT NAM",
+    flowNode2: "HỆ SINH THÁI VICATRA",
+    flowBox1: "SHOWROOM PHNOM PENH",
+    flowBox1Sub: "Hiện diện vật lý",
+    flowBox2: "VICATRA APP",
+    flowBox2Sub: "Kết nối số 24/7",
+    flowT1: "IMPORTER — Nhà nhập khẩu",
+    flowT2: "DISTRIBUTOR — Nhà phân phối",
+    flowT3: "RETAILER — Chuỗi bán lẻ",
+    flowT4: "CONSUMER — Người tiêu dùng",
+
+    tradeLabel: "Kết nối thương mại",
+    tradeHeading: "Nhu Cầu Giao Thương Của Bạn Là Gì?",
+    tradeLead: "Lựa chọn đúng mục tiêu để nhận tư vấn lộ trình và kết nối chính xác nhất.",
+    tab1Btn: "Tìm nhà phân phối",
+    tab1Title: "Dành cho nhà sản xuất Việt Nam tìm kênh phân phối tại Campuchia",
+    tab1Text: "VICATRA hỗ trợ đưa gian hàng vào Showroom Phnom Penh và kết nối trực tiếp với danh sách nhà phân phối phù hợp.",
+    tab1Cta: "Gửi yêu cầu tìm nhà phân phối",
+    tab2Btn: "Tìm nhà nhập khẩu",
+    tab2Title: "Dành cho doanh nghiệp xuất khẩu tìm đối tác nhập khẩu lớn",
+    tab2Text: "Hỗ trợ pháp lý, hồ sơ xuất khẩu chính ngạch và tiếp cận tập đoàn nhập khẩu hàng đầu Campuchia.",
+    tab2Cta: "Gửi yêu cầu tìm nhà nhập khẩu",
+    tab3Btn: "Tìm nguồn hàng Việt",
+    tab3Title: "Dành cho doanh nghiệp & nhà bán lẻ Campuchia tìm nguồn hàng Việt",
+    tab3Text: "Tra cứu nguồn hàng Made in Vietnam tận gốc nhà máy, giá cạnh tranh và hỗ trợ thủ tục mua hàng an toàn.",
+    tab3Cta: "Gửi yêu cầu nguồn hàng Việt Nam",
+    tab4Btn: "Đối tác VICATRA",
+    tab4Title: "Dành cho Hiệp hội, đại lý & đối tác dịch vụ",
+    tab4Text: "Hợp tác phát triển mạng lưới đại lý, tổ chức sự kiện xúc tiến thương mại và mở rộng hệ sinh thái VICATRA.",
+    tab4Cta: "Đăng ký trở thành đối tác VICATRA",
+
+    assocHeading: "Kết nối trực tiếp với Hiệp hội thương mại tại Campuchia",
+    assocSub: "Hỗ trợ doanh nghiệp Việt tiếp cận mạng lưới lãnh đạo và hội viên các Hiệp hội thương mại lớn nhất Campuchia.",
+    a1Type: "Phòng Thương mại",
+    a1Name: "CCC — Phòng Thương mại Campuchia",
+    a2Type: "Hiệp hội Doanh nghiệp",
+    a2Name: "VCBA — HH Doanh nghiệp Việt Nam – Campuchia",
+    a3Type: "Doanh nhân trẻ",
+    a3Name: "YEAC — HH Doanh nghiệp trẻ Campuchia",
+    a4Type: "SME Campuchia",
+    a4Name: "FASMEC — HH Doanh nghiệp vừa & nhỏ",
+
+    insightsLabel: "Market Insights",
+    insightsHeading: "Tin Tức & Phân Tích Thị Trường Campuchia",
+    insightsLead: "Cập nhật kiến thức chuyên sâu, chính sách xuất nhập khẩu và cơ hội thương mại mới nhất.",
+    i1Tag: "Thủ tục xuất khẩu",
+    i1Title: "Xuất khẩu hàng Việt sang Campuchia cần những chứng nhận và thủ tục gì?",
+    i1Text: "Hướng dẫn chi tiết quy trình hải quan, tiêu chuẩn lưu hành và lưu ý pháp lý khi đưa sản phẩm sang Phnom Penh.",
+    i2Tag: "Phân tích ngành hàng",
+    i2Title: "5 Ngành hàng Việt có sức tiêu thụ và tiềm năng lớn nhất tại Campuchia",
+    i2Text: "Phân tích xu hướng tiêu dùng của thị trường Campuchia đối với nhóm hàng FMCG, gia vị và hàng tiêu dùng.",
+    i3Tag: "Mạng lưới phân phối",
+    i3Title: "Cách tìm nhà phân phối và thiết lập kênh bán lẻ hiệu quả tại Phnom Penh",
+    i3Text: "Bí quyết tiếp cận AEON, Lucky Supermarket, Chip Mong và kết nối mạng lưới đại lý bản địa vững chắc.",
+    readMore: "Đọc bài viết",
+
+    chBadge7: "CHƯƠNG 07 / 07",
+    ch07Label: "Đăng ký tham gia",
+    ch07Heading: "Sẵn sàng đưa sản phẩm đến thị trường Campuchia?",
+    ch07Lead: "Điền thông tin hồ sơ doanh nghiệp để nhận tư vấn gian hàng và cơ hội kết nối B2B trong 24h.",
+    reqHeading: "Điều kiện & Tiêu chuẩn tham gia VFS",
+    req1Title: "01. Sản xuất tại Việt Nam",
+    req1Text: "Doanh nghiệp có nhà máy sản xuất trực tiếp tại Việt Nam (Made in Vietnam).",
+    req2Title: "02. Tiêu chuẩn thẩm định VFS",
+    req2Text: "Đáp ứng tiêu chí thẩm định: Nguồn gốc xuất xứ, chứng chỉ lưu hành, quy trình và năng lực sản xuất.",
+
+    formCompany: "Tên Công ty / Nhà máy *",
+    formCompanyPh: "Công ty TNHH Sản xuất A...",
+    formTax: "Mã số thuế (MST) *",
+    formName: "Họ và tên người đại diện *",
+    formNamePh: "Nguyễn Văn A",
+    formPhone: "Số điện thoại / Zalo *",
+    formWebsite: "Website / Fanpage",
+    formAddress: "Địa chỉ Nhà máy *",
+    formAddressPh: "Tỉnh/Thành phố (Việt Nam)",
+    formCategory: "Ngành hàng chính *",
+    formCategoryPh: "-- Chọn ngành hàng --",
+    formDemand: "Mục tiêu chính *",
+    formDemandPh: "-- Chọn nhu cầu --",
+    d1: "Trưng bày gian hàng Showroom Phnom Penh",
+    d2: "Tìm Nhà Phân Phối (Distributor)",
+    d3: "Tìm Nhà Nhập Khẩu (Importer)",
+    d4: "Đưa sản phẩm lên VICATRA App",
+    formProduct: "Mô tả sản phẩm & Chứng nhận",
+    formProductPh: "Tên sản phẩm, chứng nhận (ISO, HACCP, FDA...), quy cách đóng gói...",
+    formSubmit: "Gửi hồ sơ doanh nghiệp",
+    formNote: "VICATRA cam kết bảo mật và sẽ phản hồi qua điện thoại/Zalo trong 24h.",
+
+    contactHeading: "Trụ Sở & Văn Phòng Kết Nối VICATRA",
+    contactSub: "Liên hệ trực tiếp với chuyên viên tư vấn để nhận hỗ trợ nhanh nhất.",
+
+    footerDesc: "VICATRA – Vietnam Cambodia Trade Platform. Hệ sinh thái xúc tiến thương mại kết nối hàng Việt Nam vươn xa tại thị trường Campuchia.",
+    footerCol1: "Về VICATRA",
+    footerAbout: "Giới thiệu VICATRA",
+    footerShowroom: "Mô hình Showroom",
+    footerPillars: "4 Trụ cột năng lực",
+    footerCol2: "Doanh nghiệp",
+    footerRegister: "Thuê gian hàng Showroom",
+    footerCat: "Kho sản phẩm Việt",
+    footerTrade: "Kết nối B2B",
+    footerCol3: "Hỗ trợ",
+    footerApp: "VICATRA App",
+    footerInsights: "Market Insights",
+    footerContact: "Liên hệ tư vấn",
+    footerCopy: "© 2026 VICATRA – Vietnam Cambodia Trade Platform. All rights reserved. — CONNECT VIETNAM. GROW IN CAMBODIA.",
+
+    langEyebrow: "Chọn ngôn ngữ",
+    langTitle: "Bạn muốn trải nghiệm VICATRA bằng ngôn ngữ nào?",
+
+    formSending: "Đang gửi hồ sơ...",
+    formSuccess: "Cảm ơn {name}! VICATRA đã nhận hồ sơ và sẽ phản hồi trong 24h.",
+    formError: "Có lỗi xảy ra. Vui lòng liên hệ Hotline 0907 215 521.",
+    formRateLimit: "Bạn vừa gửi thông tin. Vui lòng đợi 1 phút."
   },
+
   en: {
-    navWhy: "Why VICATRA",
-    navServices: "Services",
-    navPricing: "Packages",
-    navProcess: "Process",
-    navTestimonials: "Clients",
-    navFaq: "FAQ",
+    brandTagline: "Trade Platform",
+    navHome: "Home",
+    navAbout: "Ecosystem",
+    navShowroom: "Showroom",
+    navCategories: "Categories",
+    navApp: "VICATRA App",
+    navInsights: "Market Insights",
+    navTrade: "Trade Matching",
     navContact: "Contact",
-    navCta: "Consultation",
-    heroEyebrow: "Partner network of 500+ supermarkets in Cambodia",
-    heroTitle: "Bring Vietnamese goods into Cambodia retail.",
-    heroLead: "VICATRA connects Vietnamese businesses with supermarkets, distributors and business associations in Cambodia.",
-    heroPrimary: "Submit product details",
-    heroSecondary: "View services",
-    metricOne: "partner supermarkets and retail points",
-    metricTwo: "connected business associations",
-    metricThreeNumber: "End-to-end",
-    metricThree: "trade promotion support",
-    partnersEyebrow: "Partners and network",
-    partnersTitle: "Cambodia retail ecosystem.",
-    whyEyebrow: "Why choose VICATRA",
-    whyTitle: 'Go with VICATRA or <span class="keep">enter the market alone?</span>',
-    whyLead: "A quick comparison between finding partners on your own and going with VICATRA.",
-    whyWithoutTitle: "❌ Enter market alone",
-    whyWithTitle: "✅ Go with VICATRA",
-    whyW1: "6–12 months finding contacts",
-    whyW2: "High travel and research costs",
-    whyW3: "Unclear listing standards",
-    whyW4: "Risk of wrong partnerships",
-    whyW5: "No post-connection support",
-    whyV1: "Direct access to 500+ supermarkets",
-    whyV2: "Assess opportunity before spending",
-    whyV3: "Listing documentation support",
-    whyV4: "Verified partner network",
-    whyV5: "Ongoing support and feedback tracking",
-    whyCta: "Get a free assessment",
-    galleryEyebrow: "Real operations",
-    galleryTitle: "VICATRA in action.",
-    galleryLead: "Vietnamese goods on their way to Cambodia supermarket shelves.",
-    galleryCaption1: "Inventory check at distribution warehouse",
-    galleryCaption2: "Delivery to supermarket systems",
-    galleryCaption3: "Direct supervision of the shipping process",
-    solutionEyebrow: "VICATRA services",
-    solutionTitle: "Bring Vietnamese products into retail systems.",
-    solutionLead: "We help prepare product materials, assess market fit, connect partners and track market feedback.",
-    serviceOneTitle: "Product assessment",
-    serviceOneText: "Review category, competitive edge, pricing and supermarket readiness.",
-    serviceTwoTitle: "Retail connection",
-    serviceTwoText: "Introduce products to suitable supermarkets, buyers and distribution partners.",
-    serviceThreeTitle: "Trade promotion",
-    serviceThreeText: "Support catalogues, meetings, product displays, sampling and launch activities.",
-    serviceFourTitle: "Post-connection support",
-    serviceFourText: "Track feedback to refine packaging, messaging and commercial terms.",
-    pricingEyebrow: "Service packages",
-    pricingTitle: "Choose the right package for your business.",
-    pricingLead: "Each package is tailored to your support needs and target market scale.",
-    priceTierOneTitle: "Explore",
-    priceTierOneDesc: "Assess product opportunity in the Cambodia market",
-    priceTierTwoTitle: "Connect",
-    priceTierTwoDesc: "Direct connection with supermarkets and distributors",
-    priceTierThreeTitle: "Partner",
-    priceTierThreeDesc: "Full support from listing to product launch",
-    priceBadge: "Most popular",
-    priceF1a: "Category & competition analysis",
-    priceF1b: "Channel fit report",
-    priceF1c: "Packaging & pricing advice",
-    priceF1d: "1 in-depth consultation session",
-    priceF2a: "Everything in Explore",
-    priceF2b: "Connect with 3–5 suitable partners",
-    priceF2c: "Listing documentation support",
-    priceF2d: "Accompany partner meetings",
-    priceF2e: "30-day feedback tracking",
-    priceF3a: "Everything in Connect",
-    priceF3b: "Display & sampling promotion",
-    priceF3c: "Catalogue & marketing support",
-    priceF3d: "90-day feedback tracking",
-    priceF3e: "Next channel expansion advice",
-    priceCta: "Contact for pricing",
-    processEyebrow: "Process",
-    processTitle: "A clear 4-step engagement.",
-    processLead: "From initial materials to suitable partner connections.",
-    stepOneTitle: "Submit details",
-    stepOneText: "Catalogue, certificates, product category, supply capacity and market goals.",
-    stepTwoTitle: "Assess opportunity",
-    stepTwoText: "Identify suitable channels, required preparation and the right partner approach.",
-    stepThreeTitle: "Connect partners",
-    stepThreeText: "Approach relevant buyers, distributors or business associations.",
-    stepFourTitle: "Follow up",
-    stepFourText: "Collect market feedback and recommend the next expansion steps.",
-    testimonialEyebrow: "What clients say",
-    testimonialTitle: "Businesses that partnered with VICATRA.",
-    testimonialOneQuote: '"VICATRA helped us connect with AEON Cambodia in just 3 weeks. Previously, we spent nearly 8 months searching with no results."',
-    testimonialOneName: "Nguyen Minh Tuan",
-    testimonialOneRole: "Director, Saigon Xanh Foods Co.",
-    testimonialTwoQuote: '"The VICATRA team understands the Cambodian market deeply. Their packaging and pricing advice was spot-on."',
-    testimonialTwoName: "Tran Thi Hong Nhung",
-    testimonialTwoRole: "Export Dept. Deputy Head, MekongCare Cosmetics",
-    testimonialThreeQuote: '"Our spice products are now on Lucky Supermarket shelves thanks to VICATRA\'s professional trade promotion support."',
-    testimonialThreeName: "Le Van Phuoc",
-    testimonialThreeRole: "CEO, Phu Quoc Gold Spices",
-    faqEyebrow: "Frequently asked questions",
-    faqTitle: "Answering common business questions.",
-    faqQ1: "What industries does VICATRA support?",
-    faqA1: "VICATRA supports FMCG manufacturers, food, beverages, spices, cosmetics and personal care brands looking to enter Cambodia's supermarket and retail channels.",
-    faqQ2: "How much does VICATRA's service cost?",
-    faqA2: "Pricing depends on the service package and product scope. Contact us for a detailed quotation tailored to your needs.",
-    faqQ3: "How long does it take for products to reach shelves?",
-    faqA3: "On average 4–12 weeks, depending on documentation readiness, certifications and target distribution channel.",
-    faqQ4: "What should a business prepare before working with VICATRA?",
-    faqA4: "Product catalogue, basic quality certificates (if available), pricing information and supply capacity. VICATRA will help with the rest.",
-    faqQ5: "Does VICATRA have representatives in Cambodia?",
-    faqA5: "Yes. VICATRA has a partner network and associates in Phnom Penh who facilitate direct connections with supermarkets and business associations.",
-    faqQ6: "What support does VICATRA provide after connection?",
-    faqA6: "VICATRA tracks market feedback, helps optimize packaging and messaging, and advises on distribution channel expansion strategies.",
-    contactEyebrow: "Contact",
-    contactTitle: "Get a product opportunity review.",
-    contactLead: "Send your product information. VICATRA will advise a practical route into the Cambodia market.",
-    formName: "Full name",
-    formNamePlaceholder: "Your name",
-    formPhone: "Phone / WhatsApp / Zalo",
-    formAddress: "Address",
-    formAddressPlaceholder: "City, Country",
-    formCompany: "Company",
-    formCompanyPlaceholder: "Company name",
-    formProduct: "Product category",
-    formProductPlaceholder: "Example: spices, beverages, packaged food...",
-    formSubmit: "Request consultation",
-    formNote: "VICATRA will respond as soon as possible.",
-    formSending: "Sending your details...",
-    formRateLimit: "Please wait 1 minute before submitting again.",
-    formSuccess: "{name}, your request has been sent. VICATRA will respond as soon as possible.",
-    formError: "We could not send your request yet. Please try again or contact VICATRA directly.",
-    footerDesc: "Bringing Vietnamese products into Cambodia retail systems.",
-    footerLinksTitle: "Links",
-    footerContactTitle: "Contact",
-    footerTop: "Back to top ↑",
-    languageModalEyebrow: "Choose language",
-    languageModalTitle: "Which language would you like to use?",
+    navCta: "Register",
+    navToc: "Table of Contents",
+
+    readingLabel: "Reading:",
+    readingIntro: "VICATRA Trade Platform Overview",
+    readingNext: "Next:",
+    nextLabel: "Next Chapter",
+
+    ch01Title: "Chapter 01: Market Challenges →",
+    ch01Short: "Challenges",
+    ch02Short: "Solutions",
+    ch03Short: "4 Pillars",
+    ch04Short: "Showroom",
+    ch05Short: "Categories",
+    ch06Short: "Digital Hub",
+    ch07Short: "Register",
+
+    next01: "Chapter 02 — VICATRA Solution Ecosystem →",
+    next02: "Chapter 03 — 4 Core Competency Pillars →",
+    next03: "Chapter 04 — Showroom & KVFCA Network →",
+    next04: "Chapter 05 — Target Product Categories →",
+    next05: "Chapter 06 — Digital Platform & App →",
+    next06: "Chapter 07 — Registration & B2B Matchmaking →",
+
+    heroEyebrow: "CONNECT VIETNAM · GROW IN CAMBODIA",
+    heroTitle: "Empower Vietnamese Brands<br><span>to Expand in Cambodia</span>",
+    heroLead: "VICATRA connects Vietnamese manufacturers with Cambodia retail through our Phnom Penh Showroom, B2B trade promotion, digital platform, and VICATRA App.",
+    heroPrimary: "Register Your Business",
+    heroSecondary: "Explore Roadmap",
+    stat1Num: "18M+",
+    stat1Label: "Cambodian consumer market reach",
+    stat2Num: "4",
+    stat2Label: "Local partner business associations",
+    stat3Num: "B2B",
+    stat3Label: "Official trade with payment guarantee",
+    routeFrom: "HO CHI MINH",
+    routeTo: "PHNOM PENH",
+    heroBadgeTitle: "VICATRA Showroom — Central Phnom Penh",
+    heroBadgeSub: "Approx. 1 km from National Olympic Stadium · Prime trade location",
+
+    partnersLabel: "Partners & Network",
+
+    chBadge1: "CHAPTER 01 / 07",
+    ch01Label: "Why & Market Challenges",
+    ch01Heading: "Why Does Entering Cambodia Alone Often Incur Risks?",
+    ch01Lead: "Cambodia holds huge potential but poses significant barriers for businesses searching for contacts unassisted.",
+    problemTitle: "Entering the Market Alone",
+    p1Bold: "Time-consuming:",
+    p1Text: "Takes 6–12 months searching for buyers with low efficiency.",
+    p2Bold: "Language & Legal barriers:",
+    p2Text: "Language gap, unclear product circulation licenses and customs standards.",
+    p3Bold: "High payment risk:",
+    p3Text: "Risk of bad debts, delayed payments, and lack of cross-border guarantees.",
+    p4Bold: "No physical presence:",
+    p4Text: "No physical space for buyers to test, touch, and verify products.",
+    solutionTitle: "Partnering with VICATRA",
+    s1Bold: "Instant Presence:",
+    s1Text: "Professional showroom space in central Phnom Penh upon joining.",
+    s2Bold: "Trade Guarantee:",
+    s2Text: "Two-way payment guarantee mechanism eliminates credit risks.",
+    s3Bold: "Full Legal Support:",
+    s3Text: "Complete official export dossier, translation, and contract drafting.",
+    s4Bold: "24/7 Digital Presence:",
+    s4Text: "Products automatically synced to B2B e-Commerce and VICATRA App.",
+
+    chBadge2: "CHAPTER 02 / 07",
+    ch02Label: "End-to-End Solution",
+    ch02Heading: "VICATRA Trade Promotion Ecosystem",
+    ch02Lead: "A closed-loop model enabling Vietnamese brands to position professionally and scale sustainably in Cambodia.",
+    step1Title: "Product Display",
+    step1Text: "Direct presence at Phnom Penh Showroom & digital platform",
+    step2Title: "Market Access",
+    step2Text: "Analyze demand, reach local consumers and retail chains",
+    step3Title: "Partner Matching",
+    step3Text: "Connect with Importers, Distributors, and Cambodia Business Associations",
+    step4Title: "Distribution Scaling",
+    step4Text: "Contract negotiations, payment guarantees, and cross-border logistics",
+    step5Title: "Business Growth",
+    step5Text: "Sustainable market share expansion across all Cambodian provinces",
+
+    chBadge3: "CHAPTER 03 / 07",
+    ch03Label: "4 Core Pillars",
+    ch03Heading: "Solid Foundation for Vietnamese Enterprises",
+    ch03Lead: "Comprehensive solutions optimizing every phase of export and distribution in Cambodia.",
+    pillar1Title: "Vietnam Factory Showroom",
+    pillar1Text: "High-standard showroom space showcasing quality Vietnamese goods in central Phnom Penh.",
+    pillar2Title: "B2B Trade Matching",
+    pillar2Text: "Direct linkages with Cambodian Importers, Distributors, Retailers, and local Business Chambers.",
+    pillar3Title: "VICATRA Digital Platform",
+    pillar3Text: "Full digital company profiles, e-Commerce catalogues, and smart NFC business card ecosystem.",
+    pillar4Title: "Market Escort & Support",
+    pillar4Text: "End-to-end customs clearance, logistics, professional interpreters, contracts, and payment guarantee.",
+
+    chBadge4: "CHAPTER 04 / 07",
+    ch04Label: "Showroom & Local Partnership Advantage",
+    ch04Heading: "Tangible Presence. Deep Local Community Reach.",
+    ch04Lead: "Phnom Penh central showroom combined with the KVFCA partner network across 25 Cambodian provinces gives an irreplaceable market advantage.",
+    kvfcaBadge: "Strategic Partner in Cambodia",
+    kvfcaTitle: "KVFCA ADVANTAGE — EXTENSIVE COMMUNITY NETWORK",
+    kvfcaSub: "VICATRA maintains a strategic partnership with the Khmer-Vietnam Friendship Association in Cambodia (KVFCA) — the largest community organization in Cambodia",
+    k1Bold: "5 affiliated associations",
+    k1Text: "with provincial branch networks nationwide",
+    k2Bold: "Present in 25/25 provinces",
+    k2Text: "across the entire kingdom of Cambodia",
+    k3Bold: "Early 2026 Congress:",
+    k3Text: "Committed to restructuring and strengthening ties with host authorities",
+    k4Bold: "Community Backing:",
+    k4Text: "Reliable natural distribution channel via community retail networks",
+    k5Bold: "Deep Government Ties:",
+    k5Text: "Direct communication with ministries and provincial administrations",
+    k6Bold: "Bilingual & Cultural Insight:",
+    k6Text: "Professional Vietnamese – Khmer bilingual negotiation support",
+    kvfcaCta: "Connect via KVFCA Network",
+
+    chBadge5: "CHAPTER 05 / 07",
+    ch05Label: "Target Categories",
+    ch05Heading: "Priority Target Product Sectors",
+    ch05Lead: "High-demand product categories with strong growth potential in the Cambodian market.",
+    cat1: "Agriculture",
+    cat1Sub: "Rice, cashews, dried fruits, processed agricultural products",
+    cat2: "Food & Beverage",
+    cat2Sub: "Instant noodles, confectionery, canned food, soft drinks",
+    cat3: "Vietnamese Spices",
+    cat3Sub: "Soy sauce, fish sauce, cooking oil, seasoning, pepper, chili",
+    cat4: "Consumer Goods",
+    cat4Sub: "Detergents, floor cleaners, household cleaning products",
+    cat5: "Cosmetics & Personal Care",
+    cat5Sub: "Shampoo, soap, skincare lotions, personal hygiene",
+    cat6: "OCOP Specialties",
+    cat6Sub: "Certified Vietnamese regional specialty items",
+    cat7: "Machinery & Equipment",
+    cat7Sub: "Light industrial gear, packaging machines, workshop tools",
+    cat8: "Agricultural Supplies",
+    cat8Sub: "Fertilizers, crop protection chemicals, high-yield seeds",
+    cat9: "Solar Energy",
+    cat9Sub: "Clean energy solutions and components for agriculture",
+    cat10: "Industrial Products",
+    cat10Sub: "Construction materials, production inputs, packaging",
+
+    chBadge6: "CHAPTER 06 / 07",
+    ch06Label: "Digital Hub for Enterprises",
+    ch06Heading: "One Physical Booth — Dual Digital Space",
+    ch06Lead: "Direct presence at Phnom Penh Showroom. 24/7 continuous outreach via VICATRA App and Local B2B Interactive Map.",
+    feat1Title: "NFC Smart Business Card",
+    feat1Text: "Each partner receives a smart NFC card. Tap against any smartphone to open company profile & catalogue instantly.",
+    feat2Title: "Cambodia B2B Enterprise Map",
+    feat2Text: "Locate Vietnamese factories and their showroom booths in Phnom Penh on an interactive map.",
+    feat3Title: "24/7 Digital Product Showcase",
+    feat3Text: "Display full e-catalogues, factory tour videos, and international quality certifications.",
+    feat4Title: "B2B Orders & Inquiries",
+    feat4Text: "Receive RFQs and purchase orders directly from Cambodian supermarkets and importers.",
+    appCta: "Early Access Sign Up",
+    appSub: "Android, iOS & NFC Smart Card",
+
+    flowLabel: "Operating Model",
+    flowHeading: "Vietnam — Cambodia Trade Corridor",
+    flowLead: "Strategic trade corridor enabling swift goods movement from Vietnamese factories to Cambodian markets.",
+    flowNode1: "VIETNAMESE ENTERPRISES",
+    flowNode2: "VICATRA ECOSYSTEM",
+    flowBox1: "PHNOM PENH SHOWROOM",
+    flowBox1Sub: "Physical Presence",
+    flowBox2: "VICATRA APP",
+    flowBox2Sub: "24/7 Digital Hub",
+    flowT1: "IMPORTER — Direct Importers",
+    flowT2: "DISTRIBUTOR — Wholesalers",
+    flowT3: "RETAILER — Retail Chains",
+    flowT4: "CONSUMER — End Users",
+
+    tradeLabel: "Trade Matchmaking",
+    tradeHeading: "What Is Your Business Need?",
+    tradeLead: "Choose your primary goal to receive tailored roadmap and partner connections.",
+    tab1Btn: "Find Distributors",
+    tab1Title: "For Vietnamese manufacturers looking for Cambodian distribution channels",
+    tab1Text: "VICATRA arranges showroom booth display and facilitates direct meetings with vetted distributors.",
+    tab1Cta: "Request Distributor Search",
+    tab2Btn: "Find Importers",
+    tab2Title: "For exporters seeking high-volume certified import partners",
+    tab2Text: "Assistance with official import-export compliance and introductions to leading import groups.",
+    tab2Cta: "Request Importer Search",
+    tab3Btn: "Source Vietnam Goods",
+    tab3Title: "For Cambodian buyers & retailers seeking direct Vietnamese factory supply",
+    tab3Text: "Source direct from Vietnamese factories with competitive wholesale prices and secure procurement.",
+    tab3Cta: "Request Vietnam Product Sourcing",
+    tab4Btn: "Become a Partner",
+    tab4Title: "For Business Associations, regional agents, and trade service providers",
+    tab4Text: "Collaborate on expanding agency networks, co-hosting trade events, and scaling the ecosystem.",
+    tab4Cta: "Apply for VICATRA Partnership",
+
+    assocHeading: "Direct Access to Major Cambodian Business Chambers",
+    assocSub: "Enabling Vietnamese leaders to meet executives and members across Cambodia's peak trade bodies.",
+    a1Type: "Chamber of Commerce",
+    a1Name: "CCC — Cambodia Chamber of Commerce",
+    a2Type: "Business Association",
+    a2Name: "VCBA — Vietnam Cambodia Business Association",
+    a3Type: "Young Entrepreneurs",
+    a3Name: "YEAC — Young Entrepreneurs Association of Cambodia",
+    a4Type: "Cambodia SMEs",
+    a4Name: "FASMEC — Fed. of Small & Medium Enterprises",
+
+    insightsLabel: "Market Insights",
+    insightsHeading: "Cambodia Market News & Intelligence",
+    insightsLead: "Latest regulatory updates, import-export compliance insights, and bilateral trade opportunities.",
+    i1Tag: "Export Regulations",
+    i1Title: "Which licenses and certificates are required to export to Cambodia?",
+    i1Text: "Detailed guide on customs procedures, market circulation standards, and legal compliance.",
+    i2Tag: "Category Analysis",
+    i2Title: "Top 5 Vietnamese product categories with highest demand in Cambodia",
+    i2Text: "Consumer behavior trends across FMCG, culinary seasonings, and household essentials in Cambodia.",
+    i3Tag: "Distribution Network",
+    i3Title: "How to identify distributors and build retail channels in Phnom Penh",
+    i3Text: "Strategies to access AEON, Lucky Supermarket, Chip Mong, and local dealer networks.",
+    readMore: "Read Article",
+
+    chBadge7: "CHAPTER 07 / 07",
+    ch07Label: "Registration",
+    ch07Heading: "Ready to Expand Your Products to Cambodia?",
+    ch07Lead: "Submit your business profile to receive booth assessment and B2B matchmaking within 24 hours.",
+    reqHeading: "VFS Eligibility & Qualification Standards",
+    req1Title: "01. Made in Vietnam",
+    req1Text: "Enterprise must own or operate manufacturing facilities in Vietnam.",
+    req2Title: "02. VFS Assessment Criteria",
+    req2Text: "Clear traceability, valid circulation licenses, and verified manufacturing capability.",
+
+    formCompany: "Company / Factory Name *",
+    formCompanyPh: "ABC Manufacturing Co., Ltd...",
+    formTax: "Tax Identification Number *",
+    formName: "Representative Full Name *",
+    formNamePh: "John Doe",
+    formPhone: "Phone / WhatsApp / Zalo *",
+    formWebsite: "Website / Fanpage",
+    formAddress: "Factory Address *",
+    formAddressPh: "Province / City (Vietnam)",
+    formCategory: "Primary Category *",
+    formCategoryPh: "-- Select category --",
+    formDemand: "Primary Objective *",
+    formDemandPh: "-- Select primary need --",
+    d1: "Showroom Booth in Phnom Penh",
+    d2: "Find Distributors",
+    d3: "Find Importers",
+    d4: "List Products on VICATRA App",
+    formProduct: "Product Description & Certificates",
+    formProductPh: "Product names, certifications (ISO, HACCP, FDA...), packaging specifications...",
+    formSubmit: "Submit Business Dossier",
+    formNote: "VICATRA commits to data privacy and will reply within 24 hours.",
+
+    contactHeading: "VICATRA Headquarters & Liaison Offices",
+    contactSub: "Contact our consultants directly for immediate assistance.",
+
+    footerDesc: "VICATRA – Vietnam Cambodia Trade Platform. Comprehensive trade promotion ecosystem driving Vietnamese products into Cambodia.",
+    footerCol1: "About VICATRA",
+    footerAbout: "Introduction",
+    footerShowroom: "Showroom Model",
+    footerPillars: "4 Core Pillars",
+    footerCol2: "Enterprises",
+    footerRegister: "Showroom Leasing",
+    footerCat: "Vietnam Product Hub",
+    footerTrade: "B2B Matchmaking",
+    footerCol3: "Support",
+    footerApp: "VICATRA App",
+    footerInsights: "Market Insights",
+    footerContact: "Contact Consultation",
+    footerCopy: "© 2026 VICATRA – Vietnam Cambodia Trade Platform. All rights reserved. — CONNECT VIETNAM. GROW IN CAMBODIA.",
+
+    langEyebrow: "Choose Language",
+    langTitle: "Which language would you prefer to explore VICATRA in?",
+
+    formSending: "Submitting profile...",
+    formSuccess: "Thank you {name}! VICATRA has received your dossier and will reach out within 24 hours.",
+    formError: "An error occurred. Please contact Hotline +84 907 215 521.",
+    formRateLimit: "Submission received. Please wait 1 minute before submitting again."
   },
+
+  km: {
+    brandTagline: "វេទិកាពាណិជ្ជកម្ម",
+    navHome: "ទំព័រដើម",
+    navAbout: "ប្រព័ន្ធអេកូឡូស៊ី",
+    navShowroom: "បន្ទប់តាំងបង្ហាញ",
+    navCategories: "វិស័យទំនិញ",
+    navApp: "កម្មវិធី VICATRA",
+    navInsights: "ការយល់ដឹងពីទីផ្សារ",
+    navTrade: "ការតភ្ជាប់ពាណិជ្ជកម្ម",
+    navContact: "ទំនាក់ទំនង",
+    navCta: "ចុះឈ្មោះ",
+    navToc: "មាតិការុករក",
+
+    readingLabel: "កំពុងអាន:",
+    readingIntro: "ទិដ្ឋភាពទូទៅនៃវេទិកា VICATRA",
+    readingNext: "បន្ទាប់:",
+    nextLabel: "បន្ទាប់",
+
+    ch01Title: "ជំពូក ០១: បញ្ហាប្រឈមទីផ្សារ →",
+    ch01Short: "បញ្ហាប្រឈម",
+    ch02Short: "ដំណោះស្រាយ",
+    ch03Short: "សសរស្តម្ភ ៤",
+    ch04Short: "បន្ទប់តាំង",
+    ch05Short: "វិស័យទំនិញ",
+    ch06Short: "វេទិកាឌីជីថល",
+    ch07Short: "ចុះឈ្មោះ",
+
+    next01: "ជំពូក ០២ — ប្រព័ន្ធដំណោះស្រាយ VICATRA →",
+    next02: "ជំពូក ០៣ — សសរស្តម្ភសមត្ថភាពទាំង ៤ →",
+    next03: "ជំពូក ០៤ — បន្ទប់តាំង និងបណ្តាញ KVFCA →",
+    next04: "ជំពូក ០៥ — បញ្ជីវិស័យទំនិញគោលដៅ →",
+    next05: "ជំពូក ០៦ — វេទិកាឌីជីថល និង App →",
+    next06: "ជំពូក ០៧ — ចុះឈ្មោះ និងតភ្ជាប់ B2B →",
+
+    heroEyebrow: "ភ្ជាប់ទំនិញវៀតណាម · រីកចម្រើននៅកម្ពុជា",
+    heroTitle: "នាំទំនិញវៀតណាម<br><span>ចូលទីផ្សារកម្ពុជា</span>",
+    heroLead: "VICATRA ភ្ជាប់អាជីវកម្មវៀតណាមជាមួយទីផ្សារកម្ពុជាតាមរយៈបន្ទប់តាំងបង្ហាញភ្នំពេញ ការផ្សព្វផ្សាយ B2B វេទិកាឌីជីថល និងកម្មវិធី VICATRA។",
+    heroPrimary: "ចុះឈ្មោះអាជីវកម្ម",
+    heroSecondary: "ស្វែងយល់ពីផែនទីបង្ហាញផ្លូវ",
+    stat1Num: "18M+",
+    stat1Label: "ប្រជាជនកម្ពុជាដែលអាចទៅដល់",
+    stat2Num: "4",
+    stat2Label: "សមាគមពាណិជ្ជកម្មដៃគូក្នុងស្រុក",
+    stat3Num: "B2B",
+    stat3Label: "ពាណិជ្ជកម្មផ្លូវការធានាការទូទាត់",
+    routeFrom: "ហូជីមិញ",
+    routeTo: "ភ្នំពេញ",
+    heroBadgeTitle: "បន្ទប់តាំង VICATRA — កណ្តាលរាជធានីភ្នំពេញ",
+    heroBadgeSub: "ចម្ងាយប្រហែល ១ គ.ម ពីពហុកីឡដ្ឋានជាតិអូឡាំពិក · ទីតាំងពាណិជ្ជកម្មយុទ្ធសាស្ត្រ",
+
+    partnersLabel: "ដៃគូ និងបណ្តាញ",
+
+    chBadge1: "ជំពូក ០១ / ០៧",
+    ch01Label: "មូលហេតុ និងបញ្ហាប្រឈម",
+    ch01Heading: "ហេតុអ្វីបានជាការចូលទីផ្សារកម្ពុជាដោយខ្លួនឯងជួបហានិភ័យ?",
+    ch01Lead: "ទីផ្សារកម្ពុជាមានសក្តានុពលខ្លាំង ប៉ុន្តែបង្កឧបសគ្គជាច្រើនសម្រាប់អាជីវកម្មដែលស្វែងរកដៃគូដោយខ្លួនឯង។",
+    problemTitle: "ចូលទីផ្សារដោយឯកឯង",
+    p1Bold: "ខាតពេលវេលាច្រើន:",
+    p1Text: "ចំណាយពេល ៦–១២ ខែស្វែងរកអ្នកទិញដោយគ្មានប្រសិទ្ធភាព។",
+    p2Bold: "ឧបសគ្គភាសា និងច្បាប់:",
+    p2Text: "បញ្ហាភាសា មិនច្បាស់ពីស្តង់ដារអាជ្ញាប័ណ្ណ និងនីតិវិធីគយ។",
+    p3Bold: "ហានិភ័យទូទាត់ប្រាក់ខ្ពស់:",
+    p3Text: "ងាយជួបបំណុលយឺតយ៉ាវ ឬគ្មានការធានាអន្តរជាតិ។",
+    p4Bold: "គ្មានទីតាំងតាំងបង្ហាញ:",
+    p4Text: "គ្មានកន្លែងជាក់ស្តែងសម្រាប់អ្នកទិញសាកល្បង និងវាយតម្លៃ។",
+    solutionTitle: "សហការជាមួយ VICATRA",
+    s1Bold: "មានវត្តមានភ្លាមៗ:",
+    s1Text: "មានស្តង់តាំងបង្ហាញស្តង់ដារនៅកណ្តាលភ្នំពេញភ្លាមៗ។",
+    s2Bold: "ការធានាពាណិជ្ជកម្ម:",
+    s2Text: "យន្តការធានាការទូទាត់សងខាងលុបបំបាត់ហានិភ័យហិរញ្ញវត្ថុ។",
+    s3Bold: "គាំទ្រច្បាប់ពេញលេញ:",
+    s3Text: "រៀបចំឯកសារនាំចេញផ្លូវការ បកប្រែ និងតាក់តែងកិច្ចសន្យា។",
+    s4Bold: "វត្តមានឌីជីថល ២៤/៧:",
+    s4Text: "ធ្វើសមកាលកម្មទំនិញដោយស្វ័យប្រវត្តិទៅលើ App និង e-Commerce។",
+
+    chBadge2: "ជំពូក ០២ / ០៧",
+    ch02Label: "ដំណោះស្រាយគ្រប់ជ្រុងជ្រោយ",
+    ch02Heading: "ប្រព័ន្ធអេកូឡូស៊ីផ្សព្វផ្សាយពាណិជ្ជកម្ម VICATRA",
+    ch02Lead: "គំរូតភ្ជាប់ពេញលេញជួយឱ្យម៉ាកយីហោវៀតណាមមានជំហររឹងមាំនៅកម្ពុជា។",
+    step1Title: "ការតាំងបង្ហាញទំនិញ",
+    step1Text: "មានវត្តមានផ្ទាល់នៅបន្ទប់តាំងភ្នំពេញ និងវេទិកាឌីជីថល",
+    step2Title: "ការឈានចូលទីផ្សារ",
+    step2Text: "ស្ទង់តម្រូវការ ឈានដល់អ្នកប្រើប្រាស់ និងប្រព័ន្ធលក់រាយ",
+    step3Title: "ការតភ្ជាប់ដៃគូ",
+    step3Text: "ជួបអ្នកនាំចូល អ្នកចែកចាយ និងសមាគមអាជីវកម្មកម្ពុជា",
+    step4Title: "អភិវឌ្ឍន៍បណ្តាញចែកចាយ",
+    step4Text: "ចរចាកិច្ចសន្យា ធានាការទូទាត់ និងដឹកជញ្ជូន",
+    step5Title: "ពង្រីកអាជីវកម្ម",
+    step5Text: "ពង្រីកចំណែកទីផ្សារប្រកបដោយនិរន្តរភាពទូទាំងប្រទេសកម្ពុជា",
+
+    chBadge3: "ជំពូក ០៣ / ០៧",
+    ch03Label: "សសរស្តម្ភសមត្ថភាពទាំង ៤",
+    ch03Heading: "គ្រឹះដ៏រឹងមាំសម្រាប់អាជីវកម្មវៀតណាម",
+    ch03Lead: "ដំណោះស្រាយសម្រួលគ្រប់ដំណាក់កាលនាំចេញ និងអភិវឌ្ឍន៍បណ្តាញចែកចាយនៅកម្ពុជា។",
+    pillar1Title: "បន្ទប់តាំងបង្ហាញរោងចក្រវៀតណាម",
+    pillar1Text: "ទីកន្លែងបង្ហាញផលិតផលវៀតណាមគុណភាពខ្ពស់នៅកណ្តាលរាជធានីភ្នំពេញ។",
+    pillar2Title: "ការតភ្ជាប់ពាណិជ្ជកម្ម B2B",
+    pillar2Text: "តភ្ជាប់អាជីវកម្មវៀតណាមជាមួយអ្នកនាំចូល អ្នកចែកចាយ និងសមាគមពាណិជ្ជកម្ម។",
+    pillar3Title: "វេទិកាឌីជីថល VICATRA",
+    pillar3Text: "ឌីជីថលរូបវន្តប្រវត្តិរូបអាជីវកម្ម កាតាឡុក e-Commerce និងប័ណ្ណឆ្លាតវៃ NFC។",
+    pillar4Title: "ការអមដំណើរទីផ្សារ",
+    pillar4Text: "គាំទ្រពេញលេញផ្នែកគយ ដឹកជញ្ជូន អ្នកបកប្រែ កិច្ចសន្យា និងការធានាទូទាត់។",
+
+    chBadge4: "ជំពូក ០៤ / ០៧",
+    ch04Label: "បន្ទប់តាំង និងអត្ថប្រយោជន៍ដៃគូក្នុងស្រុក",
+    ch04Heading: "វត្តមានជាក់ស្តែង។ បណ្តាញសហគមន៍យ៉ាងទូលំទូលាយ។",
+    ch04Lead: "បន្ទប់តាំងបង្ហាញនៅកណ្តាលភ្នំពេញរួមជាមួយបណ្តាញ KVFCA នៅទូទាំង ២៥ ខេត្ត-រាជធានី បង្កើតអត្ថប្រយោជន៍ទីផ្សារដែលមិនអាចជំនួសបាន។",
+    kvfcaBadge: "ដៃគូយុទ្ធសាស្ត្រនៅកម្ពុជា",
+    kvfcaTitle: "អត្ថប្រយោជន៍ KVFCA — បណ្តាញសហគមន៍ទូលំទូលាយ",
+    kvfcaSub: "VICATRA សហការជាយុទ្ធសាស្ត្រជាមួយសមាគមខ្មែរ-វៀតណាមនៅកម្ពុជា (KVFCA) — អង្គការតំណាងសហគមន៍ធំបំផុតនៅកម្ពុជា",
+    k1Bold: "សមាគមចំណុះចំនួន ៥",
+    k1Text: "ជាមួយបណ្តាញសាខាខេត្តទូទាំងប្រទេស",
+    k2Bold: "មានវត្តមាននៅ ២៥/២៥ ខេត្ត-រាជធានី",
+    k2Text: "លើទឹកដីនៃព្រះរាជាណាចក្រកម្ពុជា",
+    k3Bold: "មហាសន្និបាតដើមឆ្នាំ ២០២៦:",
+    k3Text: "ប្តេជ្ញាកសាង និងពង្រឹងទំនាក់ទំនងជាមួយអាជ្ញាធរមូលដ្ឋាន",
+    k4Bold: "បង្អែកសហគមន៍:",
+    k4Text: "បណ្តាញចែកចាយធម្មជាតិគួរឱ្យទុកចិត្តតាមរយៈសហគមន៍",
+    k5Bold: "ទំនាក់ទំនងរដ្ឋាភិបាលយ៉ាងជិតស្និទ្ធ:",
+    k5Text: "តភ្ជាប់ផ្ទាល់ជាមួយក្រសួង ស្ថាប័ន និងអាជ្ញាធរខេត្ត",
+    k6Bold: "ការបកប្រែ និងការយល់ដឹងវប្បធម៌:",
+    k6Text: "គាំទ្រការចរចាភាសាពីរ វៀតណាម – ខ្មែរ ប្រកបដោយវិជ្ជាជីវៈ",
+    kvfcaCta: "តភ្ជាប់តាមបណ្តាញ KVFCA",
+
+    chBadge5: "ជំពូក ០៥ / ០៧",
+    ch05Label: "វិស័យទំនិញគោលដៅ",
+    ch05Heading: "វិស័យទំនិញអាទិភាពសម្រាប់ការអភិវឌ្ឍ",
+    ch05Lead: "បញ្ជីទំនិញដែលមានតម្រូវការប្រើប្រាស់ និងសក្តានុពលរីកចម្រើនខ្ពស់បំផុតនៅកម្ពុជា។",
+    cat1: "កសិផល",
+    cat1Sub: "អង្ករ គ្រាប់ស្វាយចន្ទី ផ្លែឈើសម្ងួត កសិផលកែច្នៃ",
+    cat2: "អាហារ និងភេសជ្ជៈ",
+    cat2Sub: "មីកញ្ចប់ នំបង្អែម អាហារកំប៉ុង ភេសជ្ជៈ",
+    cat3: "គ្រឿងទេសវៀតណាម",
+    cat3Sub: "ទឹកស៊ីអ៊ីវ ទឹកត្រី ប្រេងឆា ម្សៅស៊ុប ម្រេច ម្ទេស",
+    cat4: "ទំនិញប្រើប្រាស់",
+    cat4Sub: "សាប៊ូទឹក ទឹកជូតឥដ្ឋ ផលិតផលអនាម័យក្នុងផ្ទះ",
+    cat5: "គ្រឿងសម្អាង និងការថែទាំ",
+    cat5Sub: "សាប៊ូកក់សក់ សាប៊ូដុំ ឡេ និងផលិតផលថែទាំផ្ទាល់ខ្លួន",
+    cat6: "ផលិតផលពិសេស OCOP",
+    cat6Sub: "ផលិតផលពិសេសប្រចាំតំបន់វៀតណាមស្តង់ដារ OCOP",
+    cat7: "គ្រឿងចក្រ និងឧបករណ៍",
+    cat7Sub: "ឧបករណ៍ឧស្សាហកម្មខ្នាតតូច ម៉ាស៊ីនវេចខ្ចប់",
+    cat8: "សម្ភារកសិកម្ម",
+    cat8Sub: "ជីកសិកម្ម ថ្នាំការពារដំណាំ គ្រាប់ពូជ",
+    cat9: "ថាមពលពន្លឺព្រះអាទិត្យ",
+    cat9Sub: "ឧបករណ៍ និងដំណោះស្រាយថាមពលស្អាតសម្រាប់កសិដ្ឋាន",
+    cat10: "ផលិតផលឧស្សាហកម្ម",
+    cat10Sub: "សម្ភារសំណង់ វត្ថុធាតុដើមផលិតកម្ម ការវេចខ្ចប់",
+
+    chBadge6: "ជំពូក ០៦ / ០៧",
+    ch06Label: "វេទិកាឌីជីថលសម្រាប់អាជីវកម្ម",
+    ch06Heading: "ស្តង់តែមួយ — វត្តមានពីរកន្លែង",
+    ch06Lead: "មានវត្តមានផ្ទាល់នៅបន្ទប់តាំងភ្នំពេញ។ តភ្ជាប់ជាបន្តបន្ទាប់គ្រប់ពេលវេលានៅលើ App និងផែនទី B2B។",
+    feat1Title: "ប័ណ្ណអាជីវកម្មឆ្លាតវៃ NFC",
+    feat1Text: "អាជីវកម្មនីមួយៗទទួលបានកាត NFC ឆ្លាតវៃ។ ប៉ះលើទូរស័ព្ទដៃដើម្បីបើកកាតាឡុកភ្លាមៗ។",
+    feat2Title: "ផែនទីអាជីវកម្ម B2B នៅកម្ពុជា",
+    feat2Text: "ស្វែងរក និងកំណត់ទីតាំងរោងចក្រវៀតណាម និងស្តង់តាំងបង្ហាញនៅភ្នំពេញលើផែនទីឌីជីថល។",
+    feat3Title: "ឃ្លាំងទំនិញឌីជីថល ២៤/៧",
+    feat3Text: "តាំងបង្ហាញកាតាឡុក វីដេអូរោងចក្រ និងវិញ្ញាបនបត្រគុណភាពសម្រាប់ដៃគូអន្តរជាតិ។",
+    feat4Title: "ការតភ្ជាប់ និងបញ្ជាទិញ B2B",
+    feat4Text: "ទទួលសំណើសម្រង់តម្លៃ និងការបញ្ជាទិញពីស៊ុបភើម៉ាកែត និងអ្នកនាំចូលកម្ពុជា។",
+    appCta: "ចុះឈ្មោះសាកល្បងមុនគេ",
+    appSub: "Android, iOS & ប័ណ្ណឆ្លាតវៃ NFC",
+
+    flowLabel: "គំរូប្រតិបត្តិការ",
+    flowHeading: "ច្រករបៀងពាណិជ្ជកម្ម វៀតណាម — កម្ពុជា",
+    flowLead: "ផ្លូវពាណិជ្ជកម្មយុទ្ធសាស្ត្រជួយឱ្យទំនិញចរាចរយ៉ាងឆាប់រហ័សពីរោងចក្រវៀតណាមទៅកម្ពុជា។",
+    flowNode1: "សហគ្រាសវៀតណាម",
+    flowNode2: "ប្រព័ន្ធអេកូឡូស៊ី VICATRA",
+    flowBox1: "បន្ទប់តាំងបង្ហាញភ្នំពេញ",
+    flowBox1Sub: "វត្តមានជាក់ស្តែង",
+    flowBox2: "កម្មវិធី VICATRA",
+    flowBox2Sub: "ការតភ្ជាប់ឌីជីថល ២៤/៧",
+    flowT1: "IMPORTER — អ្នកនាំចូល",
+    flowT2: "DISTRIBUTOR — អ្នកចែកចាយ",
+    flowT3: "RETAILER — ប្រព័ន្ធលក់រាយ",
+    flowT4: "CONSUMER — អ្នកប្រើប្រាស់",
+
+    tradeLabel: "ការតភ្ជាប់ពាណិជ្ជកម្ម",
+    tradeHeading: "តើតម្រូវការពាណិជ្ជកម្មរបស់អ្នកគឺជាអ្វី?",
+    tradeLead: "ជ្រើសរើសគោលដៅរបស់អ្នកដើម្បីទទួលបានការប្រឹក្សា និងការតភ្ជាប់ត្រឹមត្រូវបំផុត។",
+    tab1Btn: "ស្វែងរកអ្នកចែកចាយ",
+    tab1Title: "សម្រាប់អ្នកផលិតវៀតណាមដែលស្វែងរកបណ្តាញចែកចាយនៅកម្ពុជា",
+    tab1Text: "VICATRA ជួយដាក់ស្តង់តាំងបង្ហាញនៅភ្នំពេញ និងតភ្ជាប់ផ្ទាល់ជាមួយអ្នកចែកចាយសមស្រប។",
+    tab1Cta: "ផ្ញើសំណើស្វែងរកអ្នកចែកចាយ",
+    tab2Btn: "ស្វែងរកអ្នកនាំចូល",
+    tab2Title: "សម្រាប់សហគ្រាសនាំចេញដែលស្វែងរកអ្នកនាំចូលធំៗ",
+    tab2Text: "គាំទ្រនីតិវិធីច្បាប់ ឯកសារនាំចេញផ្លូវការ និងការជួបជាមួយក្រុមហ៊ុននាំចូលឈានមុខ។",
+    tab2Cta: "ផ្ញើសំណើស្វែងរកអ្នកនាំចូល",
+    tab3Btn: "ស្វែងរកប្រភពទំនិញវៀតណាម",
+    tab3Title: "សម្រាប់អាជីវកម្ម និងអ្នកលក់រាយកម្ពុជាដែលស្វែងរកប្រភពទំនិញវៀតណាម",
+    tab3Text: "ស្វែងរកទំនិញ Made in Vietnam ពីរោងចក្រផ្ទាល់ តម្លៃប្រកួតប្រជែង និងនីតិវិធីទិញទំនិញសុវត្ថិភាព។",
+    tab3Cta: "ផ្ញើសំណើស្វែងរកប្រភពទំនិញវៀតណាម",
+    tab4Btn: "ក្លាយជាដៃគូ VICATRA",
+    tab4Title: "សម្រាប់សមាគម ភ្នាក់ងារ និងដៃគូសេវាកម្ម",
+    tab4Text: "សហការអភិវឌ្ឍបណ្តាញភ្នាក់ងារ រៀបចំព្រឹត្តិការណ៍ពាណិជ្ជកម្ម និងពង្រីកប្រព័ន្ធ VICATRA។",
+    tab4Cta: "ចុះឈ្មោះធ្វើជាដៃគូ VICATRA",
+
+    assocHeading: "ការតភ្ជាប់ផ្ទាល់ជាមួយសមាគមពាណិជ្ជកម្មនៅកម្ពុជា",
+    assocSub: "ជួយឱ្យអាជីវកម្មវៀតណាមជួបថ្នាក់ដឹកនាំ និងសមាជិកនៃសមាគមពាណិជ្ជកម្មធំបំផុតនៅកម្ពុជា។",
+    a1Type: "សភាពាណិជ្ជកម្ម",
+    a1Name: "CCC — សភាពាណិជ្ជកម្មកម្ពុជា",
+    a2Type: "សមាគមអាជីវកម្ម",
+    a2Name: "VCBA — សមាគមធុរកិច្ច វៀតណាម – កម្ពុជា",
+    a3Type: "សហគ្រិនវ័យក្មេង",
+    a3Name: "YEAC — សមាគមសហគ្រិនវ័យក្មេងកម្ពុជា",
+    a4Type: "សហគ្រាសធុនតូច និងមធ្យម",
+    a4Name: "FASMEC — សហព័ន្ធសហគ្រាសធុនតូច និងមធ្យមកម្ពុជា",
+
+    insightsLabel: "ការយល់ដឹងពីទីផ្សារ",
+    insightsHeading: "ព័ត៌មាន និងការវិភាគទីផ្សារកម្ពុជា",
+    insightsLead: "បច្ចុប្បន្នភាពចំណេះដឹងស៊ីជម្រៅ គោលនយោបាយគយ និងឱកាសពាណិជ្ជកម្មថ្មីៗ។",
+    i1Tag: "នីតិវិធីនាំចេញ",
+    i1Title: "តើការនាំចេញទំនិញវៀតណាមទៅកម្ពុជាត្រូវការវិញ្ញាបនបត្រអ្វីខ្លះ?",
+    i1Text: "ការណែនាំលម្អិតអំពីរនាំងគយ ស្តង់ដារចរាចរ និងកំណត់សម្គាល់ច្បាប់នៅភ្នំពេញ។",
+    i2Tag: "ការវិភាគវិស័យទំនិញ",
+    i2Title: "វិស័យទំនិញវៀតណាម ៥ ដែលមានការពេញនិយម និងសក្តានុពលបំផុតនៅកម្ពុជា",
+    i2Text: "ការវិភាគនិន្នាការអ្នកប្រើប្រាស់កម្ពុជាចំពោះទំនិញ FMCG គ្រឿងទេស និងសម្ភារប្រើប្រាស់។",
+    i3Tag: "បណ្តាញចែកចាយ",
+    i3Title: "វិធីស្វែងរកអ្នកចែកចាយ និងបង្កើតបណ្តាញលក់រាយប្រកបដោយប្រសិទ្ធភាពនៅភ្នំពេញ",
+    i3Text: "គន្លឹះចូលកាន់ AEON, Lucky Supermarket, Chip Mong និងតភ្ជាប់បណ្តាញភ្នាក់ងារក្នុងស្រុក។",
+    readMore: "អានអត្ថបទ",
+
+    chBadge7: "ជំពូក ០៧ / ០៧",
+    ch07Label: "ការចុះឈ្មោះ",
+    ch07Heading: "ត្រៀមខ្លួនរួចរាល់ដើម្បីនាំទំនិញចូលទីផ្សារកម្ពុជា?",
+    ch07Lead: "បំពេញព័ត៌មានអាជីវកម្មដើម្បីទទួលបានការប្រឹក្សាអំពីស្តង់ និងឱកាសតភ្ជាប់ B2B ក្នុង ២៤ ម៉ោង។",
+    reqHeading: "លក្ខខណ្ឌ និងស្តង់ដារចូលរួម VFS",
+    req1Title: "០១. ផលិតនៅវៀតណាម",
+    req1Text: "អាជីវកម្មមានរោងចក្រផលិតផ្ទាល់នៅប្រទេសវៀតណាម (Made in Vietnam)។",
+    req2Title: "០២. ស្តង់ដារវាយតម្លៃ VFS",
+    req2Text: "ឆ្លើយតបលក្ខណៈវិនិច្ឆ័យ៖ ប្រភពដើម វិញ្ញាបនបត្រចរាចរ និងសមត្ថភាពផលិតកម្ម។",
+
+    formCompany: "ឈ្មោះក្រុមហ៊ុន / រោងចក្រ *",
+    formCompanyPh: "ក្រុមហ៊ុន ផលិតកម្ម...",
+    formTax: "លេខអត្តសញ្ញាណកម្មសារពើពន្ធ *",
+    formName: "ឈ្មោះអ្នកតំណាង *",
+    formNamePh: "ឈ្មោះរបស់អ្នក",
+    formPhone: "លេខទូរស័ព្ទ / WhatsApp / Zalo *",
+    formWebsite: "គេហទំព័រ / ផេក",
+    formAddress: "អាសយដ្ឋានរោងចក្រ *",
+    formAddressPh: "ខេត្ត / ក្រុង (វៀតណាម)",
+    formCategory: "វិស័យទំនិញចម្បង *",
+    formCategoryPh: "-- ជ្រើសរើសវិស័យទំនិញ --",
+    formDemand: "គោលដៅចម្បង *",
+    formDemandPh: "-- ជ្រើសរើសតម្រូវការ --",
+    d1: "តាំងស្តង់នៅបន្ទប់តាំងភ្នំពេញ",
+    d2: "ស្វែងរកអ្នកចែកចាយ",
+    d3: "ស្វែងរកអ្នកនាំចូល",
+    d4: "ដាក់ទំនិញលើកម្មវិធី VICATRA",
+    formProduct: "ការពិពណ៌នាទំនិញ និងវិញ្ញាបនបត្រ",
+    formProductPh: "ឈ្មោះទំនិញ វិញ្ញាបនបត្រ (ISO, HACCP, FDA...) ការវេចខ្ចប់...",
+    formSubmit: "ផ្ញើឯកសារអាជីវកម្ម",
+    formNote: "VICATRA ប្តេជ្ញារក្សាការសម្ងាត់ និងឆ្លើយតបក្នុងរយៈពេល ២៤ ម៉ោង។",
+
+    contactHeading: "ការិយាល័យកណ្តាល និងទំនាក់ទំនង VICATRA",
+    contactSub: "ទាក់ទងអ្នកប្រឹក្សាដោយផ្ទាល់ដើម្បីទទួលបានការគាំទ្ររហ័សបំផុត។",
+
+    footerDesc: "VICATRA – វេទិកាពាណិជ្ជកម្ម វៀតណាម កម្ពុជា។ ប្រព័ន្ធផ្សព្វផ្សាយពាណិជ្ជកម្មនាំទំនិញវៀតណាមរីកចម្រើននៅកម្ពុជា។",
+    footerCol1: "អំពី VICATRA",
+    footerAbout: "ការណែនាំអំពី VICATRA",
+    footerShowroom: "គំរូនៃបន្ទប់តាំង",
+    footerPillars: "សសរស្តម្ភទាំង ៤",
+    footerCol2: "អាជីវកម្ម",
+    footerRegister: "ជួលស្តង់តាំងបង្ហាញ",
+    footerCat: "ឃ្លាំងទំនិញវៀតណាម",
+    footerTrade: "ការតភ្ជាប់ B2B",
+    footerCol3: "ជំនួយ",
+    footerApp: "កម្មវិធី VICATRA",
+    footerInsights: "ការយល់ដឹងពីទីផ្សារ",
+    footerContact: "ទាក់ទងប្រឹក្សា",
+    footerCopy: "© ២០២៦ VICATRA – វេទិកាពាណិជ្ជកម្ម វៀតណាម កម្ពុជា។ រក្សាសិទ្ធិគ្រប់យ៉ាង។",
+
+    langEyebrow: "ជ្រើសរើសភាសា",
+    langTitle: "តើអ្នកចង់ស្វែងយល់ពី VICATRA ជាភាសាណា?",
+
+    formSending: "កំពុងផ្ញើព័ត៌មាន...",
+    formSuccess: "អរគុណ {name}! VICATRA បានទទួលព័ត៌មានហើយ នឹងឆ្លើយតបក្នុងរយៈពេល ២៤ ម៉ោង។",
+    formError: "មានបញ្ហាបានកើតឡើង។ សូមទាក់ទងទូរស័ព្ទបន្ទាន់ 0907 215 521។",
+    formRateLimit: "អ្នកទើបតែបានផ្ញើព័ត៌មាន។ សូមរង់ចាំ ១ នាទីមុនផ្ញើម្តងទៀត។"
+  }
 };
 
-translations.km = {
-  navWhy: "ហេតុអ្វី VICATRA",
-  navServices: "សេវាកម្ម",
-  navPricing: "កញ្ចប់សេវា",
-  navProcess: "ដំណើរការ",
-  navTestimonials: "អតិថិជន",
-  navFaq: "FAQ",
-  navContact: "ទំនាក់ទំនង",
-  navCta: "ប្រឹក្សា",
-  heroEyebrow: "បណ្តាញដៃគូស៊ុបភើម៉ាកែតជាង 500 កន្លែងនៅកម្ពុជា",
-  heroTitle: 'នាំ<span class="keep">ទំនិញវៀតណាម</span>ចូលប្រព័ន្ធលក់រាយកម្ពុជា។',
-  heroLead: "VICATRA ភ្ជាប់អាជីវកម្មវៀតណាមជាមួយស៊ុបភើម៉ាកែត អ្នកចែកចាយ និងសមាគមពាណិជ្ជកម្មនៅកម្ពុជា។",
-  heroPrimary: "ផ្ញើព័ត៌មានផលិតផល",
-  heroSecondary: "មើលសេវាកម្ម",
-  metricOne: "ស៊ុបភើម៉ាកែត និងចំណុចលក់ដៃគូ",
-  metricTwo: "សមាគមអាជីវកម្មដែលបានភ្ជាប់",
-  metricThreeNumber: "ចប់គ្រប់ជំហាន",
-  metricThree: "គាំទ្រផ្សព្វផ្សាយពាណិជ្ជកម្ម",
-  partnersEyebrow: "ដៃគូ និងបណ្តាញ",
-  partnersTitle: "ប្រព័ន្ធលក់រាយទំនើបនៅកម្ពុជា។",
-  whyEyebrow: "ហេតុអ្វីជ្រើស VICATRA",
-  whyTitle: 'ទៅជាមួយ VICATRA ឬ <span class="keep">ចូលទីផ្សារដោយខ្លួនឯង?</span>',
-  whyLead: "ការប្រៀបធៀបខ្លីរវាងការស្វែងរកដៃគូដោយខ្លួនឯង និងការទៅជាមួយ VICATRA។",
-  whyWithoutTitle: "❌ ចូលទីផ្សារដោយខ្លួនឯង",
-  whyWithTitle: "✅ ទៅជាមួយ VICATRA",
-  whyW1: "ចំណាយពេល 6–12 ខែស្វែងរកទំនាក់ទំនង",
-  whyW2: "ចំណាយខ្ពស់លើការស្ទង់ទីផ្សារ និងធ្វើដំណើរ",
-  whyW3: "មិនច្បាស់ពីស្តង់ដារ listing",
-  whyW4: "មានហានិភ័យជ្រើសដៃគូមិនត្រឹមត្រូវ",
-  whyW5: "គ្មានការគាំទ្របន្ទាប់ពីភ្ជាប់រួច",
-  whyV1: "ភ្ជាប់ផ្ទាល់ទៅស៊ុបភើម៉ាកែត 500+",
-  whyV2: "វាយតម្លៃឱកាសមុនចំណាយប្រាក់",
-  whyV3: "គាំទ្ររៀបចំឯកសារ listing",
-  whyV4: "បណ្តាញដៃគូដែលបានផ្ទៀងផ្ទាត់",
-  whyV5: "បន្តគាំទ្រ និងតាមដានមតិត្រឡប់",
-  whyCta: "ទទួលការវាយតម្លៃឥតគិតថ្លៃ",
-  galleryEyebrow: "រូបភាពប្រតិបត្តិការពិត",
-  galleryTitle: "VICATRA កំពុងប្រតិបត្តិការ។",
-  galleryLead: "ទំនិញវៀតណាមកំពុងធ្វើដំណើរទៅកាន់ធ្នើស៊ុបភើម៉ាកែតកម្ពុជា។",
-  galleryCaption1: "ត្រួតពិនិត្យទំនិញនៅឃ្លាំងចែកចាយ",
-  galleryCaption2: "ដឹកជញ្ជូនទៅប្រព័ន្ធស៊ុបភើម៉ាកែត",
-  galleryCaption3: "ត្រួតពិនិត្យផ្ទាល់លើដំណើរការដឹកជញ្ជូន",
-  solutionEyebrow: "សេវាកម្ម VICATRA",
-  solutionTitle: 'នាំ<span class="keep">ផលិតផលវៀតណាម</span>ចូល<span class="keep">បណ្តាញលក់រាយ</span>។',
-  solutionLead: "រៀបចំឯកសារ វាយតម្លៃឱកាស ភ្ជាប់ដៃគូ និងតាមដានមតិត្រឡប់ទីផ្សារ។",
-  serviceOneTitle: "វាយតម្លៃផលិតផល",
-  serviceOneText: "ពិនិត្យប្រភេទផលិតផល អត្ថប្រយោជន៍ប្រកួតប្រជែង តម្លៃ និងភាពរួចរាល់សម្រាប់ស៊ុបភើម៉ាកែត។",
-  serviceTwoTitle: "ភ្ជាប់លក់រាយ",
-  serviceTwoText: "ណែនាំផលិតផលទៅកាន់ស៊ុបភើម៉ាកែត អ្នកទិញ និងដៃគូចែកចាយដែលសមស្រប។",
-  serviceThreeTitle: "ផ្សព្វផ្សាយពាណិជ្ជកម្ម",
-  serviceThreeText: "គាំទ្រកាតាឡុក កិច្ចប្រជុំ ការតាំងបង្ហាញ ការសាកល្បង និងការបើកលក់ផលិតផល។",
-  serviceFourTitle: "គាំទ្របន្ទាប់ពីភ្ជាប់",
-  serviceFourText: "តាមដានមតិត្រឡប់ ដើម្បីកែលម្អវេចខ្ចប់ សារ និងលក្ខខណ្ឌពាណិជ្ជកម្ម។",
-  pricingEyebrow: "កញ្ចប់សេវា",
-  pricingTitle: "ជ្រើសកញ្ចប់សមស្របសម្រាប់អាជីវកម្មរបស់អ្នក។",
-  pricingLead: "កញ្ចប់នីមួយៗត្រូវបានរៀបចំតាមកម្រិតគាំទ្រ និងទំហំទីផ្សារគោលដៅ។",
-  priceTierOneTitle: "ស្វែងយល់",
-  priceTierOneDesc: "វាយតម្លៃឱកាសផលិតផលនៅទីផ្សារកម្ពុជា",
-  priceTierTwoTitle: "ភ្ជាប់",
-  priceTierTwoDesc: "ភ្ជាប់ផ្ទាល់ជាមួយស៊ុបភើម៉ាកែត និងអ្នកចែកចាយ",
-  priceTierThreeTitle: "ដៃគូអមដំណើរ",
-  priceTierThreeDesc: "គាំទ្រពេញលេញពី listing ដល់ការបើកលក់ផលិតផល",
-  priceBadge: "ពេញនិយមបំផុត",
-  priceF1a: "វិភាគប្រភេទផលិតផល និងការប្រកួតប្រជែង",
-  priceF1b: "របាយការណ៍បណ្តាញដែលសមស្រប",
-  priceF1c: "ប្រឹក្សាវេចខ្ចប់ និងកំណត់តម្លៃ",
-  priceF1d: "ប្រឹក្សាជម្រៅ 1 វគ្គ",
-  priceF2a: "រួមបញ្ចូលទាំងអស់ពីកញ្ចប់ស្វែងយល់",
-  priceF2b: "ភ្ជាប់ជាមួយដៃគូសមស្រប 3–5",
-  priceF2c: "គាំទ្ររៀបចំឯកសារ listing",
-  priceF2d: "អមដំណើរក្នុងជំនួបដៃគូ",
-  priceF2e: "តាមដានមតិត្រឡប់ 30 ថ្ងៃ",
-  priceF3a: "រួមបញ្ចូលទាំងអស់ពីកញ្ចប់ភ្ជាប់",
-  priceF3b: "ផ្សព្វផ្សាយការតាំងបង្ហាញ និង sampling",
-  priceF3c: "គាំទ្រកាតាឡុក និងទីផ្សារ",
-  priceF3d: "តាមដានមតិត្រឡប់ 90 ថ្ងៃ",
-  priceF3e: "ប្រឹក្សាពង្រីកបណ្តាញបន្ទាប់",
-  priceCta: "ទាក់ទងសម្រាប់តម្លៃ",
-  processEyebrow: "ដំណើរការ",
-  processTitle: "ដំណើរការ 4 ជំហានច្បាស់លាស់។",
-  processLead: "ពីឯកសារដំបូងរហូតដល់ការភ្ជាប់ដៃគូសមស្រប។",
-  stepOneTitle: "ផ្ញើព័ត៌មាន",
-  stepOneText: "កាតាឡុក វិញ្ញាបនបត្រ ប្រភេទផលិតផល និងសមត្ថភាពផ្គត់ផ្គង់។",
-  stepTwoTitle: "វាយតម្លៃឱកាស",
-  stepTwoText: "កំណត់បណ្តាញសមស្រប ចំណុចត្រូវត្រៀម និងវិធីចូលទៅកាន់ដៃគូ។",
-  stepThreeTitle: "ភ្ជាប់ដៃគូ",
-  stepThreeText: "ចូលទៅកាន់អ្នកទិញ អ្នកចែកចាយ ឬសមាគមអាជីវកម្មដែលពាក់ព័ន្ធ។",
-  stepFourTitle: "តាមដាន និងពង្រីក",
-  stepFourText: "ប្រមូលមតិត្រឡប់ទីផ្សារ និងណែនាំជំហានពង្រីកបន្ទាប់។",
-  testimonialEyebrow: "អ្វីដែលអតិថិជននិយាយ",
-  testimonialTitle: "អាជីវកម្មដែលបានទៅជាមួយ VICATRA។",
-  testimonialOneQuote: '"VICATRA បានជួយយើងភ្ជាប់ជាមួយ AEON Cambodia ក្នុងតែ 3 សប្តាហ៍។ មុននេះយើងស្វែងរកជិត 8 ខែតែមិនមានលទ្ធផល។"',
-  testimonialOneName: "Nguyen Minh Tuan",
-  testimonialOneRole: "នាយក, Saigon Xanh Foods Co.",
-  testimonialTwoQuote: '"ក្រុម VICATRA យល់ទីផ្សារកម្ពុជាយ៉ាងជ្រៅ។ ការប្រឹក្សាវេចខ្ចប់ និងតម្លៃរបស់ពួកគេត្រឹមត្រូវណាស់។"',
-  testimonialTwoName: "Tran Thi Hong Nhung",
-  testimonialTwoRole: "អនុប្រធានផ្នែកនាំចេញ, MekongCare Cosmetics",
-  testimonialThreeQuote: '"ផលិតផលគ្រឿងទេសរបស់យើងបានឡើងធ្នើ Lucky Supermarket ដោយសារការគាំទ្រផ្សព្វផ្សាយពាណិជ្ជកម្មដ៏ជំនាញពី VICATRA។"',
-  testimonialThreeName: "Le Van Phuoc",
-  testimonialThreeRole: "CEO, Phu Quoc Gold Spices",
-  faqEyebrow: "សំណួរដែលសួរញឹកញាប់",
-  faqTitle: "ឆ្លើយសំណួរទូទៅរបស់អាជីវកម្ម។",
-  faqQ1: "VICATRA សមស្របសម្រាប់វិស័យណាខ្លះ?",
-  faqA1: "VICATRA គាំទ្រអ្នកផលិត FMCG អាហារ ភេសជ្ជៈ គ្រឿងទេស គ្រឿងសម្អាង និងផលិតផលថែទាំផ្ទាល់ខ្លួនដែលចង់ចូលស៊ុបភើម៉ាកែត និងបណ្តាញលក់រាយនៅកម្ពុជា។",
-  faqQ2: "តម្លៃសេវា VICATRA ប៉ុន្មាន?",
-  faqA2: "តម្លៃអាស្រ័យលើកញ្ចប់សេវា និងវិសាលភាពផលិតផល។ សូមទាក់ទងយើងដើម្បីទទួលបានសម្រង់តម្លៃលម្អិតតាមតម្រូវការ។",
-  faqQ3: "ត្រូវការពេលប៉ុន្មានដើម្បីឱ្យផលិតផលឡើងធ្នើ?",
-  faqA3: "ជាមធ្យម 4–12 សប្តាហ៍ អាស្រ័យលើភាពរួចរាល់នៃឯកសារ វិញ្ញាបនបត្រ និងបណ្តាញចែកចាយគោលដៅ។",
-  faqQ4: "អាជីវកម្មគួរត្រៀមអ្វីមុនធ្វើការជាមួយ VICATRA?",
-  faqA4: "កាតាឡុកផលិតផល វិញ្ញាបនបត្រគុណភាពមូលដ្ឋាន (បើមាន) ព័ត៌មានតម្លៃ និងសមត្ថភាពផ្គត់ផ្គង់។ VICATRA នឹងជួយបំពេញផ្នែកដែលនៅសល់។",
-  faqQ5: "VICATRA មានតំណាងនៅកម្ពុជាឬទេ?",
-  faqA5: "មាន។ VICATRA មានបណ្តាញដៃគូ និងអ្នកសហការនៅភ្នំពេញ ដើម្បីជួយភ្ជាប់ផ្ទាល់ជាមួយស៊ុបភើម៉ាកែត និងសមាគមអាជីវកម្ម។",
-  faqQ6: "បន្ទាប់ពីភ្ជាប់រួច VICATRA គាំទ្រអ្វីបន្ថែម?",
-  faqA6: "VICATRA តាមដានមតិត្រឡប់ទីផ្សារ ជួយកែលម្អវេចខ្ចប់ និងសារ ព្រមទាំងប្រឹក្សាយុទ្ធសាស្ត្រពង្រីកបណ្តាញចែកចាយ។",
-  contactEyebrow: "ទំនាក់ទំនង",
-  contactTitle: "ទទួលការវាយតម្លៃឱកាសផលិតផល។",
-  contactLead: "ផ្ញើព័ត៌មានផលិតផលរបស់អ្នក។ VICATRA នឹងប្រឹក្សាផ្លូវចូលទីផ្សារកម្ពុជាដែលអាចអនុវត្តបាន។",
-  formName: "ឈ្មោះពេញ",
-  formNamePlaceholder: "ឈ្មោះរបស់អ្នក",
-  formPhone: "ទូរស័ព្ទ / WhatsApp / Zalo",
-  formAddress: "អាសយដ្ឋាន",
-  formAddressPlaceholder: "ទីក្រុង, ប្រទេស",
-  formCompany: "ក្រុមហ៊ុន",
-  formCompanyPlaceholder: "ឈ្មោះក្រុមហ៊ុន",
-  formProduct: "ប្រភេទផលិតផល",
-  formProductPlaceholder: "ឧទាហរណ៍: គ្រឿងទេស, ភេសជ្ជៈ, អាហារវេចខ្ចប់...",
-  formSubmit: "ស្នើសុំប្រឹក្សា",
-  formNote: "VICATRA នឹងឆ្លើយតបឱ្យបានឆាប់បំផុត។",
-  formSending: "កំពុងផ្ញើព័ត៌មាន...",
-  formRateLimit: "សូមរង់ចាំ 1 នាទី មុនផ្ញើសំណើថ្មីម្តងទៀត។",
-  formSuccess: "{name}, សំណើរបស់អ្នកត្រូវបានផ្ញើរួចហើយ។ VICATRA នឹងឆ្លើយតបឱ្យបានឆាប់បំផុត។",
-  formError: "មិនទាន់អាចផ្ញើសំណើបានទេ។ សូមព្យាយាមម្តងទៀត ឬទាក់ទង VICATRA ដោយផ្ទាល់។",
-  footerDesc: "នាំផលិតផលវៀតណាមចូលប្រព័ន្ធលក់រាយកម្ពុជា។",
-  footerLinksTitle: "តំណភ្ជាប់",
-  footerContactTitle: "ទំនាក់ទំនង",
-  footerTop: "ត្រឡប់ទៅខាងលើ ↑",
-  languageModalEyebrow: "ជ្រើសរើសភាសា",
-  languageModalTitle: "តើអ្នកចង់មើលវេបសាយជាភាសាណា?",
-};
-
+/* ── DOM Elements ──────────────────────────────────────────── */
 const GOOGLE_SHEETS_WEB_APP_URL =
   "https://script.google.com/macros/s/AKfycbwqNANLb2XQXQZ1dEzTmueWnmwqCZvoVfzut3F3RzfmGJl6xUugOe7LXfpNkhXOwwuC/exec";
+
 const form = document.querySelector("#leadForm");
 const note = document.querySelector("#formNote");
 const submitButton = form?.querySelector("button[type='submit']");
@@ -431,33 +865,50 @@ const revealItems = document.querySelectorAll(".reveal");
 const savedLanguage = localStorage.getItem("vicatra-language");
 let currentLanguage = translations[savedLanguage] ? savedLanguage : "vi";
 
-function applyLanguage(language) {
-  if (!translations[language]) {
-    language = "vi";
-  }
+/* ── Translation Engine ────────────────────────────────────── */
+function applyLanguage(lang) {
+  if (!translations[lang]) lang = "vi";
+  currentLanguage = lang;
+  localStorage.setItem("vicatra-language", lang);
+  document.documentElement.lang = lang;
 
-  currentLanguage = language;
-  localStorage.setItem("vicatra-language", language);
-  document.documentElement.lang = language;
-
-  document.querySelectorAll("[data-i18n]").forEach((element) => {
-    const key = element.dataset.i18n;
-    element.textContent = translations[language]?.[key] || translations.vi[key] || "";
+  // Text content
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.dataset.i18n;
+    if (translations[lang]?.[key]) {
+      el.textContent = translations[lang][key];
+    } else if (translations.vi[key]) {
+      el.textContent = translations.vi[key];
+    }
   });
 
-  document.querySelectorAll("[data-i18n-html]").forEach((element) => {
-    const key = element.dataset.i18nHtml;
-    element.innerHTML = translations[language]?.[key] || translations.vi[key] || "";
+  // HTML content (for linebreaks/spans)
+  document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+    const key = el.dataset.i18nHtml;
+    if (translations[lang]?.[key]) {
+      el.innerHTML = translations[lang][key];
+    } else if (translations.vi[key]) {
+      el.innerHTML = translations.vi[key];
+    }
   });
 
-  document.querySelectorAll("[data-placeholder]").forEach((element) => {
-    const key = element.dataset.placeholder;
-    element.setAttribute("placeholder", translations[language]?.[key] || translations.vi[key] || "");
+  // Placeholder
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const key = el.dataset.i18nPlaceholder;
+    if (translations[lang]?.[key]) {
+      el.setAttribute("placeholder", translations[lang][key]);
+    } else if (translations.vi[key]) {
+      el.setAttribute("placeholder", translations.vi[key]);
+    }
   });
 
-  languageButtons.forEach((button) => {
-    button.classList.toggle("active", button.dataset.lang === language);
+  // Active button state
+  languageButtons.forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.lang === lang);
   });
+
+  // Update dynamic chapter bar
+  updateReadingProgress();
 }
 
 function closeLanguageModal() {
@@ -475,67 +926,62 @@ function openLanguageModal() {
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => {
     applyLanguage(button.dataset.lang);
-
     if (button.hasAttribute("data-language-choice")) {
       closeLanguageModal();
     }
   });
 });
 
-languageChoiceButtons.forEach((button) => {
-  button.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeLanguageModal();
-    }
-  });
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && languageModal?.classList.contains("open")) {
+    closeLanguageModal();
+  }
 });
 
-// Hamburger menu
+/* ── Mobile Drawer ─────────────────────────────────────────── */
 const hamburger = document.querySelector(".hamburger");
 const drawer = document.querySelector("#mobileDrawer");
 const drawerClose = drawer?.querySelector(".drawer-close");
-const drawerOverlay = drawer?.querySelector(".drawer-backdrop");
+const drawerBackdrop = drawer?.querySelector(".drawer-backdrop");
 const drawerLinks = drawer?.querySelectorAll(".drawer-nav a");
 
 function openDrawer() {
   drawer?.classList.add("open");
   hamburger?.setAttribute("aria-expanded", "true");
-  document.body.style.overflow = "hidden";
+  document.body.classList.add("no-scroll");
 }
 
 function closeDrawer() {
   drawer?.classList.remove("open");
   hamburger?.setAttribute("aria-expanded", "false");
-  document.body.style.overflow = "";
+  document.body.classList.remove("no-scroll");
 }
 
 hamburger?.addEventListener("click", openDrawer);
 drawerClose?.addEventListener("click", closeDrawer);
-drawerOverlay?.addEventListener("click", closeDrawer);
+drawerBackdrop?.addEventListener("click", closeDrawer);
 drawerLinks?.forEach((link) => link.addEventListener("click", closeDrawer));
 
-// Trade Tab Switcher
-const tradeTabBtns = document.querySelectorAll(".tab-btn");
-const tradeTabContents = document.querySelectorAll(".tab-content");
+/* ── Trade Tab Switcher ────────────────────────────────────── */
+const tabBtns = document.querySelectorAll(".tab-btn");
+const tabContents = document.querySelectorAll(".tab-content");
 
-tradeTabBtns.forEach((btn) => {
+tabBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     const targetTab = btn.getAttribute("data-tab");
-
-    tradeTabBtns.forEach((b) => b.classList.remove("active"));
-    tradeTabContents.forEach((c) => c.classList.remove("active"));
-
+    tabBtns.forEach((b) => b.classList.remove("active"));
+    tabContents.forEach((c) => c.classList.remove("active"));
     btn.classList.add("active");
     const content = document.getElementById(targetTab);
     if (content) content.classList.add("active");
   });
 });
 
-// Form submission
-form?.addEventListener("submit", async (event) => {
-  event.preventDefault();
-  
-  // Rate Limiting Check (1 minute cooldown)
+/* ── Lead Form Submit ──────────────────────────────────────── */
+form?.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  // Rate Limiting (1 minute cooldown)
   const lastSubmitTime = localStorage.getItem("vicatra-last-submit");
   if (lastSubmitTime && Date.now() - parseInt(lastSubmitTime) < 60000) {
     if (note) note.textContent = translations[currentLanguage]?.formRateLimit || "Bạn vừa gửi thông tin. Vui lòng đợi 1 phút.";
@@ -543,13 +989,8 @@ form?.addEventListener("submit", async (event) => {
   }
 
   const formData = new FormData(form);
-  const fallbackName = currentLanguage === "vi" ? "Quý khách" : currentLanguage === "km" ? "អតិថិជន" : "Thank you";
+  const fallbackName = currentLanguage === "vi" ? "Quý khách" : currentLanguage === "km" ? "អតិថិជន" : "Valued Partner";
   const name = formData.get("name")?.toString().trim() || fallbackName;
-
-  if (!GOOGLE_SHEETS_WEB_APP_URL) {
-    if (note) note.textContent = translations[currentLanguage]?.formError || "Chưa cấu hình URL kết nối Google Sheets.";
-    return;
-  }
 
   const payload = {
     company: formData.get("company")?.toString().trim() || "",
@@ -559,15 +1000,13 @@ form?.addEventListener("submit", async (event) => {
     website: formData.get("website")?.toString().trim() || "",
     address: formData.get("address")?.toString().trim() || "",
     category: formData.get("category")?.toString().trim() || "",
-    product_count: formData.get("product_count")?.toString().trim() || "1",
     demand: formData.get("demand")?.toString().trim() || "",
-    target_market: formData.get("target_market")?.toString().trim() || "",
     product: formData.get("product")?.toString().trim() || "",
     language: currentLanguage,
     page: window.location.href,
   };
 
-  if (note) note.textContent = translations[currentLanguage]?.formSending || "Đang gửi hồ sơ doanh nghiệp...";
+  if (note) note.textContent = translations[currentLanguage]?.formSending || "Đang gửi hồ sơ...";
   if (submitButton) submitButton.disabled = true;
 
   try {
@@ -583,14 +1022,14 @@ form?.addEventListener("submit", async (event) => {
     localStorage.setItem("vicatra-last-submit", Date.now().toString());
     form.reset();
   } catch (error) {
-    console.error("Lỗi gửi form:", error);
+    console.error("Form submit error:", error);
     if (note) note.textContent = translations[currentLanguage]?.formError || "Có lỗi xảy ra. Vui lòng liên hệ Hotline 0907 215 521.";
   } finally {
     if (submitButton) submitButton.disabled = false;
   }
 });
 
-// Reveal on scroll
+/* ── Scroll Reveal ─────────────────────────────────────────── */
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
     (entries) => {
@@ -601,28 +1040,22 @@ if ("IntersectionObserver" in window) {
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.12 }
   );
   revealItems.forEach((item) => revealObserver.observe(item));
 } else {
   revealItems.forEach((item) => item.classList.add("visible"));
 }
 
-applyLanguage(currentLanguage);
-
-if (!savedLanguage || !translations[savedLanguage]) {
-  openLanguageModal();
-}
-
-// Reading Progress & Chapter Navigation Observer
+/* ── Reading Progress & Chapter Navigator ──────────────────── */
 const chapters = [
-  { id: "reason", title: "Chương 01: Thách Thức Thị Trường", nextId: "about", nextTitle: "Chương 02: Giải Pháp VICATRA ➔" },
-  { id: "about", title: "Chương 02: Giải Pháp VICATRA", nextId: "pillars", nextTitle: "Chương 03: 4 Trụ Cột Năng Lực ➔" },
-  { id: "pillars", title: "Chương 03: 4 Trụ Cột Năng Lực", nextId: "showroom", nextTitle: "Chương 04: Showroom Phnom Penh ➔" },
-  { id: "showroom", title: "Chương 04: Showroom Phnom Penh", nextId: "categories", nextTitle: "Chương 05: Danh Mục Ngành Hàng ➔" },
-  { id: "categories", title: "Chương 05: Danh Mục Ngành Hàng", nextId: "app", nextTitle: "Chương 06: Nền Tảng Số & App ➔" },
-  { id: "app", title: "Chương 06: Nền Tảng Số & App", nextId: "register", nextTitle: "Chương 07: Kết Nối B2B & Đăng Ký ➔" },
-  { id: "register", title: "Chương 07: Kết Nối B2B & Đăng Ký", nextId: "top", nextTitle: "Về đầu trang ⬆" },
+  { id: "reason", titleKey: "ch01Title", nextId: "about", nextKey: "next01" },
+  { id: "about", titleKey: "next01", nextId: "pillars", nextKey: "next02" },
+  { id: "pillars", titleKey: "next02", nextId: "showroom", nextKey: "next03" },
+  { id: "showroom", titleKey: "next03", nextId: "categories", nextKey: "next04" },
+  { id: "categories", titleKey: "next04", nextId: "app", nextKey: "next05" },
+  { id: "app", titleKey: "next05", nextId: "register", nextKey: "next06" },
+  { id: "register", titleKey: "next06", nextId: "top", nextKey: "navHome" },
 ];
 
 const progressBar = document.getElementById("readingProgressBar");
@@ -632,13 +1065,11 @@ const chapterNavLinks = document.querySelectorAll(".chapter-nav-list a");
 const chapterNavigator = document.getElementById("chapterNavigator");
 const chapterNavToggle = document.getElementById("chapterNavToggle");
 
-if (chapterNavToggle && chapterNavigator) {
-  chapterNavToggle.addEventListener("click", () => {
-    chapterNavigator.classList.toggle("collapsed");
-    const isCollapsed = chapterNavigator.classList.contains("collapsed");
-    chapterNavToggle.textContent = isCollapsed ? "▶" : "◀";
-  });
-}
+chapterNavToggle?.addEventListener("click", () => {
+  chapterNavigator?.classList.toggle("collapsed");
+  const isCollapsed = chapterNavigator?.classList.contains("collapsed");
+  if (chapterNavToggle) chapterNavToggle.textContent = isCollapsed ? "▶" : "◀";
+});
 
 function updateReadingProgress() {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -649,8 +1080,8 @@ function updateReadingProgress() {
     progressBar.style.width = scrollPercent + "%";
   }
 
+  const scrollPosition = scrollTop + 260;
   let activeIndex = -1;
-  const scrollPosition = scrollTop + 250;
 
   for (let i = 0; i < chapters.length; i++) {
     const sec = document.getElementById(chapters[i].id);
@@ -666,28 +1097,37 @@ function updateReadingProgress() {
     }
   }
 
+  const lang = currentLanguage;
   if (activeIndex >= 0) {
-    const currentChapter = chapters[activeIndex];
-    if (currentChapterTitleEl) currentChapterTitleEl.textContent = currentChapter.title;
-    if (nextChapterLinkEl) {
-      nextChapterLinkEl.href = "#" + currentChapter.nextId;
-      nextChapterLinkEl.textContent = currentChapter.nextTitle;
+    const ch = chapters[activeIndex];
+    if (currentChapterTitleEl) {
+      currentChapterTitleEl.textContent = translations[lang]?.[ch.titleKey] || translations.vi[ch.titleKey] || "";
     }
-
+    if (nextChapterLinkEl) {
+      nextChapterLinkEl.href = "#" + ch.nextId;
+      nextChapterLinkEl.textContent = translations[lang]?.[ch.nextKey] || translations.vi[ch.nextKey] || "";
+    }
     chapterNavLinks.forEach((link) => {
       const targetId = link.getAttribute("href")?.substring(1);
-      link.classList.toggle("active", targetId === currentChapter.id);
+      link.classList.toggle("active", targetId === ch.id);
     });
   } else {
-    if (currentChapterTitleEl) currentChapterTitleEl.textContent = "Tổng quan VICATRA Trade Platform";
+    if (currentChapterTitleEl) {
+      currentChapterTitleEl.textContent = translations[lang]?.readingIntro || "Tổng quan VICATRA Trade Platform";
+    }
     if (nextChapterLinkEl) {
       nextChapterLinkEl.href = "#reason";
-      nextChapterLinkEl.textContent = "Chương 01: Thách Thức Thị Trường ➔";
+      nextChapterLinkEl.textContent = translations[lang]?.ch01Title || "Chương 01: Thách Thức Thị Trường →";
     }
     chapterNavLinks.forEach((link) => link.classList.remove("active"));
   }
 }
 
 window.addEventListener("scroll", updateReadingProgress, { passive: true });
-window.addEventListener("load", updateReadingProgress);
 
+/* ── Initialize ────────────────────────────────────────────── */
+applyLanguage(currentLanguage);
+
+if (!savedLanguage || !translations[savedLanguage]) {
+  openLanguageModal();
+}
