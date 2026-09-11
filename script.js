@@ -613,3 +613,81 @@ applyLanguage(currentLanguage);
 if (!savedLanguage || !translations[savedLanguage]) {
   openLanguageModal();
 }
+
+// Reading Progress & Chapter Navigation Observer
+const chapters = [
+  { id: "reason", title: "Chương 01: Thách Thức Thị Trường", nextId: "about", nextTitle: "Chương 02: Giải Pháp VICATRA ➔" },
+  { id: "about", title: "Chương 02: Giải Pháp VICATRA", nextId: "pillars", nextTitle: "Chương 03: 4 Trụ Cột Năng Lực ➔" },
+  { id: "pillars", title: "Chương 03: 4 Trụ Cột Năng Lực", nextId: "showroom", nextTitle: "Chương 04: Showroom Phnom Penh ➔" },
+  { id: "showroom", title: "Chương 04: Showroom Phnom Penh", nextId: "categories", nextTitle: "Chương 05: Danh Mục Ngành Hàng ➔" },
+  { id: "categories", title: "Chương 05: Danh Mục Ngành Hàng", nextId: "app", nextTitle: "Chương 06: Nền Tảng Số & App ➔" },
+  { id: "app", title: "Chương 06: Nền Tảng Số & App", nextId: "register", nextTitle: "Chương 07: Kết Nối B2B & Đăng Ký ➔" },
+  { id: "register", title: "Chương 07: Kết Nối B2B & Đăng Ký", nextId: "top", nextTitle: "Về đầu trang ⬆" },
+];
+
+const progressBar = document.getElementById("readingProgressBar");
+const currentChapterTitleEl = document.getElementById("currentChapterTitle");
+const nextChapterLinkEl = document.getElementById("nextChapterLink");
+const chapterNavLinks = document.querySelectorAll(".chapter-nav-list a");
+const chapterNavigator = document.getElementById("chapterNavigator");
+const chapterNavToggle = document.getElementById("chapterNavToggle");
+
+if (chapterNavToggle && chapterNavigator) {
+  chapterNavToggle.addEventListener("click", () => {
+    chapterNavigator.classList.toggle("collapsed");
+    const isCollapsed = chapterNavigator.classList.contains("collapsed");
+    chapterNavToggle.textContent = isCollapsed ? "▶" : "◀";
+  });
+}
+
+function updateReadingProgress() {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+  if (progressBar) {
+    progressBar.style.width = scrollPercent + "%";
+  }
+
+  let activeIndex = -1;
+  const scrollPosition = scrollTop + 250;
+
+  for (let i = 0; i < chapters.length; i++) {
+    const sec = document.getElementById(chapters[i].id);
+    if (sec) {
+      const top = sec.offsetTop;
+      const height = sec.offsetHeight;
+      if (scrollPosition >= top && scrollPosition < top + height) {
+        activeIndex = i;
+        break;
+      } else if (scrollPosition >= top) {
+        activeIndex = i;
+      }
+    }
+  }
+
+  if (activeIndex >= 0) {
+    const currentChapter = chapters[activeIndex];
+    if (currentChapterTitleEl) currentChapterTitleEl.textContent = currentChapter.title;
+    if (nextChapterLinkEl) {
+      nextChapterLinkEl.href = "#" + currentChapter.nextId;
+      nextChapterLinkEl.textContent = currentChapter.nextTitle;
+    }
+
+    chapterNavLinks.forEach((link) => {
+      const targetId = link.getAttribute("href")?.substring(1);
+      link.classList.toggle("active", targetId === currentChapter.id);
+    });
+  } else {
+    if (currentChapterTitleEl) currentChapterTitleEl.textContent = "Tổng quan VICATRA Trade Platform";
+    if (nextChapterLinkEl) {
+      nextChapterLinkEl.href = "#reason";
+      nextChapterLinkEl.textContent = "Chương 01: Thách Thức Thị Trường ➔";
+    }
+    chapterNavLinks.forEach((link) => link.classList.remove("active"));
+  }
+}
+
+window.addEventListener("scroll", updateReadingProgress, { passive: true });
+window.addEventListener("load", updateReadingProgress);
+
