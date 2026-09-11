@@ -386,12 +386,23 @@ h4{font-size:1.05rem;font-weight:700}
 .lang-choice:hover{border-color:var(--blue);background:var(--blue-soft);color:var(--blue)}
 .lang-choice small{font-size:.72rem;font-weight:700;color:var(--muted);letter-spacing:.1em}
 
-/* ── 26. REVEAL ────────────────────────────────────────────── */
+/* ── 26. FAQ (SEO & AEO) ──────────────────────────────────── */
+.faq-wrap{max-width:840px;margin-inline:auto;display:grid;gap:12px}
+.faq-item{border:1px solid var(--line);border-radius:var(--r-md);background:var(--surface);overflow:hidden;transition:border-color var(--ease),box-shadow var(--ease)}
+.faq-item[open]{border-color:rgba(23,102,216,.35);box-shadow:var(--sh-1)}
+.faq-item summary{padding:18px 24px;font-size:1rem;font-weight:700;color:var(--navy);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;user-select:none;transition:color var(--ease)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:'+';font-size:1.4rem;font-weight:400;color:var(--blue);line-height:1;transition:transform .2s ease;flex-shrink:0}
+.faq-item[open] summary{color:var(--blue)}
+.faq-item[open] summary::after{content:'−'}
+.faq-answer{padding:0 24px 20px;color:var(--ink-2);font-size:.92rem;line-height:1.7}
+
+/* ── 27. REVEAL ────────────────────────────────────────────── */
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 
-/* ── 27. RESPONSIVE ────────────────────────────────────────── */
+/* ── 28. RESPONSIVE ────────────────────────────────────────── */
 @media(max-width:1080px){
   .nav,.header-cta{display:none}
   .hamburger{display:flex}
