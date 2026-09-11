@@ -26,6 +26,8 @@ function doPost(e) {
       data.phone || "",
       data.address || "",
       data.company || "",
+      data.category || "",
+      data.shelves_count || "1",
       data.product || "",
       data.page || ""
     ];
@@ -60,6 +62,8 @@ function getOrCreateSheet_(spreadsheet) {
       "Dia chi",
       "Doanh nghiep",
       "Nhom san pham",
+      "So luong ke",
+      "Mo ta chi tiet",
       "Trang gui"
     ]);
   }

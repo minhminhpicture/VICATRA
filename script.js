@@ -539,6 +539,8 @@ form?.addEventListener("submit", async (event) => {
     phone: formData.get("phone")?.toString().trim() || "",
     address: formData.get("address")?.toString().trim() || "",
     company: formData.get("company")?.toString().trim() || "",
+    category: formData.get("category")?.toString().trim() || "",
+    shelves_count: formData.get("shelves_count")?.toString().trim() || "1",
     product: formData.get("product")?.toString().trim() || "",
     language: currentLanguage,
     page: window.location.href,
