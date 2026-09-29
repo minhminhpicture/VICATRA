@@ -13,7 +13,18 @@
       content="Thế Giới Chay xuất khẩu Campuchia, Thế Giới Chay Cambodia, VICATRA, SG Mart 310 Monivong, đồ chay Việt Nam tại Campuchia, kho quẹt nấm, nước mắm chay trái điều, mắm ruốc nấm, អាហារបួស ភ្នំពេញ, vegan phnom penh, vegetarian food cambodia"
     />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <!-- Canonical & Multilingual SEO (Hreflang) -->
     <link rel="canonical" href="https://vicatra.com/the-gioi-chay" />
+    <link rel="alternate" hreflang="x-default" href="https://vicatra.com/the-gioi-chay" />
+    <link rel="alternate" hreflang="vi" href="https://vicatra.com/the-gioi-chay" />
+    <link rel="alternate" hreflang="km" href="https://vicatra.com/the-gioi-chay" />
+    <link rel="alternate" hreflang="en" href="https://vicatra.com/the-gioi-chay" />
+
+    <!-- Geo Meta Tags for Local SEO & GEO (Phnom Penh, Cambodia) -->
+    <meta name="geo.region" content="KH-12;VN-SG" />
+    <meta name="geo.placename" content="Phnom Penh; Ho Chi Minh City" />
+    <meta name="geo.position" content="11.5564;104.9128" />
+    <meta name="ICBM" content="11.5564, 104.9128" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -25,9 +36,17 @@
       content="Gia vị chay thuần khiết từ nông sản Việt đã cập bến Phnom Penh. Điểm bán lẻ & trải nghiệm tại SG Mart 310 Preah Monivong. Báo giá sỉ nhà hàng & đại lý toàn Campuchia."
     />
     <meta property="og:image" content="https://vicatra.com/assets/the-gioi-chay/sg-mart-310-monivong.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="vi_VN" />
     <meta property="og:locale:alternate" content="km_KH" />
     <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter Card for Social GEO -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Thế Giới Chay Xuất Khẩu Sang Campuchia Qua VICATRA" />
+    <meta name="twitter:description" content="Điểm bán trực tiếp tại SG Mart 310 Preah Monivong, Phnom Penh. Kho quẹt nấm, nước mắm chay trái điều, mắm ruốc nấm." />
+    <meta name="twitter:image" content="https://vicatra.com/assets/the-gioi-chay/sg-mart-310-monivong.jpg" />
 
     <!-- Favicon & Fonts -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
@@ -40,59 +59,169 @@
     />
     <link rel="stylesheet" href="the-gioi-chay.css" />
 
-    <!-- JSON-LD Structured Data for Local SEO & Rich Snippets -->
+    <!-- JSON-LD Structured Data for Advanced SEO, AEO (Perplexity/ChatGPT/Gemini) & GEO -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": "WebSite",
-            "@id": "https://vicatra.com/#website",
+            "@type": "Organization",
+            "@id": "https://vicatra.com/#organization",
+            "name": "VICATRA",
+            "alternateName": [
+              "Vietnam Cambodia Trade Platform",
+              "Nền tảng Xúc tiến Thương mại Việt Nam Campuchia",
+              "VICATRA B2B Trade Platform"
+            ],
             "url": "https://vicatra.com/",
-            "name": "VICATRA Trade Platform"
+            "logo": "https://vicatra.com/assets/logo-vicatra.png",
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+84-907-215-521",
+                "contactType": "sales",
+                "areaServed": ["VN", "KH"],
+                "availableLanguage": ["Vietnamese", "Khmer", "English"]
+              }
+            ]
           },
           {
-            "@type": "Store",
+            "@type": "Brand",
+            "@id": "https://vicatra.com/the-gioi-chay#brand",
+            "name": "Thế Giới Chay",
+            "alternateName": "The Gioi Chay Vietnam",
+            "description": "Thương hiệu thực phẩm và gia vị chay thủ công tự nhiên từ nông sản Việt Nam: Kho quẹt nấm, Nước mắm chay trái điều, Nước mắm chay trái thơm, Mắm ruốc nấm.",
+            "url": "https://vicatra.com/the-gioi-chay"
+          },
+          {
+            "@type": "GroceryStore",
             "@id": "https://vicatra.com/the-gioi-chay#sg-mart",
             "name": "Trung Tâm Hàng Việt Nam SG MART (មជ្ឈមណ្ឌលទំនិញវៀតណាម SG MART)",
-            "description": "Điểm trưng bày và phân phối chính thức các sản phẩm Thế Giới Chay xuất khẩu tại thủ đô Phnom Penh, Campuchia.",
+            "alternateName": "SG MART Phnom Penh - The Gioi Chay Official Retail Point",
+            "description": "Điểm trưng bày, bán lẻ và phân phối thực tế các sản phẩm Thế Giới Chay tại trung tâm thủ đô Phnom Penh, Campuchia.",
             "image": "https://vicatra.com/assets/the-gioi-chay/sg-mart-310-monivong.jpg",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "310 Preah Monivong Blvd",
               "addressLocality": "Phnom Penh",
+              "addressRegion": "Phnom Penh",
               "addressCountry": "KH"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 11.5564,
+              "longitude": 104.9128
             },
             "telephone": "+84-907-215-521",
             "url": "https://vicatra.com/the-gioi-chay",
-            "priceRange": "$$"
+            "priceRange": "$$",
+            "currenciesAccepted": "USD, KHR, VND",
+            "paymentAccepted": "Cash, Credit Card, Bakong KHQR, Bank Transfer",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "08:00",
+                "closes": "22:00"
+              }
+            ]
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://vicatra.com/the-gioi-chay#products-list",
+            "name": "Sản phẩm Thế Giới Chay xuất khẩu Campuchia",
+            "itemListElement": [
+              {
+                "@type": "Product",
+                "position": 1,
+                "name": "Kho Quẹt Nấm Thế Giới Chay",
+                "sku": "GVD01",
+                "image": "https://vicatra.com/assets/the-gioi-chay/kho-quet-nam.jpg",
+                "description": "Kho quẹt nấm cô đặc từ nấm tươi và gia vị truyền thống, dùng chấm rau củ luộc hoặc ăn kèm cơm cháy giòn rụm.",
+                "brand": { "@id": "https://vicatra.com/the-gioi-chay#brand" }
+              },
+              {
+                "@type": "Product",
+                "position": 2,
+                "name": "Nước Mắm Chay Trái Điều (Cashew Fruit Sauce)",
+                "sku": "NCC02",
+                "image": "https://vicatra.com/assets/the-gioi-chay/nuoc-mam-chay-trai-dieu.jpg",
+                "description": "Nước mắm chay lên men từ thịt trái điều Bình Phước chín mọng, vị ngọt bùi thanh dịu tự nhiên.",
+                "brand": { "@id": "https://vicatra.com/the-gioi-chay#brand" }
+              },
+              {
+                "@type": "Product",
+                "position": 3,
+                "name": "Nước Mắm Chay Trái Thơm (Pineapple Sauce)",
+                "sku": "NCC03",
+                "image": "https://vicatra.com/assets/the-gioi-chay/nuoc-mam-chay-trai-thom.jpg",
+                "description": "Nước mắm chay cốt dứa tươi lên men, vị ngọt thanh mát, chuyên dùng pha nước chấm bánh xèo chay hoặc ướp món kho.",
+                "brand": { "@id": "https://vicatra.com/the-gioi-chay#brand" }
+              },
+              {
+                "@type": "Product",
+                "position": 4,
+                "name": "Mắm Ruốc Nấm (Tìm lại vị xưa)",
+                "sku": "GVD02",
+                "image": "https://vicatra.com/assets/the-gioi-chay/mam-ruoc-nam.jpg",
+                "description": "Mắm ruốc nấm thơm nồng chuẩn vị xứ Huế làm từ chân nấm chọn lọc, chấm quả chua non và nấu Bún bò Huế chay.",
+                "brand": { "@id": "https://vicatra.com/the-gioi-chay#brand" }
+              }
+            ]
           },
           {
             "@type": "FAQPage",
+            "@id": "https://vicatra.com/the-gioi-chay#faq",
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Mua sản phẩm Thế Giới Chay ở đâu tại Campuchia?",
+                "name": "Sản phẩm Thế Giới Chay đã có mặt tại Campuchia chưa và mua ở đâu tại Phnom Penh?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Bạn có thể ghé trực tiếp Trung Tâm Hàng Việt Nam SG MART tại số 310 Preah Monivong Boulevard, thủ đô Phnom Penh hoặc đặt giao hàng toàn Campuchia qua nền tảng VICATRA."
+                  "text": "Thế Giới Chay đã chính thức xuất khẩu và có mặt tại Campuchia thông qua nền tảng thương mại VICATRA. Khách hàng có thể đến mua sắm trực tiếp tại Trung Tâm Hàng Việt Nam SG MART, địa chỉ số 310 Preah Monivong Boulevard, Phnom Penh hoặc liên hệ hotline/Zalo/Telegram (+84) 0907 215 521 để giao hàng tận nơi."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Nhà hàng, siêu thị mini tại Campuchia muốn nhập sỉ Thế Giới Chay thì làm thế nào?",
+                "name": "Nhà hàng chay hoặc đại lý tại Campuchia muốn nhập sỉ số lượng lớn Thế Giới Chay bằng cách nào?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Quý đối tác liên hệ trực tiếp với VICATRA qua Hotline/Zalo/Telegram (+84) 0907 215 521 để nhận catalog chi tiết và bảng báo giá sỉ xuất khẩu chính ngạch."
+                  "text": "VICATRA cung cấp chính sách phân phối sỉ chính ngạch với chiết khấu lên đến 30%, hợp đồng pháp lý đầy đủ và dịch vụ giao hàng liên tỉnh khắp 25 tỉnh thành Campuchia (Siem Reap, Sihanoukville, Battambang...). Liên hệ Zalo/Telegram 0907 215 521 để nhận báo giá sỉ B2B."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Sản phẩm Thế Giới Chay gồm những món gì?",
+                "name": "Nước mắm chay trái điều và kho quẹt nấm có chứng nhận an toàn thực phẩm không?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Các mặt hàng nổi bật gồm: Kho quẹt nấm, Nước mắm chay trái điều, Nước mắm chay trái thơm, Mắm ruốc nấm, Nước tương hảo hạng, Giấm mãng cầu, Muối nấm đông cô và Bánh tráng Cô Hai Tây Ninh."
+                  "text": "100% sản phẩm Thế Giới Chay đạt tiêu chuẩn an toàn thực phẩm xuất khẩu, không chứa bột ngọt công nghiệp hay phẩm màu hóa học, được lên men tự nhiên từ trái điều, dứa tươi và nấm đông cô Việt Nam."
                 }
+              },
+              {
+                "@type": "Question",
+                "name": "អាហារបួស Thế Giới Chay មានលក់នៅភ្នំពេញនៅឯណា? (Thực phẩm chay Thế Giới Chay bán ở đâu tại Phnom Penh?)",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "លោកអ្នកអាចទិញអាហារបួស Thế Giới Chay នៅមជ្ឈមណ្ឌលទំនិញវៀតណាម SG MART លេខ 310 មហាវិថីព្រះមុនីវង្ស រាជធានីភ្នំពេញ ឬទាក់ទង Telegram 0907 215 521 ដើម្បីដឹកជញ្ជូនដល់កន្លែង។"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://vicatra.com/the-gioi-chay#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "VICATRA Home",
+                "item": "https://vicatra.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Thế Giới Chay Cambodia",
+                "item": "https://vicatra.com/the-gioi-chay"
               }
             ]
           }
